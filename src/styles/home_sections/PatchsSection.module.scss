@@ -1,0 +1,96 @@
+.patchs_section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 120vh;
+}
+
+.patchs_section_text{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.swiper_container{
+    width: 80vw;
+    height: 80vh;
+}
+
+.swiper_slide_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .swiper_slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 500px;
+  }
+  
+  .swiper_slide img {
+    display: block;
+    width: 100%;
+  }
+  
+
+  .info_patch_modal{
+    display: flex;
+    padding: 2rem;
+  }
+
+  .info_patch_modal_image{
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info_patch_modal_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: 1rem;
+    text-align: left;
+    flex: 8;
+  }
+
+  .buy_all_button{
+    margin-top: 4rem;
+  }
+
+
+  @media screen and (max-width: 768px){
+      .swiper_container{
+          width: 90vw;
+      }
+
+      .info_patch_modal{
+          flex-direction: column;
+      }
+
+      .info_patch_modal_image{
+          margin-bottom: 1rem;
+          height: 250px;
+
+          & img{
+              height: inherit;
+          }
+      }
+
+      .info_patch_modal_text{
+          margin-left: 0;
+          width: 80vw;
+      }
+  }

@@ -1,0 +1,92 @@
+.hero_section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f94e17;
+
+    .hero_image{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('/images/superpatch_logo-removebg.png');
+        background-size: cover;
+        height: 50vh;
+    }
+
+    & .hero_section_content{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+            
+        .text_content{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            gap: 1rem;
+
+            .button_container{
+                width: 50%;
+                display: flex;
+            }
+        }
+
+
+        & h1{
+            font-size: clamp(48px, 4.5vw, 96px);;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 2px rgba(44, 44, 44, 0.5);
+        }
+
+        & p{
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 2px rgba(44, 44, 44, 0.5);
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hero_section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .hero_image{
+            width: 100%;
+            height: 30vh;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .hero_section_content{
+            width: 80%;
+            text-align: center;
+
+            .text_content{
+                width: 100%;
+                gap: 1rem;
+
+                .button_container{
+                    width: 100%;
+                    
+                }
+            }
+
+            h1{
+                font-size: clamp(36px, 4.5vw, 72px);
+            }
+
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

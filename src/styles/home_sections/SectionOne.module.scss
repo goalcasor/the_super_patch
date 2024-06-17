@@ -1,0 +1,20 @@
+.section_one{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/super_patchs_01.jpg');
+    background-size: 70%;
+    background-position-x: center;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 768px){
+    .section_one{
+        height: 40vh;
+        background-size: 120%;
+    }
+}
