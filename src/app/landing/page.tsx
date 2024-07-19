@@ -2,7 +2,7 @@ import styles from '@/styles/home_sections/VideoSection.module.scss'
 
 const VideoSection = () => {
   return (
-    <div >
+    <div className={styles.landing}>
         <div className={`${styles.video_section_content}`}>
             <div className={styles.video_container}>
               <video controls id='video_principal'>
