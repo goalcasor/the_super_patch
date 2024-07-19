@@ -24,3 +24,5 @@ const PrivacidadPage: React.FC = () => {
 }
 
 export default PrivacidadPage;
+
+

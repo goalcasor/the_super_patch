@@ -58,6 +58,22 @@
     }
 }
 
+.wp_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #25d366;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .3s ease;
+    margin: 1rem;
+}
+
+
 @media screen and (max-width: 768px){
     .video_section{
         height: fit-content;
