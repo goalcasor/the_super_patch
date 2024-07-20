@@ -35,7 +35,15 @@
 
 .video_section_content{
     display: flex;
-    width: 40%;
+    flex-direction: column;
+    width: 70%;
+    padding-top: 3rem;
+    & h1{
+        font-size: clamp(25px, 4.5vw, 45px);
+        color: #fff;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
 }
 
 .video_container{
@@ -63,6 +71,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: #000;
 }
 
 .wp_button{
