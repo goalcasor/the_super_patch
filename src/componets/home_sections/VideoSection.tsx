@@ -12,9 +12,8 @@ const VideoSection = () => {
         <div className={`${styles.video_section_content}`}>
             <div className={styles.video_container}>
               <video poster="/images/superpatch_logo.jpg" controls id='video_principal'>
-                <source src="/videos/presentacion_01.mp4" type="video/mp4" />
+                <source src="/videos/super_patch.mp4" type="video/mp4" />
               </video>
-              <p>Cómo comprar y/o darme de alta</p>
             </div>
         </div>
     </div>

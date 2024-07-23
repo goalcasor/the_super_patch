@@ -30,7 +30,7 @@ function HeroSection() {
           <h1>El futuro del bienestar en un Parche</h1>
           <p>100% libre de drogas y no invasivo</p>
           <div className={styles.button_container}>
-            <PrimaryButton text="Cómo darme de alta" onClick={navigateToVideoSection} />
+            <PrimaryButton text="Cómo Funciona" onClick={navigateToVideoSection} />
           </div>
         </div>
       </div>
