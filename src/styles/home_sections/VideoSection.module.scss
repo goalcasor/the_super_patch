@@ -74,19 +74,28 @@
     background-color: #000;
 }
 
-.wp_button{
+
+.video_button, .wp_button{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #25d366;
+    background-color: #0051ff;
     color: #fff;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     font-weight: 700;
     border-radius: 5px;
+    text-align: center;
     text-decoration: none;
     transition: all .3s ease;
     margin: 1rem;
+    border:  none;
+
+    font-size: clamp(20px, 4.5vw, 45px);
+}
+
+.wp_button{
+    background-color: #25d366;
 }
 
 

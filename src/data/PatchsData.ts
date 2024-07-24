@@ -57,3 +57,4 @@ export const PatchsData = [
         url: 'https://shop.superpatch.com/#/shop/from/111208386?categoryID=66'     
     }
 ];
+
