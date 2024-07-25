@@ -81,7 +81,7 @@ export default function PatchsSection() {
         </div>
         <div className={styles.buy_all_button}>
             <PrimaryButton 
-                text='Comprar todos los parches'
+                text='Ir a la tienda y ver todas las ofertas'
                 onClick={() => router.push('https://shop.superpatch.com/#/shop/from/111208386')}
             />
         </div>
