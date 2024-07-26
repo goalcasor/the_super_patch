@@ -71,29 +71,43 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #000;
+    background-color: #1a1616;
+}
+
+.buttons_container{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin: 1rem;
 }
 
 
-.video_button, .wp_button{
+.video_button, .wp_button, .store_button{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: .3rem;
     background-color: #0051ff;
     color: #fff;
     font-weight: 700;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(44, 44, 44, 0.5);
     text-align: center;
     text-decoration: none;
     transition: all .3s ease;
-    margin: 1rem;
     border:  none;
-    font-size: clamp(20px, 4.5vw, 45px);
+    font-size: clamp(1px, 4.5vw, 1.5rem);
+    cursor: pointer;    
+    width: 100%;
+    flex: 1;
 }
 
 .wp_button{
     background-color: #25d366;
+}
+
+.store_button{
+    background-color: #f94e17;
 }
 
 
@@ -120,5 +134,10 @@
         & p{
             font-size: 1.2rem;
         }
+    }
+
+    .buttons_container{
+        flex-direction: column;
+        gap: 1rem;
     }
 }
