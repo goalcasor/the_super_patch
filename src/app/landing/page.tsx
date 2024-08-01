@@ -33,7 +33,7 @@ const VideoSection = () => {
 
             {seenexVideo && (
                 <video controls poster='/images/super_patchs_01.jpg' id='second_video'>
-                 <source src="https://firebasestorage.googleapis.com/v0/b/eblock-music.appspot.com/o/resumen%20tecnologia.mp4?alt=media&token=c25f5636-1707-4a9c-a957-fc472daa8cca" type="video/mp4" />
+                 <source src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/0801.mov?alt=media&token=1d5c014b-b3d6-4b4d-9af6-9baea2a7e8ec" type="video/mp4" />
                 </video>
             )}
         </div>
