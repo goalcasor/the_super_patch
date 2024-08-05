@@ -25,7 +25,7 @@ const VideoSection = () => {
         <div className={`${styles.video_section_content}`}>
             <div className={styles.video_container}>
               <video controls poster='/images/superpatch_logo.jpg'>
-                <source src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/landing_01_new.mp4?alt=media&token=efad1c89-6ccf-40e8-a7bf-7469aff5c062" type="video/mp4" />
+                <source src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/FINAL%20ALEX.mp4?alt=media&token=834729d2-2a9e-428e-a455-ea70636c3bac" type="video/mp4" />
               </video>
               <div className={styles.buttons_container}>
                 <button
