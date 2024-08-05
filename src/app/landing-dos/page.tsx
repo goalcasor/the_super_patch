@@ -1,10 +1,24 @@
 'use client';
 import { useState } from 'react';
-import styles from '@/styles/home_sections/VideoSection.module.scss'
+import styles from '@/styles/home_sections/VideoSection.module.scss';
 
 const VideoSection = () => {
 
   const [seenexVideo, setSeenexVideo] = useState(false);
+
+  const navigateToVideoSection = () => {
+    setSeenexVideo(!seenexVideo);
+    const section = document.getElementById('video-explicativo-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        const video = document.getElementById('video-explicativo') as HTMLVideoElement;
+        if (video) {
+          video.play();
+        }
+      }, 500); 
+    }
+  };
 
   return (
     <div className={styles.landing}>
@@ -13,11 +27,10 @@ const VideoSection = () => {
               <video controls poster='/images/superpatch_logo.jpg'>
                 <source src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/landing_01_new.mp4?alt=media&token=efad1c89-6ccf-40e8-a7bf-7469aff5c062" type="video/mp4" />
               </video>
-
               <div className={styles.buttons_container}>
                 <button
                   className={styles.video_button}
-                  onClick={() => setSeenexVideo(!seenexVideo)}
+                  onClick={() => navigateToVideoSection()}
                 >
                   Conóce la tecnología detrás de Super Patch
                 </button>
@@ -29,13 +42,14 @@ const VideoSection = () => {
                 </a>
               </div>
             </div>
-            
 
-            {seenexVideo && (
-                <video controls poster='/images/super_patchs_01.jpg' id='second_video'>
-                 <source src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/0801.mov?alt=media&token=1d5c014b-b3d6-4b4d-9af6-9baea2a7e8ec" type="video/mp4" />
-                </video>
-            )}
+            <div className={styles.video_container} id='video-explicativo-section'>
+              {seenexVideo && (
+                  <video controls poster='/images/super_patchs_02.jpg' id='video-explicativo'>
+                    <source src="/videos/super_patch.mp4" type="video/mp4" />
+                  </video>
+              )}
+            </div>
         </div>
     </div>
   );

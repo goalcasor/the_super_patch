@@ -9,15 +9,12 @@ function HeroSection() {
     const section = document.getElementById('video_section');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  
-      // Espera a que el desplazamiento suave termine antes de reproducir el video.
-      // Esto puede requerir ajustes basados en la duración del desplazamiento.
       setTimeout(() => {
         const video = document.getElementById('video_principal') as HTMLVideoElement;
         if (video) {
           video.play();
         }
-      }, 500); // Ajusta este tiempo según sea necesario.
+      }, 500); 
     }
   };
 

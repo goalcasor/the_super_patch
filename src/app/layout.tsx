@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter } from "next/font/google";
 import '@/styles/globals.scss';
+import WhatsAppButton from "@/componets/buttons/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +32,10 @@ export default function RootLayout({
           fbq('track', 'PageView');
         `}
       </Script>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }
