@@ -66,6 +66,27 @@
     }
 }
 
+.vert_video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .vert_video {
+        max-width: 720px; /* Ajusta según el tamaño deseado para escritorio */
+        height: auto;
+        max-height: 1280px; /* Limita la altura máxima para evitar el sobrepaso */
+    }
+}
+
+@media (min-width: 1024px) {
+    .vert_video {
+        max-width: 1080px; /* Ajusta según el tamaño deseado para pantallas más grandes */
+        max-height: 1920px; /* Limita la altura máxima para evitar el sobrepaso */
+    }
+}
 .landing{
     display: flex;
     justify-content: center;
