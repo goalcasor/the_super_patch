@@ -23,7 +23,7 @@ const VideoSection = () => {
   return (
     <div className={styles.landing}>
         <div className={`${styles.video_section_content}`}>
-            <div className={styles.video_container}>
+            <div className={styles.video_vert_container}>
               <video controls poster='/images/super_patch_play.jpg' className={styles.vert_video}>
                 <source src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/C0069%20(1).mp4?alt=media&token=8ff8f42f-0cec-4352-aaea-eac7a8bbed6d" type="video/mp4" />
               </video>
