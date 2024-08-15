@@ -1,41 +1,23 @@
 'use client';
-import { useState } from 'react';
 import styles from '@/styles/home_sections/VideoSection.module.scss'
 
 const VideoSection = () => {
-
-  const [seenexVideo, setSeenexVideo] = useState(false);
 
   return (
     <div className={styles.landing}>
         <div className={`${styles.video_section_content}`}>
             <div className={styles.video_container}>
               <video controls poster='/images/superpatch_logo.jpg'>
-                <source src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/FINAL%20ALEX.mp4?alt=media&token=834729d2-2a9e-428e-a455-ea70636c3bac" type="video/mp4" />
+                <source src="/videos/super_patch.mp4" type="video/mp4" />
               </video>
 
               <div className={styles.buttons_container}>
-                <button
-                  className={styles.video_button}
-                  onClick={() => setSeenexVideo(!seenexVideo)}
-                >
-                  Conóce la tecnología detrás de Super Patch
-                </button>
-                <a href="https://wa.me/message/U47Z7TQCMLBGJ1" className={styles.wp_button}>
-                  Reservar a través de WhatsApp
-                </a>
-                <a href="https://111208386.superpatch.com/es" className={styles.store_button}>
-                  Ir a la Tienda
+                <a href="https://wa.me/34661959090" className={styles.wp_button}>
+                  ¿Quieres saber más? Contáctanos por WhatsApp
                 </a>
               </div>
             </div>
-            
-
-            {seenexVideo && (
-                <video controls poster='/images/super_patchs_01.jpg' id='second_video'>
-                 <source src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/0801.mov?alt=media&token=1d5c014b-b3d6-4b4d-9af6-9baea2a7e8ec" type="video/mp4" />
-                </video>
-            )}
+           
         </div>
     </div>
   );
