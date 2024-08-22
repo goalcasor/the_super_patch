@@ -8,7 +8,7 @@ const VideoSection = () => {
         <div className={`${styles.video_section_content}`}>
             <div className={styles.video_container}>
               <video controls poster='/images/superpatch_logo.jpg'>
-                <source src="/videos/super_patch.mp4" type="video/mp4" />
+                <source src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/alex%2FPAGINA.mp4?alt=media&token=54cce25c-aa12-4170-a04f-35ce01f85f55" type="video/mp4" />
               </video>
 
               <div className={styles.buttons_container}>
