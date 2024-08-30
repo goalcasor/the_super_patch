@@ -15,8 +15,8 @@ export default function LandingTest() {
   const [evaluation, setEvaluation] = useState(null);
   const swiperRef = useRef(null);
 
-  const handleAnswerSelection = (index, answer) => {
-    const newResponses = [...responses];
+  const handleAnswerSelection = (index: number, answer: string): void => {
+    const newResponses: string[] = [...responses];
     newResponses[index] = answer;
     setResponses(newResponses);
 
@@ -28,18 +28,17 @@ export default function LandingTest() {
     }
   };
 
-  const evaluateResponses = (responses) => {
+  const evaluateResponses = (responses: string[]): void => {
     let score = 0;
 
-    // Ejemplo de lógica simple de evaluación
-    responses.forEach((response, index) => {
+    responses.forEach((response: string, index: number) => {
       if (response.includes('a')) score += 1; // Puedes ajustar la lógica según tus necesidades
       if (response.includes('b')) score += 2;
       if (response.includes('c')) score += 1;
     });
 
     // Establecer un umbral para determinar si el usuario es un buen candidato
-    const isQualified = score >= 15; // Puedes ajustar este umbral
+    const isQualified: boolean = score >= 15; // Puedes ajustar este umbral
 
     setEvaluation({
       score,
@@ -81,13 +80,38 @@ export default function LandingTest() {
             <h3>Resultados</h3>
             {evaluation && (
               <div>
-                <h4>Evaluación</h4>
-                <p>Puntuación Total: {evaluation.score}</p>
-                <p>
-                  {evaluation.isQualified
-                    ? '¡Felicidades! Eres un buen candidato para esta oportunidad.'
-                    : 'Gracias por tu tiempo. Parece que esta oportunidad podría no ser la mejor para ti.'}
-                </p>
+                <div>
+                  <h4>Evaluación</h4>
+                  <p>Puntuación Total: {evaluation.score}</p>
+                  <p>
+                    {evaluation.isQualified
+                      ? '¡Felicidades! Eres un buen candidato para esta oportunidad.'
+                      : 'Gracias por tu tiempo. Parece que esta oportunidad podría no ser la mejor para ti.'}
+                  </p>
+
+                </div>
+                <br />
+                <br />
+                <div>
+                <br />
+                <h4>Lógica de Evaluación:</h4>
+                <br />
+                <p><strong>Puntuación por Respuesta:</strong></p>
+                <br />
+
+                <ul>
+                  <li>Respuestas que contienen <strong>a</strong>: 1 punto.</li>
+                  <li>Respuestas que contienen <strong>b</strong>: 2 puntos.</li>
+                  <li>Respuestas que contienen <strong>c</strong>: 1 punto.</li>
+                </ul>
+                <br />
+                <p><strong>Umbral:</strong></p>
+                <br />
+                <ul>
+                  <li>Si la puntuación total es 15 o más, el usuario pasa el test </li>
+                  <li>Si la puntuación es menos de 15, el usuario no pasa el test </li>
+                </ul>
+                </div>
               </div>
             )}
           </div>
