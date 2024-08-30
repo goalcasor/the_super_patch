@@ -1,6 +1,7 @@
 .landing_test_page{
     height: 100vh;
     width: 100%;
+
 }
 
 .swiper {
@@ -11,14 +12,14 @@
   .swiper_slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: #000;
   
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
 
-    color: black;
+    color: white;
   }
   
   .swiper_slide img {
@@ -57,6 +58,7 @@
     padding: 1rem;
     border-radius: 10px;
     background-color: #c5c5c5;
+    color: #000;
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 1.2rem;
