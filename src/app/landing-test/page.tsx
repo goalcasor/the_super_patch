@@ -9,7 +9,7 @@ import styles from '@/styles/pages/LandingTest.module.scss';
 
 // Importa las preguntas y la interfaz Question
 import { questions, Question } from '@/data/QuestionsLandingTest';
-
+import { Swiper as SwiperClass } from 'swiper/types';
 // Interfaz para la evaluación
 interface Evaluation {
   score: number;
@@ -20,7 +20,7 @@ export default function LandingTest() {
   // Inicialización del estado con tipos correctos
   const [responses, setResponses] = useState<string[]>([]);
   const [evaluation, setEvaluation] = useState<Evaluation | null>(null);
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperClass | null>(null);
 
   const handleAnswerSelection = (index: number, answer: string): void => {
     const newResponses: string[] = [...responses];
