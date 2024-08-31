@@ -6,18 +6,15 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import styles from '@/styles/pages/LandingTest.module.scss';
-
-// Importa las preguntas y la interfaz Question
 import { questions, Question } from '@/data/QuestionsLandingTest';
 import { Swiper as SwiperClass } from 'swiper/types';
-// Interfaz para la evaluación
+
 interface Evaluation {
   score: number;
   isQualified: boolean;
 }
 
 export default function LandingTest() {
-  // Inicialización del estado con tipos correctos
   const [responses, setResponses] = useState<string[]>([]);
   const [evaluation, setEvaluation] = useState<Evaluation | null>(null);
   const swiperRef = useRef<SwiperClass | null>(null);
@@ -29,7 +26,7 @@ export default function LandingTest() {
 
     if (swiperRef.current && index < questions.length - 1) {
       swiperRef.current.slideNext();
-    } else if (index === questions.length - 1) {
+    } else if (index === questions.length - 1 && swiperRef.current) {
       swiperRef.current.slideNext();
       evaluateResponses(newResponses);
     }
@@ -55,7 +52,7 @@ export default function LandingTest() {
   return (
     <div className={styles.landing_test_page}>
       <Swiper
-        direction={'vertical'}
+        direction="vertical"
         pagination={{
           clickable: true,
         }}
@@ -82,16 +79,15 @@ export default function LandingTest() {
           </SwiperSlide>
         ))}
         <SwiperSlide className={styles.swiper_slide}>
-          <div>
-            <h3>Resultados</h3>
+          <div className={styles.results_container}>
+            <h3 className={styles.results_title}>Resultados</h3>
             {evaluation && (
-              <div>
-                <div>
-                  <h4>Evaluación</h4>
-                  <p>Preguntas totales: {questions.length}</p>
-                  <p>Puntuación Total: {evaluation.score}</p>
-                  
-                  <p>
+              <div className={styles.evaluation_container}>
+                <div className={styles.evaluation_summary}>
+                  <h4 className={styles.evaluation_title}>Evaluación</h4>
+                  <p className={styles.evaluation_score}>Preguntas totales: {questions.length}</p>
+                  <p className={styles.evaluation_score}>Puntuación Total: {evaluation.score}</p>
+                  <p className={styles.evaluation_message}>
                     {evaluation.isQualified
                       ? '¡Felicidades! Eres un buen candidato para esta oportunidad.'
                       : 'Gracias por tu tiempo. Parece que esta oportunidad podría no ser la mejor para ti.'}
@@ -99,16 +95,16 @@ export default function LandingTest() {
                 </div>
                 <br />
                 <br />
-                <div>
-                  <h4>Lógica de Evaluación:</h4>
-                  <p><strong>Puntuación por Respuesta:</strong></p>
-                  <ul>
+                <div className={styles.evaluation_logic}>
+                  <h4 className={styles.logic_title}>Lógica de Evaluación:</h4>
+                  <p className={styles.logic_points}><strong>Puntuación por Respuesta:</strong></p>
+                  <ul className={styles.logic_list}>
                     <li>Respuestas que contienen <strong>a</strong>: 1 punto.</li>
                     <li>Respuestas que contienen <strong>b</strong>: 2 puntos.</li>
                     <li>Respuestas que contienen <strong>c</strong>: 1 punto.</li>
                   </ul>
-                  <p><strong>Umbral:</strong></p>
-                  <ul>
+                  <p className={styles.logic_threshold}><strong>Umbral:</strong></p>
+                  <ul className={styles.logic_list}>
                     <li>Si la puntuación total es 15 o más, el usuario pasa el test.</li>
                     <li>Si la puntuación es menos de 15, el usuario no pasa el test.</li>
                   </ul>
