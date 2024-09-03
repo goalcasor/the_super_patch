@@ -1,5 +1,6 @@
 'use client';
 import styles from '@/styles/home_sections/VideoSection.module.scss'
+import { MdGroups2 } from "react-icons/md";
 
 const VideoSection = () => {
   const phoneNumber = "34661959090"; 
@@ -7,6 +8,7 @@ const VideoSection = () => {
   
   const encodedMessage = encodeURIComponent(message);
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
   return (
     <div className={styles.landing}>
         <div className={`${styles.video_section_content}`}>
@@ -16,8 +18,12 @@ const VideoSection = () => {
               </video>
 
               <div className={styles.buttons_container}>
-                <a href={whatsappLink} className={styles.wp_button}>
-                  ¿Quieres saber más? Contáctanos por WhatsApp
+                <a href={`https://chat.whatsapp.com/ECZXJH3jUrTE8QG97z7VND`} className={styles.wp_button}>
+                  ¿Quieres saber más? Únete al grupo
+                  <br />
+                  <MdGroups2 
+                    fontSize={50}
+                  />
                 </a>
               </div>
             </div>
