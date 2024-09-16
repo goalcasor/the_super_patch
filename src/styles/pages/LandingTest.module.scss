@@ -107,6 +107,33 @@
     flex: 1;
 }
 
+.no_congrats{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & h1{
+    font-size: 2rem;
+  }
+}
+
+.rs_icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  color: #fff;
+  margin: 1rem;
+  background-color: #25d366;
+  border-radius: .2rem;
+  padding: .2rem;
+
+  & a{
+    
+    text-decoration: none;
+  }
+}
+
   @media screen and (max-width: 768px){
 
     .question_container{
@@ -130,6 +157,12 @@
         font-size: 1.5rem;
       }
     }
+
+    .no_congrats{
+      & h1{
+        font-size: 1.5rem;
+      }
+    }    
 
     .wp_button{
       width: 100%;

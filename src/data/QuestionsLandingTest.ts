@@ -9,8 +9,8 @@ export const questions: Question[] = [
     answers: [
       "a) Generar ingresos extras.",
       "b) Ser mi propio jefe y tener libertad financiera.",
-      "c) Estabilidad y seguridad laboral que ofrece una carrera tradicional.",
-      "d) Explorar nuevas industrias y mercados.",
+      "c) Explorar nuevas industrias y mercados.",
+      "d) Estabilidad y seguridad laboral que ofrece una carrera tradicional.",
     ],
   },
   {
@@ -59,66 +59,57 @@ export const questions: Question[] = [
     ],
   },
   {
-    question: "¿Estás llevando el estilo de vida que deseas?",
-    answers: [
-      "a) Sí",
-      "b) No",
-      "c) Estoy en camino",
-      "d) Prefiero no responder",
-    ],
-  },
-  {
-    question: "¿Qué te hace falta ahora mismo para lograr tu estilo de vida deseado?",
-    answers: [
-      "a) Más tiempo",
-      "b) Más dinero",
-      "c) No lo sé",
-      "d) Otro factor",
-    ],
-  },
-  {
     question: "¿Te gustaría tener una o más fuentes de ingresos adicionales?",
     answers: [
-      "a) Sí",
-      "b) No",
-      "c) Me gustaría saber más",
-      "d) No estoy seguro",
+      "a) Sí.",
+      "b) No.",
+      "c) Me gustaría saber más.",
+      "d) No estoy seguro.",
     ],
   },
   {
     question: "¿Te gustaría aprender nuevas habilidades para lograr el éxito?",
     answers: [
-      "a) Sí",
-      "b) No",
-      "c) Me gustaría saber más",
-      "d) Estoy en proceso",
+      "a) Sí.",
+      "b) No.",
+      "c) Me gustaría saber más.",
+      "d) Estoy en proceso.",
     ],
   },
   {
     question: "¿Estás dispuesto a dedicar tiempo extra para alcanzar tus metas financieras?",
     answers: [
-      "a) Sí",
-      "b) No",
-      "c) Me gustaría saber más",
-      "d) Depende de la situación",
+      "a) Sí.",
+      "b) No.",
+      "c) Me gustaría saber más.",
+      "d) Depende de la situación.",
     ],
   },
   {
     question: "¿Te sientes motivado para generar ingresos ilimitados?",
     answers: [
-      "a) Sí",
-      "b) No",
-      "c) Me gustaría saber más",
-      "d) No estoy seguro",
+      "a) Sí.",
+      "b) No.",
+      "c) Me gustaría saber más.",
+      "d) No estoy seguro.",
     ],
   },
   {
-    question: "¿Te interesa crear un proyecto propio y verlo crecer?",
+    question: "¿Qué tan cómodo te sientes con la idea de trabajar de manera independiente y sin supervisión constante?",
     answers: [
-      "a) Sí",
-      "b) No",
-      "c) Me gustaría saber más",
-      "d) No tengo tiempo",
+      "a) Muy cómodo.",
+      "b) Algo cómodo, pero prefiero algo de supervisión.",
+      "c) Prefiero tener una supervisión constante.",
+      "d) No estoy cómodo con la idea.",
+    ],
+  },
+  {
+    question: "¿Cuál es tu nivel de compromiso con el aprendizaje continuo y la mejora personal?",
+    answers: [
+      "a) Muy alto; siempre busco aprender y mejorar.",
+      "b) Moderado; aprendo cuando es necesario.",
+      "c) Bajo; solo me esfuerzo por aprender lo esencial.",
+      "d) No estoy interesado en aprender o mejorar continuamente.",
     ],
   },
 ];

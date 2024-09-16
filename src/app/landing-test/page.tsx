@@ -4,10 +4,11 @@ import { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
 import styles from '@/styles/pages/LandingTest.module.scss';
 import { questions, Question } from '@/data/QuestionsLandingTest';
 import { Swiper as SwiperClass } from 'swiper/types';
+import { PiLinktreeLogoDuotone, PiLinkThin  } from "react-icons/pi";
+
 
 interface Evaluation {
   score: number;
@@ -119,7 +120,15 @@ export default function LandingTest() {
                         Ir a WhatsApp
                       </a>
                     </div>
-                    : 'Gracias por tu tiempo. Parece que esta oportunidad podría no ser la mejor para ti.'
+                    : 
+                    <div className={styles.no_congrats}>
+                        <h1>Gracias por tu tiempo. Parece que esta oportunidad podría no ser la mejor para ti. <br /> Si quieres conocer más acerca de esta gran oportidad te invitamos a seguirnos en redes sociales.</h1>
+                        <div className={styles.rs_icons}>
+                          <PiLinktreeLogoDuotone />
+                          <PiLinkThin />
+                          <a href="https://linktr.ee/alexcastells">https://linktr.ee/alexcastells</a>
+                        </div>
+                    </div>
                   }
                 </div>
               </div>
