@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -68,29 +68,18 @@ export default function LandingTest() {
     }
   };
 
-  const handleSlideChange = (): void => {
-    if (swiperRef.current) {
-      const currentSlide = swiperRef.current.activeIndex;
-      const lastSlideIndex = questions.length;
-
-      // Si el usuario llega al último slide y está calificado, se reproduce el video
-      if (currentSlide === lastSlideIndex && evaluation?.isQualified && videoRef.current) {
-        videoRef.current.play();  // Reproduce el video automáticamente
-      }
+  useEffect(() => {
+    if (evaluation?.isQualified && swiperRef.current?.activeIndex === questions.length && videoRef.current) {
+      videoRef.current.play();  
     }
-  };
+  }, [evaluation]);  
 
   return (
     <div className={styles.landing_test_page}>
       <Swiper
         direction="vertical"
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
         className={styles.swiper}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
-        onSlideChange={handleSlideChange}  // Detecta cambios de slide
       >
         {questions.map((item: Question, index: number) => (
           <SwiperSlide key={index} className={styles.swiper_slide}>
@@ -123,7 +112,7 @@ export default function LandingTest() {
                           src='/videos/landing_test.mp4'
                           id='video_congrats'
                           controls
-                          ref={videoRef}  // Asigna la referencia al video
+                          ref={videoRef}  
                         ></video>
                       </div>
                       <a href="https://chat.whatsapp.com/ECZXJH3jUrTE8QG97z7VND" className={styles.wp_button}>
