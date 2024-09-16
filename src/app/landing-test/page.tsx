@@ -18,6 +18,7 @@ export default function LandingTest() {
   const [responses, setResponses] = useState<string[]>([]);
   const [evaluation, setEvaluation] = useState<Evaluation | null>(null);
   const swiperRef = useRef<SwiperClass | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);  // Referencia al video
 
   const handleAnswerSelection = (index: number, answer: string): void => {
     const newResponses: string[] = [...responses];
@@ -35,18 +36,48 @@ export default function LandingTest() {
   const evaluateResponses = (responses: string[]): void => {
     let score = 0;
 
+    const answerScores: { [key: string]: number } = {
+      'a)': 2, 
+      'b)': 3, 
+      'c)': 1, 
+      'd)': 0, 
+    };
+
     responses.forEach((response: string) => {
-      if (response.includes('a')) score += 1;
-      if (response.includes('b')) score += 2;
-      if (response.includes('c')) score += 1;
+      const option = response.charAt(0); 
+      if (answerScores[`${option})`]) {
+        score += answerScores[`${option})`];
+      }
     });
 
-    const isQualified: boolean = score >= 15;
-
+    const totalPossibleScore = responses.length * 3;  
+    const threshold = Math.ceil(totalPossibleScore * 0.4);  
+    const isQualified: boolean = score >= threshold;
+  
     setEvaluation({
       score,
       isQualified,
     });
+  };
+
+  const resetTest = (): void => {
+    setResponses([]);
+    setEvaluation(null);
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(0);  
+    }
+  };
+
+  const handleSlideChange = (): void => {
+    if (swiperRef.current) {
+      const currentSlide = swiperRef.current.activeIndex;
+      const lastSlideIndex = questions.length;
+
+      // Si el usuario llega al último slide y está calificado, se reproduce el video
+      if (currentSlide === lastSlideIndex && evaluation?.isQualified && videoRef.current) {
+        videoRef.current.play();  // Reproduce el video automáticamente
+      }
+    }
   };
 
   return (
@@ -59,6 +90,7 @@ export default function LandingTest() {
         modules={[Pagination]}
         className={styles.swiper}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
+        onSlideChange={handleSlideChange}  // Detecta cambios de slide
       >
         {questions.map((item: Question, index: number) => (
           <SwiperSlide key={index} className={styles.swiper_slide}>
@@ -80,34 +112,26 @@ export default function LandingTest() {
         ))}
         <SwiperSlide className={styles.swiper_slide}>
           <div className={styles.results_container}>
-            <h3 className={styles.results_title}>Resultados</h3>
             {evaluation && (
               <div className={styles.evaluation_container}>
                 <div className={styles.evaluation_summary}>
-                  <h4 className={styles.evaluation_title}>Evaluación</h4>
-                  <p className={styles.evaluation_score}>Preguntas totales: {questions.length}</p>
-                  <p className={styles.evaluation_score}>Puntuación Total: {evaluation.score}</p>
-                  <p className={styles.evaluation_message}>
-                    {evaluation.isQualified
-                      ? '¡Felicidades! Eres un buen candidato para esta oportunidad.'
-                      : 'Gracias por tu tiempo. Parece que esta oportunidad podría no ser la mejor para ti.'}
-                  </p>
-                </div>
-                <br />
-                <br />
-                <div className={styles.evaluation_logic}>
-                  <h4 className={styles.logic_title}>Lógica de Evaluación:</h4>
-                  <p className={styles.logic_points}><strong>Puntuación por Respuesta:</strong></p>
-                  <ul className={styles.logic_list}>
-                    <li>Respuestas que contienen <strong>a</strong>: 1 punto.</li>
-                    <li>Respuestas que contienen <strong>b</strong>: 2 puntos.</li>
-                    <li>Respuestas que contienen <strong>c</strong>: 1 punto.</li>
-                  </ul>
-                  <p className={styles.logic_threshold}><strong>Umbral:</strong></p>
-                  <ul className={styles.logic_list}>
-                    <li>Si la puntuación total es 15 o más, el usuario pasa el test.</li>
-                    <li>Si la puntuación es menos de 15, el usuario no pasa el test.</li>
-                  </ul>
+                  {evaluation.isQualified ? 
+                    <div className={styles.evaluation_success}>
+                      <h1> ¡Enhorabuena! Eres un buen candidato para esta gran oportunidad.</h1>
+                      <div className={styles.video_congrats_container}>
+                        <video
+                          src='/videos/landing_test.mp4'
+                          id='video_congrats'
+                          controls
+                          ref={videoRef}  // Asigna la referencia al video
+                        ></video>
+                      </div>
+                      <a href="https://chat.whatsapp.com/ECZXJH3jUrTE8QG97z7VND" className={styles.wp_button}>
+                        Ir a WhatsApp
+                      </a>
+                    </div>
+                    : 'Gracias por tu tiempo. Parece que esta oportunidad podría no ser la mejor para ti.'
+                  }
                 </div>
               </div>
             )}

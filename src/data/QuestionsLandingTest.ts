@@ -13,7 +13,7 @@ export const questions: Question[] = [
       "d) Explorar nuevas industrias y mercados.",
     ],
   },
-    {
+  {
     question: "¿Cuál es tu experiencia previa en emprendimiento?",
     answers: [
       "a) He iniciado mi propio negocio o proyecto en el pasado.",
@@ -41,17 +41,7 @@ export const questions: Question[] = [
     ],
   },
   {
-    question: "¿Qué opinas sobre las farmacéuticas?",
-    answers: [
-      "a) Tienen demasiado poder y, a veces, actúan en contra del interés público.",
-      "b) Entiendo su importancia, pero prefiero apoyar empresas más pequeñas e innovadoras.",
-      "c) No tengo una opinión formada al respecto.",
-      "d) Confío en que están haciendo lo mejor para el bienestar general.",
-    ],
-  },
-  
-  {
-    question: "¿Cuál de las siguientes afirmaciones describe mejor tu actitud hacia el éxito financiero?",
+    question: "¿Cuál de las siguientes afirmaciones describe mejor tu actitud hacia el éxito personal - financiero?",
     answers: [
       "a) El éxito financiero es posible si uno se arriesga y trabaja duro.",
       "b) Prefiero tener un equilibrio entre estabilidad y oportunidades de crecimiento.",
@@ -68,12 +58,74 @@ export const questions: Question[] = [
       "d) No estoy seguro; necesito más información antes de decidir.",
     ],
   },
- 
+  {
+    question: "¿Estás llevando el estilo de vida que deseas?",
+    answers: [
+      "a) Sí",
+      "b) No",
+      "c) Estoy en camino",
+      "d) Prefiero no responder",
+    ],
+  },
+  {
+    question: "¿Qué te hace falta ahora mismo para lograr tu estilo de vida deseado?",
+    answers: [
+      "a) Más tiempo",
+      "b) Más dinero",
+      "c) No lo sé",
+      "d) Otro factor",
+    ],
+  },
+  {
+    question: "¿Te gustaría tener una o más fuentes de ingresos adicionales?",
+    answers: [
+      "a) Sí",
+      "b) No",
+      "c) Me gustaría saber más",
+      "d) No estoy seguro",
+    ],
+  },
+  {
+    question: "¿Te gustaría aprender nuevas habilidades para lograr el éxito?",
+    answers: [
+      "a) Sí",
+      "b) No",
+      "c) Me gustaría saber más",
+      "d) Estoy en proceso",
+    ],
+  },
+  {
+    question: "¿Estás dispuesto a dedicar tiempo extra para alcanzar tus metas financieras?",
+    answers: [
+      "a) Sí",
+      "b) No",
+      "c) Me gustaría saber más",
+      "d) Depende de la situación",
+    ],
+  },
+  {
+    question: "¿Te sientes motivado para generar ingresos ilimitados?",
+    answers: [
+      "a) Sí",
+      "b) No",
+      "c) Me gustaría saber más",
+      "d) No estoy seguro",
+    ],
+  },
+  {
+    question: "¿Te interesa crear un proyecto propio y verlo crecer?",
+    answers: [
+      "a) Sí",
+      "b) No",
+      "c) Me gustaría saber más",
+      "d) No tengo tiempo",
+    ],
+  },
 ];
 
 export const questions_ = [
   {
-    question: "¿Estás llevando el estilo de vida que deseas?",
+    question: "¿Estás llevando el estilo de vida que deseas?", 
     answers: [
       "a) Sí",
       "b) No",

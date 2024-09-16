@@ -66,12 +66,51 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
+  .evaluation_success{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & h1{
+      font-size: 2rem;
+    }
+  }
+
+  .video_congrats_container{
+    width: 70%; 
+
+    & video{
+      width: 100%;
+    }
+  }
+
+  .wp_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background-color: #25d366;
+    color: #fff;
+    font-weight: 700;
+    gap: 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(44, 44, 44, 0.5);
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s ease;
+    border:  none;
+    font-size: clamp(1px, 7.5vw, 2rem);
+    cursor: pointer;    
+    width: 70%;
+    flex: 1;
+}
+
   @media screen and (max-width: 768px){
 
     .question_container{
-        justify-content: flex-start;
-        padding-top: 1rem;
-        width: 100%;
+      width: 100%;
     }
 
     .question{
@@ -80,6 +119,20 @@
     .answer{
       width: 80%;
       font-size: 1rem;
+    }
+
+    .video_congrats_container{
+      width: 100%; 
+    }
+
+    .evaluation_success{
+      & h1{
+        font-size: 1.5rem;
+      }
+    }
+
+    .wp_button{
+      width: 100%;
     }
     
   }
