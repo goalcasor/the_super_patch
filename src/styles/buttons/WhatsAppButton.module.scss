@@ -13,3 +13,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
+
+@media screen and (max-width: 768px){
+    .wp_button{
+        font-size: 2rem;
+        padding: .3rem;
+    }
+}

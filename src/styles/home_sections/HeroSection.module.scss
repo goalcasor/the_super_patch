@@ -5,6 +5,8 @@
     justify-content: space-around;
     align-items: center;
     background-color: #000;
+    background-image: url('/images/landing-navidad/banner-principal.png');
+    background-size: cover;
 
     .hero_image{
         width: 50%;
@@ -20,34 +22,35 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: start;
+       
         color: white;
             
         .text_content{
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
+            align-items: start;
+            text-align: left;
             gap: 1rem;
+            padding: 1rem 3rem;
+            width: 50%;
 
             .button_container{
                 width: fit-content;
                 display: flex;
-                padding: .2rem 2rem;
             }
         }
 
 
         & h1{
             color: #fff ;
-            font-size: clamp(48px, 4rem, 96px);
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
             
             & span{
                 background-image: linear-gradient(75deg, red,#010bc4,#01c4b9 );
                 background-clip: text;
+                font-size: 2.7rem;
             -webkit-background-clip: text;
             -moz-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -67,8 +70,9 @@
 @media screen and (max-width: 768px){
     .hero_section{
         flex-direction: column;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
+        background-image: url('/images/landing-navidad/banner-mobile.png');
 
         .hero_image{
             width: 100%;
@@ -78,12 +82,13 @@
         }
 
         .hero_section_content{
-            width: 80%;
+            width: 100%;
             text-align: center;
 
             .text_content{
                 width: 100%;
                 gap: 1rem;
+                padding: 1rem;
 
                 .button_container{
                     width: 100%;
@@ -92,11 +97,15 @@
             }
 
             h1{
-                font-size: clamp(36px, 4.5vw, 72px);
+                font-size: 1.5rem;
+
+                & span{
+                    font-size: 1.8rem;
+                }
             }
 
             p{
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
         }
     }

@@ -24,10 +24,10 @@ function HeroSection() {
       </div> */}
       <div className={`${styles.hero_section_content}`}>
         <div className={styles.text_content}>
-          <h1>Regala Salud y Bienestar: <br/> Descubre los Packs Más Exclusivos para <br/><span> Navidad con 25% de Descuento. </span> </h1>
+          <h1>Regala Salud y Bienestar: <br/> Descubre los Packs Más Exclusivos para <br/><span> Navidad con 25% de Descuento</span> </h1>
           <p>El regalo perfecto que transformará vidas. Elige tu Pack diseñado para lograr más energía, más movilidad, más equilibrio y más belleza.</p>
           <div className={styles.button_container}>
-            <PrimaryButton text="Cómo Funciona" onClick={navigateToVideoSection} />
+            <PrimaryButton text="COMPRAR AHORA" onClick={navigateToVideoSection} />
           </div>
         </div>
       </div>

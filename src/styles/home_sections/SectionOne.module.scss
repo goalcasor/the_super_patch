@@ -1,20 +1,36 @@
 .section_one{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/images/super_patchs_01.jpg');
-    background-size: 70%;
-    background-position-x: center;
-    background-position-y: 100%;
-    background-repeat: no-repeat;
+}
+
+.cards_container{
+    display: flex;
+    gap: 3rem;
+}
+
+.card{
+    width: 320px;
+    height: 450px;
+}
+
+.card_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+    text-align: center;
 }
 
 
 @media screen and (max-width: 768px){
     .section_one{
-        height: 40vh;
-        background-size: 120%;
+        padding: 3rem 0;
+    }
+
+    .cards_container{
+        flex-direction: column;
     }
 }

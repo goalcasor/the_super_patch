@@ -1,6 +1,6 @@
 .primary_button{
-    background-color: #000;
-    color: white;
+    background-color: #f36b20;
+    color: #fff;
     border: none;
     padding: 10px 30px;
     border-radius: 40px;
@@ -13,6 +13,11 @@
     &:hover{
         background-color: #fff;
         color: #000;
-        border: 1px solid #000;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .primary_button{
+        font-size: 1.2rem;
     }
 }
