@@ -10,7 +10,6 @@ export default function Home() {
         <HeroSection />
         <SectionOne />
         <PacksPromo />
-        <VideoSection />
         <PatchsSection />
         <Faqs />  
     </main>

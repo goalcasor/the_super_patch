@@ -1,7 +1,7 @@
 export const PacksData = [
     {
         id: 1,
-        title: "Ignite + Victory",
+        title: "Victory + Ignite",
         description: "Energía y metabolismo para mantener la figura",
         image: "/images/landing-navidad/pack1.png"
     },
