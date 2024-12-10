@@ -2,16 +2,34 @@
     height: 120vh;
     background-size: cover;
     background-position: center;
+    display:flex;
+    align-items: end;
+    padding: 1rem;
+    & p{
+        color: #2b2a2a;
+        font-size: 1.2rem;
+        font-style: italic;
+        width: 100%;
+    }
 }
 
 .pack_one{
     background-image: url('/images/landing-navidad/banner-victory-escritorio.png');
+    & p{
+        text-align: end;
+    }
 }
 .pack_two{
     background-image: url('/images/landing-navidad/banner-lumi-escritorio.png');
+    & p{
+        text-align: start;
+    }
 }
 .pack_three{
     background-image: url('/images/landing-navidad/banner-freedom-escritorio.png');
+    & p{
+        text-align: center;
+    }
 }
 
 .pack_section_content{
@@ -64,6 +82,12 @@
 @media screen and (max-width: 768px){
     .pack_section{
         height: 70vh;
+        & p{
+            color: #fff;
+            font-size: .9rem;
+            text-align: end;
+            width: 100%;
+        }
     }
 
     .pack_one{

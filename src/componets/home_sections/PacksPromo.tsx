@@ -1,7 +1,7 @@
 'use client'
-
 import styles from '@/styles/home_sections/PacksPromo.module.scss'
 import PrimaryButton from '../buttons/PrimaryButton'
+
 function PacksPromo () {
     return(
         <section>
@@ -14,13 +14,14 @@ function PacksPromo () {
 
 export default PacksPromo
 
-
 function PackOne () {
     return(
        <section>
             <div
                 className={`${styles.pack_section} ${styles.pack_one}`}
-            />
+            >
+                <p>Regala energía y salud, la combinación perfecta para cuidarte sin renunciar a los placeres navideños</p>
+            </div>
             <div className={styles.pack_section_content}>
                 <div className={styles.pack_section_text}>
                    <h1>Pack Victory + Ignite</h1>    
@@ -49,7 +50,9 @@ function PackTwo () {
        <section>
             <div
                 className={`${styles.pack_section} ${styles.pack_two}`}
-            />
+            >
+                <p>Este pack es super impactante haz que quienes amas brillen desde adentro hacia afuera estas fiestas</p>
+            </div>
             <div className={styles.pack_section_content}>
                 <div className={styles.pack_section_text}>
                    <h1>Pack Joy + Lumi</h1>    
@@ -78,7 +81,9 @@ function PackThree () {
        <section>
             <div
                 className={`${styles.pack_section} ${styles.pack_three}`}
-            />
+            >
+                <p>Ahora es el momento de devolver a tus seres queridos la libertad de moverse y disfrutar sin limitaciones</p>
+            </div>
             <div className={styles.pack_section_content}>
                 <div className={styles.pack_section_text}>
                    <h1>Pack Liberty + Freedom</h1>    

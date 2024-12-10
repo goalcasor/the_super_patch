@@ -7,10 +7,17 @@
 }
 
 .patchs_section_text{
-    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
     text-align: center;
+    padding: 1rem;
+    & h2{
+      font-size: 2.5rem;
+    }
+
+    & p{
+      font-size: 1.5rem;
+    }
 }
 
 .swiper_container{
@@ -72,6 +79,17 @@
 
 
   @media screen and (max-width: 768px){
+
+      .patchs_section_text{
+        text-align: left;
+        & h2{
+          font-size: 1.5rem;
+        }
+    
+        & p{
+          font-size: .8rem;
+        }
+      }
       .swiper_container{
           width: 90vw;
       }
