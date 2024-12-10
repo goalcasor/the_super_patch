@@ -1,4 +1,4 @@
-import { db } from "../config";
+/* import { db } from "../config";
 import { collection, addDoc } from "firebase/firestore";
 import { Product } from "@/types/ProductType";
 
@@ -9,4 +9,4 @@ export default async function addProduct(product: Product) {
     } catch (e) {
         console.error("Error adding document: ", e);
     }
-}
+} */

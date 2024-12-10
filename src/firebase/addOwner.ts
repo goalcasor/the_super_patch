@@ -1,6 +1,6 @@
 
 
-
+/* 
 import { db } from "../config";
 import { collection, addDoc  } from "firebase/firestore";
 import { Owner } from "@/types/OwnerType";
@@ -12,4 +12,4 @@ export default async function addOwner(owner: Owner) {
      } catch (e) {
          console.error("Error adding document: ", e);
      }
-}
+} */

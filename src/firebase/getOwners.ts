@@ -1,4 +1,4 @@
-
+/* 
 
 import { db } from "../config";
 import { collection, query, getDocs } from "firebase/firestore";
@@ -17,4 +17,4 @@ export default async function getOwners() {
         console.log("Error getting documents: ", error);
     }
     return owners;
-}
+} */
