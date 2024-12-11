@@ -35,7 +35,7 @@ function PackOne () {
                    </ul>
                    <div className={styles.button_container}>
                     <PrimaryButton 
-                        text='Comprar ahora'
+                        text='Quisiera un poco más información'
                         onClick={() => alert('hello tienda')}
                     />
                    </div>
@@ -66,7 +66,7 @@ function PackTwo () {
                    </ul>
                    <div className={styles.button_container}>
                     <PrimaryButton 
-                        text='Comprar ahora'
+                        text='¿De qué se trata esto?'
                         onClick={() => alert('hello tienda')}
                     />
                    </div>
@@ -97,7 +97,7 @@ function PackThree () {
                    </ul>
                    <div className={styles.button_container}>
                     <PrimaryButton 
-                        text='Comprar ahora'
+                        text='Comprar ahora!'
                         onClick={() => alert('hello tienda')}
                     />
                    </div>

@@ -11,6 +11,7 @@ export default function Home() {
         <SectionOne />
         <PacksPromo />
         <PatchsSection />
+        <SectionOne />
         <Faqs />  
     </main>
   );
