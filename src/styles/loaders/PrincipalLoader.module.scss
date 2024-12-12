@@ -16,32 +16,28 @@
 
 /* HTML: <div class="loader"></div> */
 .loader {
-    width: 100px;
+    width: 200px;
     aspect-ratio: 1;
-    border-radius: 50%;
-    margin-top: -30px;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    transform-origin: 50% 116.5%;
-    animation: l17 2s infinite linear; 
-  }
-  .loader:before {
-    content:"";
-    min-width: 233%;
-    height: 233%;
-    background: 
-      radial-gradient(farthest-side,#00DA3C 90%,#0000) top,
-      radial-gradient(farthest-side,#00CBE7 90%,#0000) left,
-      radial-gradient(farthest-side,#FD8603 90%,#0000) bottom,
-      radial-gradient(farthest-side,#F4F328 90%,#0000) right;
-    background-size: 43% 43%;
+    background:
+      linear-gradient( 45deg,#00AAFF 50%,#0000 0),
+      linear-gradient(-45deg,#F1BBBB 50%,#0000 0),
+      linear-gradient( 45deg,#0000 50%,#AA00FF 0),
+      linear-gradient(-45deg,#0000 50%,#FF00AA 0),
+      #00AAFF;
+    background-size: 200% 200%;
     background-repeat: no-repeat;
-    animation: inherit;
-    animation-direction: reverse;
+    animation: l3 2.5s infinite; 
   }
-  @keyframes l17 {
-    100% {transform: rotate(360deg)}
+  @keyframes l3 {
+    0%   {background-position:100% 0,0    0   ,0 100%,100% 100%}
+    15%,
+    25%  {background-position:100% 0,0    0   ,0 100%,0    0   }
+    40%,
+    50%  {background-position:100% 0,0    0   ,100% 0,0    0   }
+    65%,
+    75%  {background-position:100% 0,100% 100%,100% 0,0    0   }
+    90%,
+    100% {background-position:0 100%,100% 100%,100% 0,0    0   }
   }
   
 @media screen and (max-width: 768px){
