@@ -13,23 +13,31 @@ import FormSection from "@/componets/home_sections/FormSection";
 import TestimonySection from "@/componets/home_sections/TestimonySection";
 
 export default function Home() {
+  const { owners, selectedOwner, loading, ownersValid, selectedOwnerValid } = useOwner();
 
-  const { owners, selectedOwner } = useOwner();
-  if (owners === null || selectedOwner === null || selectedOwner === undefined){
-    return (<><p>Un momento...</p></>)
+  
+  if (loading) {
+    return <>Un momento...</>;
   }
+
+ 
+  if (!ownersValid || !selectedOwnerValid) {
+    return <p>No hay propietarios disponibles en este momento. Intenta más tarde.</p>;
+  }
+
   console.log(owners, selectedOwner)
+
   return (
-    <main >
-        <HeroSection />
-        <SectionOne />
-        <PacksPromo />
-        <PatchsSection />
-        <BeneficiosSection />
-        <SectionOne />
-        <FormSection />
-        <TestimonySection />
-        <Faqs />  
+    <main>
+      <HeroSection />
+      <SectionOne />
+      <PacksPromo />
+      <PatchsSection />
+      <BeneficiosSection />
+      <SectionOne />
+      <FormSection />
+      <TestimonySection />
+      <Faqs />
     </main>
   );
 }
