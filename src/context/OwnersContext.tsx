@@ -49,13 +49,13 @@ useEffect(() => {
     if(!owners) return;
     const ownerIDFromCokkies = Cookies.get('ownerID');
     if (ownerIDFromCokkies) {
-      const owner = owners.find(owner => owner.id === ownerIDFromCokkies);
+      const owner = owners.find(owner => owner?.id === ownerIDFromCokkies);
       setSelectedOwner(owner);
     } else {
       const owner = selectOwner(owners);
       updateOwnerLeads(owner?.id, owner?.leads);
       setSelectedOwner(owner);
-      Cookies.set('ownerID', owner.id);
+      Cookies.set('ownerID', owner?.id);
     }
 }, [owners, updateOwnerLeads]); 
 
