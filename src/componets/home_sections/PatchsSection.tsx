@@ -2,6 +2,9 @@
 import React, {useState} from 'react';
 import { useRouter } from 'next/navigation'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useOwner } from "@/context/OwnersContext";
+import { PatchsData } from '@/data/PatchsData';
+
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -9,13 +12,15 @@ import 'swiper/css/pagination';
 
 import styles from '@/styles/home_sections/PatchsSection.module.scss';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
-import { PatchsData, IPatch } from '@/data/PatchsData';
+import { IPatch } from '@/data/PatchsData';
 import PatchModal from '@/componets/modals/PatchModal';
 import PrimaryButton from '../buttons/PrimaryButton';
 
 export default function PatchsSection() {
 
     const router = useRouter();
+    const { selectedOwner } = useOwner();
+    const patchsData = PatchsData(selectedOwner);
     const [isOpen, setIsOpen] = useState(false);
     const [selectedPatch, setSelectedPatch] = useState<IPatch>({ id: 0, title: '', description: '', image: '', url: ''});
 
@@ -53,7 +58,7 @@ export default function PatchsSection() {
                 className={styles.swiper}
             >
             
-                {PatchsData.map((patch) => (
+                {patchsData.map((patch) => (
                     <SwiperSlide key={patch.id} className={styles.swiper_slide} onClick={() => handleOpenModal(patch)}>
                         <div className={styles.swiper_slide_image}>
                             <img src={patch.image} alt={patch.title} />
@@ -82,7 +87,7 @@ export default function PatchsSection() {
         <div className={styles.buy_all_button}>
             <PrimaryButton 
                 text='Ir a la tienda y ver todas las ofertas'
-                onClick={() => router.push('https://shop.superpatch.com/#/shop/from/111208386')}
+                onClick={() => router.push(`https://shop.superpatch.com/#/shop/from/${selectedOwner.shopId}`)}
             />
         </div>
     </div>

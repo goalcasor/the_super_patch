@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import '@/styles/globals.scss';
 import WhatsAppButton from "@/componets/buttons/WhatsAppButton";
 import Footer from "@/componets/footers/Footer";
-
+import { OwnersProvider } from "@/context/OwnersContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -65,11 +65,14 @@ export default function RootLayout({
           }(window, document, 'ttq');
         `}
       </Script>
-      <body className={inter.className}>
-        {children}
-        <Footer />
-        <WhatsAppButton />
-      </body>
+      <OwnersProvider >
+        <body className={inter.className}>
+          {children}
+          <Footer />
+          <WhatsAppButton />
+        </body>
+      </OwnersProvider>
+
     </html>
   );
 }

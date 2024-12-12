@@ -1,19 +1,24 @@
 'use client'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { useOwner } from "@/context/OwnersContext";
 import styles from '@/styles/home_sections/SectionOne.module.scss'
 import { PacksData }  from '@/data/PacksData'
 import PrimaryButton from '../buttons/PrimaryButton'
 function SectionOne() {
 
+    const { selectedOwner } = useOwner();
+    const router = useRouter();
     const goToShopping = () =>{
        alert('Hola Tienda')
     }
 
+  const packsData = PacksData(selectedOwner);
 
   return (
     <div className={styles.section_one}>
         <div className={styles.cards_container}>
-          {PacksData.map((item) => {
+          {packsData.map((item) => {
             return(
               <div key={item.id} className={styles.card}>
                   <Image
@@ -30,7 +35,7 @@ function SectionOne() {
                     <div>
                       <PrimaryButton 
                           text='Comprar'
-                          onClick={goToShopping}
+                          onClick={() => router.push(item.url)}
                       />
                     </div>
                   </div>

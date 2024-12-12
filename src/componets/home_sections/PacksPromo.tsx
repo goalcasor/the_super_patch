@@ -1,20 +1,30 @@
 'use client'
 import styles from '@/styles/home_sections/PacksPromo.module.scss'
 import PrimaryButton from '../buttons/PrimaryButton'
+import { useOwner } from '@/context/OwnersContext'
+import { PacksData } from '@/data/PacksData';
+import { useRouter } from 'next/navigation'
+
 
 function PacksPromo () {
+
+    const { selectedOwner } = useOwner();
+    const router = useRouter()
+    const packsData = PacksData(selectedOwner);
+
     return(
         <section>
-            <PackOne />
-            <PackTwo />
-            <PackThree />
+            <PackOne url={packsData[0].url} router={router}/>
+            <PackTwo url={packsData[2].url} router={router}/>
+            <PackThree url={packsData[1].url} router={router}/>
         </section>
     )
 }
 
 export default PacksPromo
 
-function PackOne () {
+function PackOne ({url, router}) {
+
     return(
        <section>
             <div
@@ -36,7 +46,7 @@ function PackOne () {
                    <div className={styles.button_container}>
                     <PrimaryButton 
                         text='Quisiera un poco más información'
-                        onClick={() => alert('hello tienda')}
+                        onClick={() => router.push(url)}
                     />
                    </div>
                    
@@ -45,7 +55,10 @@ function PackOne () {
        </section>
     )
 }
-function PackTwo () {
+
+
+function PackTwo ({url, router}) {
+    
     return(
        <section>
             <div
@@ -67,7 +80,7 @@ function PackTwo () {
                    <div className={styles.button_container}>
                     <PrimaryButton 
                         text='¿De qué se trata esto?'
-                        onClick={() => alert('hello tienda')}
+                        onClick={() => router.push(url)}
                     />
                    </div>
                    
@@ -76,7 +89,8 @@ function PackTwo () {
        </section>
     )
 }
-function PackThree () {
+function PackThree ({url, router}) {
+
     return(
        <section>
             <div
@@ -98,7 +112,7 @@ function PackThree () {
                    <div className={styles.button_container}>
                     <PrimaryButton 
                         text='Comprar ahora!'
-                        onClick={() => alert('hello tienda')}
+                        onClick={() => router.push(url)}
                     />
                    </div>
                    

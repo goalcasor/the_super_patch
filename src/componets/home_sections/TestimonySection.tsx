@@ -8,10 +8,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import VideoModal from '@/componets/modals/Videomodal';
+import isMobile from 'is-mobile';
 
 export default function TestimonySection() {
 
-    const [isMobile, setIsMobile] = useState(false);
+    const [_isMobile, setIsMobile] = useState(false);
     const [showModal, setShowModal] = useState(false)
     const [testimonyVideo, setTestimonyVideo] = useState('')
     const progressCircle = useRef<SVGSVGElement | null>(null);
@@ -24,16 +25,10 @@ export default function TestimonySection() {
         }
     };
 
-    const isMobileDevice = () => {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      };
-
     useEffect(() => {
-        setIsMobile(isMobileDevice());
+        setIsMobile(isMobile());
     }, []);
 
-
-    console.log(isMobile)
 
     return (
         <section className={styles.testimony_section} id='contact'>
@@ -44,7 +39,7 @@ export default function TestimonySection() {
                 </div>
                 <div className={styles.testimonials_container}>
                     <Swiper
-                        slidesPerView={isMobile ? 2.3 : 6 }
+                        slidesPerView={_isMobile ? 2.3 : 6 }
                         spaceBetween={30}
                         modules={[Autoplay, Pagination, Navigation]}
                         onAutoplayTimeLeft={onAutoplayTimeLeft}
