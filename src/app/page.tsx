@@ -11,14 +11,15 @@ import PacksPromo from "@/componets/home_sections/PacksPromo";
 import BeneficiosSection from '@/componets/home_sections/BeneficiosSection';
 import FormSection from "@/componets/home_sections/FormSection";
 import TestimonySection from "@/componets/home_sections/TestimonySection";
+import PrincipalLoader from "@/componets/loaders/PrincipalLoader";
 
 export default function Home() {
   const { owners, selectedOwner, loading, ownersValid, selectedOwnerValid } = useOwner();
   if (loading) {
-    return <>Un momento...</>;
+    return <PrincipalLoader/>;
   }
   if (!ownersValid || !selectedOwnerValid) {
-    return <p>No hay propietarios disponibles en este momento. Intenta más tarde.</p>;
+    return <PrincipalLoader/>;
   }
   return (
     <main>
