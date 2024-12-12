@@ -1,4 +1,4 @@
-/* 'use client';
+'use client';
 import React, { createContext, useState, useEffect, useContext, useCallback } from 'react';
 import { db } from "@/firebase/config";
 import { collection, query, onSnapshot, where } from "firebase/firestore";
@@ -54,4 +54,3 @@ const useProducts = () => {
 }
 
 export { useProducts };
- */

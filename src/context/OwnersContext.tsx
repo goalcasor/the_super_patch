@@ -1,4 +1,4 @@
-/* 'use client';
+'use client';
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { db } from "@/firebase/config";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
@@ -73,4 +73,4 @@ useEffect(() => {
 
 const useOwner = () => useContext(OwnersContext);
 
-export { useOwner }; */
+export { useOwner };

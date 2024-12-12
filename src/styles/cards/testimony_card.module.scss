@@ -1,0 +1,10 @@
+.testimony_card{
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+    & video{
+        height: 350px;
+        border-radius: 7px;
+        width: 150px;
+    }
+}

@@ -1,0 +1,107 @@
+.beneficios_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+    background-image: url('/images/how-it-works-superptach.jpg');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+
+.content{
+    flex: 1;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.text{
+    & h1{
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        background-image: linear-gradient(75deg, red,#010bc4,#01c4b9 );
+        background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    }
+
+    & ul{
+        padding-left: 2rem;
+       
+    }
+
+    & li{
+        font-size: 1.2rem;
+
+        & span{
+            font-weight: 700;
+        }
+    }
+}
+.download_btn{
+    width: fit-content;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px){
+    .beneficios_section{
+        height: 70vh;
+        background-position: bottom;
+        align-items: flex-start;
+        padding-top: 4rem;
+    }
+    .container{
+        width: 100vw;
+        padding: 1rem;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+    }
+    
+    .content{
+        width: 100%;
+    }
+
+    .text{
+        & h1{
+            font-size: 1.5rem;
+        }
+    
+        & ul{
+            padding-left: 1rem;
+        }
+    
+        & li{
+            font-size: 1rem;
+    
+            & span{
+                font-weight: 700;
+            }
+        }
+    }
+
+    .download_btn{
+        width: 100%;
+    }
+}
