@@ -14,19 +14,12 @@ import TestimonySection from "@/componets/home_sections/TestimonySection";
 
 export default function Home() {
   const { owners, selectedOwner, loading, ownersValid, selectedOwnerValid } = useOwner();
-
-  
   if (loading) {
     return <>Un momento...</>;
   }
-
- 
   if (!ownersValid || !selectedOwnerValid) {
     return <p>No hay propietarios disponibles en este momento. Intenta más tarde.</p>;
   }
-
-  console.log(owners, selectedOwner)
-
   return (
     <main>
       <HeroSection />
