@@ -15,7 +15,9 @@ import TestimonySection from "@/componets/home_sections/TestimonySection";
 export default function Home() {
 
   const { owners, selectedOwner } = useOwner();
-  if (owners === null ||  !selectedOwner) return
+  if (owners === null){
+    return (<><p>Un momento...</p></>)
+  }
   console.log(owners, selectedOwner)
   return (
     <main >
