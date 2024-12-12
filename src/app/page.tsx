@@ -1,3 +1,7 @@
+'use client'
+
+import { useOwner } from "@/context/OwnersContext";
+
 import HeroSection from "@/componets/home_sections/HeroSection";
 import SectionOne from "@/componets/home_sections/SectionOne";
 import VideoSection from "@/componets/home_sections/VideoSection";
@@ -9,6 +13,10 @@ import FormSection from "@/componets/home_sections/FormSection";
 import TestimonySection from "@/componets/home_sections/TestimonySection";
 
 export default function Home() {
+
+  const { owners, selectedOwner } = useOwner();
+  if (owners === null ||  !selectedOwner) return
+  console.log(owners, selectedOwner)
   return (
     <main >
         <HeroSection />

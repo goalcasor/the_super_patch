@@ -45,7 +45,7 @@ function PackOne ({url, router}) {
                    </ul>
                    <div className={styles.button_container}>
                     <PrimaryButton 
-                        text='Quisiera un poco más información'
+                        text='Obtén más información'
                         onClick={() => router.push(url)}
                     />
                    </div>
@@ -79,7 +79,7 @@ function PackTwo ({url, router}) {
                    </ul>
                    <div className={styles.button_container}>
                     <PrimaryButton 
-                        text='¿De qué se trata esto?'
+                        text='Descubre más'
                         onClick={() => router.push(url)}
                     />
                    </div>
@@ -111,7 +111,7 @@ function PackThree ({url, router}) {
                    </ul>
                    <div className={styles.button_container}>
                     <PrimaryButton 
-                        text='Comprar ahora!'
+                        text='Comprar ahora'
                         onClick={() => router.push(url)}
                     />
                    </div>

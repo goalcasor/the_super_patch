@@ -12,7 +12,7 @@ export const OwnersProvider = ({ children }) => {
   const [owners, setOwners] = useState<Owner[]>(null);
   const [selectedOwner, setSelectedOwner] = useState<Owner>(null);
 
-  console.log(owners?.length)
+  console.log(selectedOwner)
 
   useEffect(() => {
     const q = query(collection(db, "owners"), orderBy("createdAt"));

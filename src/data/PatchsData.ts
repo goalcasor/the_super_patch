@@ -61,7 +61,7 @@ export function PatchsData(selectedOwner:Owner) {
             url: selectedOwner ? `https://shop.superpatch.com/#/shop/from/${selectedOwner.shopId}?categoryID=66` : "#"
         },
         {
-            id: 7,
+            id: 8,
             title: 'Joy',
             description: 'La esperanza y la felicidad son quizás dos de los aspectos más importantes del espíritu humano. ¡Nunca ha sido más fácil encontrar esa alegría y optimismo en nuestras vidas! ¡Joy Super Patch es una tecnología no invasiva y libre de drogas que puede mejorar el sentido de bienestar y felicidad a través de la estimulación vibrotáctil que permite a los usuarios sentirse naturalmente lo mejor posible!',
             image: '/images/patchs/joy.png',

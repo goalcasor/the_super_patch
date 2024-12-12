@@ -6,21 +6,21 @@ export function PacksData(selectedOwner: Owner){
         {
             id: 1,
             title: "Victory + Ignite",
-            description: "Energía y metabolismo para mantener la figura",
+            description: "Aumenta tu energía y acelera tu metabolismo para mantener la figura",
             image: "/images/landing-navidad/pack1.png",
             url: selectedOwner ? `https://shop.superpatch.com/#/shop/from/${selectedOwner.shopId}?categoryID=63` : "#"
         },
         {
             id: 2,
             title: "Liberty + Freedom",
-            description: " Movilidad y equilibrio para disfrutar sin límites",
+            description: "Mejora la movilidad y el equilibrio para disfrutar sin límites",
             image: "/images/landing-navidad/pack2.png",
             url: selectedOwner ? `https://shop.superpatch.com/#/shop/from/${selectedOwner.shopId}?categoryID=64` : "#"
         },
         {
             id: 3,
             title: "Joy + Lumi",
-            description: "Mejora del ánimo y cuidado de la piel",
+            description: " Eleva el ánimo y cuida la salud de tu piel",
             image: "/images/landing-navidad/pack3.png",
             url: selectedOwner ? `https://shop.superpatch.com/#/shop/from/${selectedOwner.shopId}?categoryID=76` : "#"
         },
