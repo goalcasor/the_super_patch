@@ -1,0 +1,91 @@
+/* Estilos móviles */
+.principal_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.678); 
+    backdrop-filter: blur(7px); 
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+}
+  
+.video_container {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.video {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    border-radius: 10px; 
+}
+
+.close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
+}
+
+/* Estilos para tablets */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .principal_video {
+    height: 100vh;
+    width: 100vw;
+    /* Ajustes adicionales para tablet */
+  }
+
+  .video_container {
+    width: 80%;
+    max-width: 600px; /* Mayor tamaño para tablets */
+  }
+
+  .video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .close {
+    font-size: 2.5rem; /* Tamaño ligeramente mayor para la close button */
+  }
+}
+
+/* Estilos para escritorios */
+@media (min-width: 1024px) {
+  .principal_video {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;  /* Centra el contenido */
+  }
+
+  .video_container {
+    width: 70%;
+    max-width: 800px; /* Máximo tamaño para escritorios */
+    max-height: 90vh;  /* Evita que el contenedor sea más alto que la pantalla */
+  }
+
+  .video {
+    width: 100%;
+    height:  90vh; /* La altura del video se ajusta al contenedor */
+    object-fit: contain;  /* El video se ajusta para no desbordarse */
+  }
+
+  .close {
+    font-size: 3rem;
+    top: 10;
+    right: 40px;
+  }
+}

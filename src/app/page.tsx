@@ -12,17 +12,27 @@ import BeneficiosSection from '@/componets/home_sections/BeneficiosSection';
 import FormSection from "@/componets/home_sections/FormSection";
 import TestimonySection from "@/componets/home_sections/TestimonySection";
 import PrincipalLoader from "@/componets/loaders/PrincipalLoader";
+import CookieBanner from "@/componets/cookies/CookieBanner";
+import PrincipalVideo from "@/componets/home_sections/PrincipalVideo";
+import { useState } from "react";
 
-export default function Home() {
+export default function Home({
+  searchParams
+}: {
+  searchParams: { [key: string]: string | string[] | undefined }
+}) {
   const { owners, selectedOwner, loading, ownersValid, selectedOwnerValid } = useOwner();
+  const [playPrincipalVideo, setPlayPrincipalVideo] = useState(false);
   if (loading) {
     return <PrincipalLoader/>;
   }
   if (!ownersValid || !selectedOwnerValid) {
     return <PrincipalLoader/>;
   }
+
+
   return (
-    <main>
+    <main> 
       <HeroSection />
       <SectionOne />
       <PacksPromo />
@@ -32,6 +42,16 @@ export default function Home() {
       <FormSection />
       <TestimonySection />
       <Faqs />
+
+      <PrincipalVideo 
+          playPrincipalVideo={playPrincipalVideo}
+      
+      />
+
+      <CookieBanner 
+        searchParams={searchParams}
+        setPlayPrincipalVideo={setPlayPrincipalVideo}
+      />
     </main>
   );
 }

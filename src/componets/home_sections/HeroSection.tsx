@@ -2,9 +2,15 @@
 
 import { motion } from 'framer-motion';
 import styles from '@/styles/home_sections/HeroSection.module.scss';
+import styless from '@/styles/home_sections/PrincipalVideo.module.scss'
 import PrimaryButton from '../buttons/PrimaryButton';
+import VideoModal from '../modals/Videomodal';
+import { useState } from 'react';
 
 function HeroSection() {
+
+  const [showModal, setShowModal] = useState(false)
+
   const navigateToVideoSection = () => {
     const section = document.getElementById('video_section');
     if (section) {
@@ -48,11 +54,22 @@ function HeroSection() {
               whileHover={{ scale: 1.1 }} // Aumenta un poco el tamaño cuando se pasa el cursor
               whileTap={{ scale: 0.95 }} // Reduce el tamaño al hacer clic
             >
-              <PrimaryButton text="COMPRAR AHORA" onClick={navigateToVideoSection} />
+              <PrimaryButton text="MÁS INFORMACIÓN" onClick={() => setShowModal(true)} />
             </motion.div>
           </div>
         </motion.div>
       </div>
+      {showModal && (
+        <VideoModal
+            setShowModal={setShowModal}
+        > 
+            <div className={styless.principal_video}>
+              <div className={styless.video_container} >
+                  <video className={styless.video} src='/videos/principal_video.mp4' controls autoPlay  controlsList="nodownload"/>
+              </div>
+            </div>
+        </VideoModal>
+        )}
     </div>
   );
 }
