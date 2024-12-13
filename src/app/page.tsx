@@ -1,6 +1,7 @@
 'use client'
 
 import { useOwner } from "@/context/OwnersContext";
+import Cookies from 'js-cookie';
 
 import HeroSection from "@/componets/home_sections/HeroSection";
 import SectionOne from "@/componets/home_sections/SectionOne";
@@ -21,14 +22,18 @@ export default function Home({
 }: {
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
-  const { owners, selectedOwner, loading, ownersValid, selectedOwnerValid } = useOwner();
-  const [playPrincipalVideo, setPlayPrincipalVideo] = useState(false);
+
+  const { loading, ownersValid, selectedOwnerValid } = useOwner();
+  const [isVisible, setIsVisible] = useState(false); 
+
   if (loading) {
     return <PrincipalLoader/>;
   }
   if (!ownersValid || !selectedOwnerValid) {
     return <PrincipalLoader/>;
   }
+
+  console.log(isVisible)
 
 
   return (
@@ -43,14 +48,15 @@ export default function Home({
       <TestimonySection />
       <Faqs />
 
-      <PrincipalVideo 
-          playPrincipalVideo={playPrincipalVideo}
+      {!isVisible && ( <PrincipalVideo 
+        
       
-      />
+      /> )}
 
       <CookieBanner 
         searchParams={searchParams}
-        setPlayPrincipalVideo={setPlayPrincipalVideo}
+        setIsVisible={setIsVisible}
+        isVisible={isVisible}
       />
     </main>
   );

@@ -6,15 +6,16 @@ interface PrincipalVideoProps {
   playPrincipalVideo: boolean; 
 }
 
-export default function PrincipalVideo({ playPrincipalVideo }: PrincipalVideoProps) {
-  const videoRef = useRef<HTMLVideoElement | null>(null); 
-    const [showVideo, setShowVideo] = useState(true)
+export default function PrincipalVideo() {
     
-    useEffect(() => {
+    const videoRef = useRef<HTMLVideoElement | null>(null); 
+    const [showVideo, setShowVideo] = useState(true)
+
+ /*    useEffect(() => {
         if (playPrincipalVideo && videoRef.current) {
         videoRef.current.play(); 
         }
-    }, [playPrincipalVideo]); 
+    }, [playPrincipalVideo]);  */
 
 
   if(!showVideo) return
@@ -23,11 +24,11 @@ export default function PrincipalVideo({ playPrincipalVideo }: PrincipalVideoPro
     <section className={styles.principal_video}>
       <div className={styles.video_container} onClick={() => setShowVideo(false)}>
         <div className={styles.close}><span>X</span></div>
-        {playPrincipalVideo && (
+       {/*  {playPrincipalVideo && ( */}
           <video ref={videoRef} autoPlay className={styles.video}>
             <source src='/videos/principal_video.mp4' />
           </video>
-        )}
+       {/*  )} */}
       </div>
     </section>
   );

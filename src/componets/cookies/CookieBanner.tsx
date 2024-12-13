@@ -8,13 +8,12 @@ import { LiaCookieSolid } from "react-icons/lia";
 
 interface CookieBannerProps {
   searchParams: { [key: string]: string | string[] | undefined };
-  setPlayPrincipalVideo: React.Dispatch<React.SetStateAction<boolean>>; // Aquí se define el tipo
+  setIsVisible: React.Dispatch<React.SetStateAction<boolean>>; 
+  isVisible: boolean
 }
 
-const CookieBanner = ({ searchParams, setPlayPrincipalVideo }: CookieBannerProps) => {
+const CookieBanner = ({ searchParams, setIsVisible, isVisible }: CookieBannerProps) => {
 
-  const [isVisible, setIsVisible] = useState(false);
-  
   useEffect(() => {
     setIsVisible(!Cookies.get('cookie_consent'));
   }, []);
@@ -27,14 +26,12 @@ const CookieBanner = ({ searchParams, setPlayPrincipalVideo }: CookieBannerProps
     window.dataLayer.push({ event: 'cookie_accepted' });
     window.dataLayer.push({ event: utm_ad });
     Cookies.set('cookie_consent', 'true', { expires: 365 });
-    setPlayPrincipalVideo(true);
     setIsVisible(false); 
   };
 
   const handleDecline = () => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: 'cookie_refused' });
-    setPlayPrincipalVideo(true);
     setIsVisible(false); 
   };
 
