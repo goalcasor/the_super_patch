@@ -26,6 +26,7 @@ export default function RootLayout({
         property="og:image"
         content="https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fbanner-principal.png?alt=media&token=d2aa3f43-fd77-4022-b15a-6d54b60a6d42"
       />
+      {/* PIXEL META */}
       <Script id='fb-pixel' strategy='afterInteractive'>
         {`
           !function(f,b,e,v,n,t,s)
