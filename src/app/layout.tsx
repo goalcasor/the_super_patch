@@ -42,7 +42,7 @@ export default function RootLayout({
         `}
       </Script>
 
-      {/* <Script
+      <Script
         id="tiktok-pixel"
         strategy="afterInteractive"
       >
@@ -73,7 +73,7 @@ export default function RootLayout({
             ttq.page();
           }(window, document, 'ttq');
         `}
-      </Script> */}
+      </Script>
       <OwnersProvider >
         <body className={inter.className}>
           {children}
