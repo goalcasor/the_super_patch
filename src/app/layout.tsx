@@ -67,7 +67,7 @@ export default function RootLayout({
               e=document.getElementsByTagName("script")[0];
               e.parentNode.insertBefore(n,e)
             };
-            ttq.load('CQUA813C77U2R2HQ3S40');
+            ttq.load('${process.env.NEXT_PUBLIC_TIKTOK_PIXEL}');
             ttq.page();
           }(window, document, 'ttq');
         `}
