@@ -70,3 +70,56 @@
         }
     }
 }
+
+/* Media Query para tablets (pantallas entre 768px y 1024px) */
+@media (max-width: 1024px) {
+    .owner_container {
+        padding: 1.5rem;
+    }
+
+    .owner_header h1 {
+        font-size: 2rem;
+    }
+
+    .owner_header h2 {
+        font-size: 1.4rem;
+    }
+
+    .owner {
+        padding: 0.8rem;
+    }
+
+    .owner h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Media Query para dispositivos móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+    .owner_container {
+        padding: 1rem;
+    }
+
+    .owner_header h1 {
+        font-size: 1.8rem;
+    }
+
+    .owner_header h2 {
+        font-size: 1.3rem;
+    }
+
+    .owner {
+        padding: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .owner h1 {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+
+    .owner h1 span {
+        font-size: 1.5rem;
+    }
+}

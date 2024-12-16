@@ -22,7 +22,7 @@ export default function OwnersPage() {
                             {owner.id}
                         </p>
                         <h1>
-                            {owner.name} : <span>{owner.leads}</span>
+                            {owner.name} {owner.lastName} <span>{owner.leads}</span>
                         </h1>
                     </div>
                 ))}

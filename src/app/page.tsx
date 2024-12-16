@@ -39,6 +39,7 @@ export default function Home({
   return (
     <main> 
       <HeroSection />
+      <VideoSection />
       <SectionOne />
       <PacksPromo />
       <PatchsSection />

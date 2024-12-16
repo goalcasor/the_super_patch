@@ -1,17 +1,19 @@
 .video_section{
+    background-color: #000;
+    
+    display: grid;
+    place-items: center;
+}
+
+
+.video_section_container{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+    background-color: #000;
     height: 100vh;
-    background-color: #01c4b9;
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: left;
-    padding: 0 1rem;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
+    width: 80vw;
 }
 
 .video_section_text{
@@ -20,16 +22,17 @@
     gap: 1rem;
     
     & h1{
-        font-size: clamp(48px, 4.5vw, 96px);;
+        color: #fff;
+        font-size: 2.5rem;
         font-weight: 700;
         margin-bottom: 1rem;
-        text-shadow: 2px 2px 2px rgba(44, 44, 44, 0.5);
+        text-align: left;
     }
 
     & p{
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        text-align: left;
+        color: #ddd;
     }
 }
 
@@ -40,13 +43,6 @@
     align-items: center;
     width: 70%;
     padding-top: 3rem;
-    
-    & h1{
-        font-size: clamp(25px, 4.5vw, 45px);
-        color: #fff;
-        text-align: center;
-        margin-bottom: 2rem;
-    }
 }
 
 .video_container{
@@ -60,12 +56,6 @@
         width: 100%;
         height: 100%;
         border-radius: 5px;
-    }
-
-    & p{
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-top: 1rem;
     }
 }
 
@@ -132,12 +122,14 @@
 
 
 @media screen and (max-width: 768px){
-    .video_section{
+    
+    .video_section_container{
         height: fit-content;
-        padding: 3rem .5rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
+        width: 100vw;
     }
 
 
@@ -151,13 +143,12 @@
 
     .video_section_text{
         & h1{
-            font-size: clamp(36px, 4.5vw, 72px);
+            font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 2px rgba(44, 44, 44, 0.5);
         }
         & p{
-            font-size: 1.2rem;
+            font-size: .9rem;
         }
     }
 
