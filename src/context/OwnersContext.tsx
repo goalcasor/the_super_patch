@@ -96,6 +96,7 @@ export const OwnersProvider = ({ children }) => {
     });
   }, []); 
 
+
   const value = {
     owners,
     selectedOwner,
