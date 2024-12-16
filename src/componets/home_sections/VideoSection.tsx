@@ -5,10 +5,11 @@ const VideoSection = () => {
     <div className={styles.video_section} id="video_section">
        <div className={styles.video_section_container}>
         <div className={`${styles.video_section_content}`}>
-              <div className={styles.video_section_text}>
-                <h1>Cómo funciona</h1>
-                <p>La tecnología del interior del Superparche presenta unas crestas dispuestas de forma única que parecen como un código QR, cuando estas crestas tocan nuestra piel, nuestras células transmiten señales únicas que interactúan con el sistema nervioso de nuestro cuerpo.</p>
-              </div>
+          <div className={styles.video_section_text}>
+            <h1>¿Cómo funciona Super Patch?</h1>
+            <p>La tecnología dentro de Super Patch está compuesta por crestas dispuestas de forma innovadora, que recuerdan a un código QR. Al entrar en contacto con la piel, estas crestas envían señales únicas a nuestras células, que a su vez interactúan con el sistema nervioso, generando efectos específicos en el cuerpo.</p>
+          </div>
+
           </div>
           <div className={`${styles.video_section_content}`}>
               <div className={styles.video_container}>

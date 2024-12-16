@@ -33,9 +33,6 @@ export default function Home({
     return <PrincipalLoader/>;
   }
 
-  console.log(isVisible)
-
-
   return (
     <main> 
       <HeroSection />
