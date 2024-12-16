@@ -71,11 +71,14 @@ export const OwnersProvider = ({ children }) => {
       setSelectedOwnerValid(true);
     } else {
       const selected = selectOwner(owners);
+      updateOwnerLeads(selected.id, selected.leads)
       setSelectedOwner(selected);
       setSelectedOwnerValid(true);
       Cookies.set('ownerID', selected.id); 
     }
   }, [owners]);
+
+
 
   const selectOwner = (owners: Owner[]): Owner => {
     if (owners.every(owner => owner.leads === 0)) {
@@ -86,6 +89,12 @@ export const OwnersProvider = ({ children }) => {
     const ownersWithMinLeads = owners.filter(owner => owner.leads === minLeads);
     return ownersWithMinLeads[Math.floor(Math.random() * ownersWithMinLeads.length)];
   };
+
+  const updateOwnerLeads = useCallback(async (ownerID: string, leads: number) => {
+    db.collection('owners').doc(ownerID).update({
+        leads: leads + 1
+    });
+  }, []); 
 
   const value = {
     owners,

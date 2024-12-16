@@ -11,24 +11,15 @@ export default function PrincipalVideo() {
     const videoRef = useRef<HTMLVideoElement | null>(null); 
     const [showVideo, setShowVideo] = useState(true)
 
- /*    useEffect(() => {
-        if (playPrincipalVideo && videoRef.current) {
-        videoRef.current.play(); 
-        }
-    }, [playPrincipalVideo]);  */
-
-
   if(!showVideo) return
 
   return (
     <section className={styles.principal_video}>
       <div className={styles.video_container} onClick={() => setShowVideo(false)}>
         <div className={styles.close}><span>X</span></div>
-       {/*  {playPrincipalVideo && ( */}
-          <video ref={videoRef} autoPlay className={styles.video}>
+          <video ref={videoRef} autoPlay className={styles.video} controls>
             <source src='/videos/principal_video.mp4' />
           </video>
-       {/*  )} */}
       </div>
     </section>
   );
