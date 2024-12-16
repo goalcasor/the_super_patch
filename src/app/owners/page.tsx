@@ -2,17 +2,18 @@
 
 import { useOwner } from "@/context/OwnersContext";
 import styles from '@/styles/owners.module.scss';
-export default function OwnersPage(){
 
-    const { owners } = useOwner()
-
-    return(
+export default function OwnersPage() {
+    const { owners } = useOwner();
+    const sortedOwners = owners.sort((a, b) => b.leads - a.leads);
+    const totalLeads = sortedOwners.reduce((sum, owner) => sum + owner.leads, 0);
+    return (
         <section>
             <div className={styles.owner_container}>
+                <h1>Owners: <span> {sortedOwners.length} </span></h1>
+                <h2>Total Leads: <span>{totalLeads}</span></h2>
 
-                <h1>Owners: <span> {owners.length} </span></h1>
-
-                {owners.map((owner) => (
+                {sortedOwners.map((owner) => (
                     <div
                         key={owner.id}
                         className={styles.owner}
@@ -21,13 +22,11 @@ export default function OwnersPage(){
                             {owner.id}
                         </p>
                         <h1>
-                           
-                            <br/>
                             {owner.name} : <span>{owner.leads}</span>
                         </h1>
                     </div>
                 ))}
             </div>
         </section>
-    )
+    );
 }
