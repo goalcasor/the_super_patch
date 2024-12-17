@@ -111,9 +111,9 @@ export default function EventoMallorca() {
                                 <p><strong>Reme Barbeera</strong><br />VP de Super Patch</p>
                             </div>
                             <div>
-                                <h2>Sólo para asociados</h2>
+                                <h2>La aportación de 20€ es sólo para Asociados de SuperPatch.</h2>
                                 <br/> 
-                                <p>La aportación de 20€ debe ser enviada a la siguiente cuenta. <br/> <br/> <strong>ES1715830001139384050452</strong> <br/>PROYECTOS ALCASOR SL.</p>
+                                <p> <br/> <strong>ES1715830001139384050452</strong> <br/>PROYECTOS ALCASOR SL.</p>
                             </div>
                         </div>
 

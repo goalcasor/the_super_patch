@@ -7,36 +7,32 @@
 }
 
 .banner_section {
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    width: 100vw; /* Ocupa todo el ancho de la ventana */
-    background-image: url('/images/evento-mallorca-banner.png');
-    background-size: contain; /* Asegura que la imagen de fondo se ajuste */
+    height: 100vh; 
+    width: 100vw; 
+    background-color: #14082b;
+    background-image: url('/images/banner-escritorio.png');
+    background-size: 80%; 
     background-repeat: no-repeat;
-    background-position: center;
+    background-position-x: -5%;
     display: flex;
-    justify-content: flex-end; /* Coloca el video a la derecha */
-    align-items: center; /* Centra el video verticalmente */
-    padding-right: 10rem;
+    justify-content: flex-end; 
+    align-items: center;
+    padding-right: 5rem;
 }
 
 .video_container {
-    width: 550px; /* Establece el ancho del contenedor del video */
+    width: 550px;
     display: flex;
-    justify-content: center; /* Centra el video dentro del contenedor */
-    align-items: center; /* Centra el video dentro del contenedor */
+    justify-content: center;
+    align-items: center;
 
     & video {
-        width: 100%; /* Asegura que el video ocupe todo el contenedor */
-        max-width: 100%; /* Limita el tamaño del video al contenedor */
-        max-height: 100%; /* Limita el tamaño del video al contenedor */
-        border-radius: 10px; /* Agrega bordes redondeados al video si lo deseas */
+        width: 100%; 
+        max-width: 100%; 
+        max-height: 100%; 
+        border-radius: 10px; 
     }
 }
-
-
-
-
-
 
 .hero_section {
     width: 100%;
@@ -212,6 +208,13 @@
             border: 1px solid #010bc4;
         }
     }
+
+    & label{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
 }
 
 .guest_container{
@@ -334,8 +337,11 @@
 @media screen and (max-width: 768px) {
 
     .banner_section{
-        background-image: url('/images/evento-mallorca-banner-mobile.png');
+        background-image: url('/images/banner-mobile.png');
         align-items: flex-start;
+        background-position-x: center;
+        padding-right: 0;
+        background-size: contain;
     }
 
     .video_container{
@@ -359,9 +365,10 @@
     }
 
     .form_section_container {
-        padding: 1rem;
+        padding: .5rem;
         flex-wrap: wrap;
         gap: 2rem;
+        width: 100vw;
     }
     
     .form {
