@@ -33,9 +33,11 @@ export default function TestimonySection() {
     return (
         <section className={styles.testimony_section} id='contact'>
 
+            {/* TODO: Crear una sección de cifras. Usuarios actuales a nivel mundial. */}
+
             <div className={styles.testimony_section_container}>
                 <div className={styles.testimony_section_text}>
-                    <h2 className={styles.sub_title}>Voces de Nuestros Clientes: Testimonios Reales</h2>
+                    <h2 className={styles.sub_title}><span>Voces de Nuestros Clientes:</span> Testimonios Reales</h2>
                 </div>
                 <div className={styles.testimonials_container}>
                     <Swiper

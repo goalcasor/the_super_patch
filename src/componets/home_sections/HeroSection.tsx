@@ -69,7 +69,7 @@ function HeroSection() {
         > 
             <div className={styless.principal_video}>
               <div className={styless.video_container} >
-                  <video className={styless.video} src='/videos/principal_video.mp4' controls autoPlay  controlsList="nodownload"/>
+                  <video className={styless.video} src='/videos/presentacion_corta_v_paisa.mp4' controls autoPlay  controlsList="nodownload"/>
               </div>
             </div>
         </VideoModal>

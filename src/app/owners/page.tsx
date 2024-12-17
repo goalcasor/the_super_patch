@@ -2,11 +2,16 @@
 
 import { useOwner } from "@/context/OwnersContext";
 import styles from '@/styles/owners.module.scss';
+import Confite from "@/componets/congrats/CongratsComponent";
 
 export default function OwnersPage() {
-    const { owners } = useOwner();
+
+    const { owners, showConfite } = useOwner();
     const sortedOwners = owners.sort((a, b) => b.leads - a.leads);
     const totalLeads = sortedOwners.reduce((sum, owner) => sum + owner.leads, 0);
+
+    console.log('SHOW CONFITE>', showConfite)
+
     return (
         <section>
             <div className={styles.owner_container}>
@@ -26,6 +31,7 @@ export default function OwnersPage() {
                         </h1>
                     </div>
                 ))}
+                {showConfite && <Confite />}
             </div>
         </section>
     );

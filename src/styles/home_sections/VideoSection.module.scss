@@ -59,21 +59,49 @@
     }
 }
 
-.video_vert_container{
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   
-    align-items: center;
-}
-
-.vert_video {
-    width: 100%;
-    height: auto;
+.video_vert_container {
+    position: relative;
     display: block;
-    margin: 0 auto;
+    max-width: 350px; /* Máximo ancho en escritorio */
+    width: 100%; /* El contenedor ocupa el 100% del ancho disponible */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+  }
+  
+  .video_vert_container::before {
+    content: "";
+    display: block;
+    padding-top: 150%; /* Relación de aspecto 4:3 para video, ajustable */
+  }
+  
+  .vert_video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* El video ocupa el 100% del contenedor */
+    height: 100%; /* El video ocupa el 100% del contenedor */
     border-radius: 10px;
-}
+    object-fit: cover; /* Esto asegura que el video llene el contenedor sin distorsión */
+  }
+  
+  /* Media Query para tablet */
+  @media (max-width: 768px) {
+    .video_vert_container {
+      max-width: 80%; /* Ajustamos el ancho para tablet */
+      padding-top: 56.25%; /* Relación de aspecto 16:9 */
+    }
+  }
+  
+  /* Media Query para móvil */
+  @media (max-width: 480px) {
+    .video_vert_container {
+      max-width: 100%; /* El video ocupa el 90% del ancho de la pantalla */
+      padding-top: 56.25%; /* Relación de aspecto 16:9 */
+    }
+  }
+  
+  
 
 .landing{
     display: flex;

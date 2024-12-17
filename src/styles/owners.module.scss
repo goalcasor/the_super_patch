@@ -13,7 +13,7 @@
     /* Título principal */
     .owner_header {
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: bold;
             color: #333;
             text-align: center;
@@ -56,7 +56,7 @@
 
         /* Estilo de los títulos de cada owner */
         h1 {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             font-weight: bold;
             color: #333;
             margin-bottom: 0.5rem;
@@ -68,6 +68,11 @@
         h1 span {
             color: #4caf50;
         }
+
+        p{
+            font-size: .8rem;
+            color: #555;
+        }
     }
 }
 
@@ -75,6 +80,12 @@
 @media (max-width: 1024px) {
     .owner_container {
         padding: 1.5rem;
+
+
+        .owner {
+            padding: .5rem;
+        }
+    
     }
 
     .owner_header h1 {
@@ -85,10 +96,7 @@
         font-size: 1.4rem;
     }
 
-    .owner {
-        padding: 0.8rem;
-    }
-
+    
     .owner h1 {
         font-size: 1.6rem;
     }
@@ -109,13 +117,13 @@
     }
 
     .owner {
-        padding: 0.5rem;
+        padding: 0.3rem;
         width: 100%;
         box-sizing: border-box;
     }
 
     .owner h1 {
-        font-size: 1.2rem !important;
+        font-size: 1rem !important;
         margin-bottom: 0.3rem !important;
     }
 

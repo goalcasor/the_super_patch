@@ -18,7 +18,7 @@ export default function PrincipalVideo() {
       <div className={styles.video_container} onClick={() => setShowVideo(false)}>
         <div className={styles.close}><span>X</span></div>
           <video ref={videoRef} autoPlay className={styles.video} controls>
-            <source src='/videos/principal_video.mp4' />
+            <source src='/videos/presentacion_corta_v_paisa.mp4' />
           </video>
       </div>
     </section>

@@ -1,3 +1,5 @@
+// context/OwnersContext.tsx
+
 'use client'
 
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
@@ -12,12 +14,16 @@ export const OwnersContext = createContext<{
   loading: boolean;
   ownersValid: boolean;
   selectedOwnerValid: boolean;
-}>({
+  showConfite: boolean;
+  updateOwnerLeads: (ownerID: string, leads: number) => void;
+}>( {
   owners: [],
   selectedOwner: null,
   loading: true,
   ownersValid: false,
   selectedOwnerValid: false,
+  showConfite: false,
+  updateOwnerLeads: () => {}
 });
 
 export const OwnersProvider = ({ children }) => {
@@ -26,6 +32,7 @@ export const OwnersProvider = ({ children }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [ownersValid, setOwnersValid] = useState<boolean>(false);
   const [selectedOwnerValid, setSelectedOwnerValid] = useState<boolean>(false);
+  const [showConfite, setShowConfite] = useState<boolean>(false);
 
   useEffect(() => {
     const q = query(collection(db, "owners"), orderBy("createdAt"));
@@ -56,7 +63,6 @@ export const OwnersProvider = ({ children }) => {
   
     return () => unsub();
   }, []);
-  
 
   useEffect(() => {
     if (!owners || owners.length === 0) return;
@@ -71,14 +77,12 @@ export const OwnersProvider = ({ children }) => {
       setSelectedOwnerValid(true);
     } else {
       const selected = selectOwner(owners);
-      updateOwnerLeads(selected.id, selected.leads)
+      updateOwnerLeads(selected.id, selected.leads);
       setSelectedOwner(selected);
       setSelectedOwnerValid(true);
       Cookies.set('ownerID', selected.id); 
     }
   }, [owners]);
-
-
 
   const selectOwner = (owners: Owner[]): Owner => {
     if (owners.every(owner => owner.leads === 0)) {
@@ -87,15 +91,19 @@ export const OwnersProvider = ({ children }) => {
     }
     const minLeads = Math.min(...owners.map(owner => owner.leads));
     const ownersWithMinLeads = owners.filter(owner => owner.leads === minLeads);
+    setShowConfite(true);
+
     return ownersWithMinLeads[Math.floor(Math.random() * ownersWithMinLeads.length)];
   };
 
   const updateOwnerLeads = useCallback(async (ownerID: string, leads: number) => {
-    db.collection('owners').doc(ownerID).update({
-        leads: leads + 1
+    await db.collection('owners').doc(ownerID).update({
+      leads: leads + 1
     });
-  }, []); 
 
+    setShowConfite(true); // Muestra Confite cuando se actualiza el lead
+    setTimeout(() => setShowConfite(false), 5000); // Lo oculta después de 5 segundos
+  }, []);
 
   const value = {
     owners,
@@ -103,6 +111,8 @@ export const OwnersProvider = ({ children }) => {
     loading,
     ownersValid,
     selectedOwnerValid,
+    showConfite,
+    updateOwnerLeads
   };
 
   return (

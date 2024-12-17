@@ -36,7 +36,10 @@ export default function Home({
   return (
     <main> 
       <HeroSection />
-      <VideoSection />
+      <VideoSection 
+        videoUrl={'/videos/presentacion_corta_v_paisa.mp4'}
+        vert={true}
+      />
       <SectionOne />
       <PacksPromo />
       <PatchsSection />
@@ -44,6 +47,12 @@ export default function Home({
       <SectionOne />
       <FormSection />
       <TestimonySection />
+
+      <VideoSection 
+        videoUrl={'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2FCONOCE%20SUPER%20PATCH%20COMPANY%20.mp4?alt=media&token=ccd486d1-ec0b-480c-91c6-5d22d82ba4e9'}
+        vert={false}
+      />
+
       <Faqs />
 
       {!isVisible && ( <PrincipalVideo 

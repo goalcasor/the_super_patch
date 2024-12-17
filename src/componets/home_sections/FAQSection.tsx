@@ -14,6 +14,9 @@ const Faqs = () => {
     return (
         <div className={styles.faqs_section}>
             <h2>Preguntas Frecuentes</h2>
+
+            {/* TODO: Añadir más preguntas frecuentes y botn en la parte de abajo. */}
+
             <div className={styles.faqs_section_container}>
                 {faqData.map((faq, index) => (
                     <div key={index} className={styles.faq_container}>

@@ -1,6 +1,6 @@
 import styles from '@/styles/home_sections/VideoSection.module.scss'
 
-const VideoSection = () => {
+const VideoSection = ({videoUrl, vert}) => {
   return (
     <div className={styles.video_section} id="video_section">
        <div className={styles.video_section_container}>
@@ -12,11 +12,24 @@ const VideoSection = () => {
 
           </div>
           <div className={`${styles.video_section_content}`}>
-              <div className={styles.video_container}>
-                <video poster="/images/superpatch_logo.jpg" controls id='video_principal'>
-                  <source src="https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2FCONOCE%20SUPER%20PATCH%20COMPANY%20.mp4?alt=media&token=ccd486d1-ec0b-480c-91c6-5d22d82ba4e9" type="video/mp4" />
-                </video>
-              </div>
+             
+                {vert ? (
+                  <div className={styles.video_vert_container}>
+                    <video width={500} height={281} poster="/images/poster_vert.png" controls id='video_principal' className={styles.vert_video}>
+                        <source src={videoUrl} type="video/mp4" />
+                    </video>
+                  </div>
+
+                ):
+                (
+                  <div className={styles.video_container}>
+                    <video poster="/images/superpatch_logo.jpg" controls id='video_principal'>
+                      <source src={videoUrl} type="video/mp4" />
+                    </video>
+                  </div>
+                )
+                }
+               
           </div>
        </div>
     </div>
