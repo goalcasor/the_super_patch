@@ -15,8 +15,9 @@ export default function OwnersPage() {
     return (
         <section>
             <div className={styles.owner_container}>
-                <h1>Owners: <span> {sortedOwners.length} </span></h1>
-                <h2>Total Leads: <span>{totalLeads}</span></h2>
+                <h1>Total de colaboradores: <span> {sortedOwners.length} </span></h1>
+                <h2>Total Leads <span>{totalLeads}</span> </h2>
+                <p>Desde Lunes 16/12/2024</p>
 
                 {sortedOwners.map((owner) => (
                     <div
