@@ -109,6 +109,7 @@ export default function EventoMallorca() {
                                 <h4>Ponentes:</h4>
                                 <p><strong>Jose Piquer</strong><br />VP de Super Patch</p>
                                 <p><strong>Reme Barbeera</strong><br />VP de Super Patch</p>
+                                <p><strong>Laura Morro</strong><br />Directora</p>
                             </div>
                             <div>
                                 <h2>La aportación de 20€ es sólo para Asociados de SuperPatch.</h2>
