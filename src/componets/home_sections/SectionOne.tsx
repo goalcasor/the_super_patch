@@ -28,11 +28,11 @@ function SectionOne() {
                     alt={item.title}
                   />
                   <div className={styles.card_content}>
-                    <div>
+                    <div className={styles.card_text_container}>
                       <h2>{item.title}</h2>
                       <p>{item.description}</p>
                     </div>
-                    <div>
+                    <div className={styles.card_btn_container}>
                       <PrimaryButton 
                           text='Comprar'
                           onClick={() => router.push(item.url)}

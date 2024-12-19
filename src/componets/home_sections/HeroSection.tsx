@@ -22,8 +22,8 @@ function HeroSection() {
         }
       }, 500);
     }
-  };
-
+  };   
+  
   return (
     <div className={styles.hero_section}>
       <div className={`${styles.hero_section_content}`}>
@@ -40,7 +40,7 @@ function HeroSection() {
             transition={{ duration: 1, ease: 'easeOut' }} // Duración de la animación
           >
             Regala Salud y Bienestar: <br /> 
-            Descubre los Packs Exclusivos con <span>Tecnología innovadora para esta Navidad y un 25% de Descuento.</span>
+            Descubre los Packs Exclusivos para <span>Navidad con 25% descuento.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}

@@ -32,15 +32,7 @@
 .sub_title{
     font-size: 2.5rem;
     font-weight: 700;
-    & span{
-        background-image: linear-gradient(75deg, red,#010bc4,#01c4b9 );
-        background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    }
-
+    text-align: center;
     @include isMobile{
       font-size: 1.5rem;
   }

@@ -19,19 +19,17 @@
     }
 
     & .hero_section_content{
-        width: 100%;
+        width: 80vw;
         display: flex;
         flex-direction: column;
         justify-content: start;
         color: white;
-            
         .text_content{
             display: flex;
             flex-direction: column;
             align-items: start;
             text-align: left;
             gap: 1rem;
-            padding: 1rem 3rem;
             width: 60%;
 
             .button_container{
