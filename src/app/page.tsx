@@ -37,7 +37,7 @@ export default function Home({
     <main> 
       <HeroSection />
       <VideoSection 
-        videoUrl={'/videos/presentacion_corta_v_paisa.mp4'}
+        videoUrl={'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fsp%2Fsuper_patch.mp4?alt=media&token=b510b4d1-c939-4304-a6f7-cc6b311ae6d3'}
         vert={true}
       />
       <SectionOne />
@@ -49,7 +49,7 @@ export default function Home({
       <TestimonySection />
 
       <VideoSection 
-        videoUrl={'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2FCONOCE%20SUPER%20PATCH%20COMPANY%20.mp4?alt=media&token=ccd486d1-ec0b-480c-91c6-5d22d82ba4e9'}
+        videoUrl={'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fsp%2Fsuper_patch_desktop.mp4?alt=media&token=b83dd774-b2e3-4ccb-a5f3-fc245f2d994c'}
         vert={false}
       />
 

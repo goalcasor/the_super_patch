@@ -18,7 +18,7 @@ export default function PrincipalVideo() {
       <div className={styles.video_container} onClick={() => setShowVideo(false)}>
         <div className={styles.close}><span>X</span></div>
           <video ref={videoRef} autoPlay className={styles.video} controls>
-            <source src='/videos/presentacion_corta_v_paisa.mp4' />
+            <source src='https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fsp%2Fsuper_patch.mp4?alt=media&token=b510b4d1-c939-4304-a6f7-cc6b311ae6d3' />
           </video>
       </div>
     </section>
