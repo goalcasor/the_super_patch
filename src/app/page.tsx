@@ -55,10 +55,7 @@ export default function Home({
 
       <Faqs />
 
-      {!isVisible && ( <PrincipalVideo 
-        
-      
-      /> )}
+      {!isVisible && ( <PrincipalVideo/> )}
 
       <CookieBanner 
         searchParams={searchParams}
