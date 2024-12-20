@@ -36,8 +36,7 @@ export default function PatchsSection() {
   return (
     <div className={styles.patchs_section}>
         <div className={styles.patchs_section_text}>
-            <h2>Más populares </h2>
-            <p>Compra con una garantía de devolución del dinero de 30 días sin riesgos Garantía</p>
+            <h2>Descubre más soluciones Super Patch</h2>
         </div>
         <div className={styles.swiper_container}>
             <Swiper
@@ -86,7 +85,7 @@ export default function PatchsSection() {
         </div>
         <div className={styles.buy_all_button}>
             <PrimaryButton 
-                text='Ir a la tienda y ver todas las ofertas'
+                text='Ver todas las ofertas'
                 onClick={() => router.push(`https://shop.superpatch.com/#/shop/from/${selectedOwner.shopId}`)}
             />
         </div>

@@ -14,9 +14,9 @@ function PacksPromo () {
 
     return(
         <section>
+            <PackThree url={packsData[1].url} router={router}/>
             <PackOne url={packsData[0].url} router={router}/>
             <PackTwo url={packsData[2].url} router={router}/>
-            <PackThree url={packsData[1].url} router={router}/>
         </section>
     )
 }
@@ -34,8 +34,8 @@ function PackOne ({url, router}) {
             </div>
             <div className={styles.pack_section_content}>
                 <div className={styles.pack_section_text}>
-                   <h1>Pack Victory + Ignite</h1>    
-                   <h2>Energía y Metabolismo para Mantener la Figura</h2> 
+                   <h1>ACTÍVATE</h1>    
+                   <h2>Más Energía y un Mejor Metabolismo para Mantener tu Figura</h2> 
                    <p>Imagina pasar las fiestas con toda la vitalidad que necesitas y sin preocuparte por las comidas navideñas. El pack Ignite + Victory combina la tecnología avanzada de Superpatch para brindarte un impulso natural de energía y un metabolismo más eficiente. Perfecto para mantener tu figura, disfrutar de tus actividades favoritas y empezar el año con fuerza.</p>
                    <h3>Beneficios Clave:</h3>
                    <ul>
@@ -68,8 +68,8 @@ function PackTwo ({url, router}) {
             </div>
             <div className={styles.pack_section_content}>
                 <div className={styles.pack_section_text}>
-                   <h1>Pack Joy + Lumi</h1>    
-                   <h2>Mejora del Ánimo y Cuidado de la Piel</h2> 
+                   <h1>REFLEJO DE FELICIDAD</h1>    
+                   <h2>Mejora tu Ánimo y Cuida tu Piel</h2> 
                    <p>La verdadera belleza comienza desde dentro. Con el pack Joy + Lumi, no solo te sentirás bien, sino que también lucirás radiante. Diseñado para quienes desean potenciar su bienestar emocional y cuidar su piel, este pack es el regalo ideal para iluminar las fiestas y empezar el nuevo año con una sonrisa.</p>
                    <h3>Beneficios Clave:</h3>
                    <ul>
@@ -100,7 +100,7 @@ function PackThree ({url, router}) {
             </div>
             <div className={styles.pack_section_content}>
                 <div className={styles.pack_section_text}>
-                   <h1>Pack Liberty + Freedom</h1>    
+                   <h1>LA VIDA ES MOVIMIENTO</h1>    
                    <h2>Movilidad y Equilibrio para Disfrutar sin Límites</h2> 
                    <p>La Navidad es el momento perfecto para devolver la alegría a quienes más amas. Este pack está diseñado pensando en las personas mayores o en aquellos que necesitan un apoyo extra para recuperar su movilidad y equilibrio. Con Liberty + Freedom, cada paso será más estable, y cada momento, más pleno.</p>
                    <h3>Beneficios Clave:</h3>

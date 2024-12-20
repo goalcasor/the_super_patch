@@ -47,15 +47,17 @@ function FormSection() {
             <div className={styles.form_section_container}>
                 <div className={styles.form_section_content}>
                     <div className={styles.text_container}>
-                        <h1>Oferta Especial:</h1>
+                        <h1>¡Regales lo que regales, haz que sea único!</h1>
                         <p>
-                            Solo por tiempo limitado: 25% de descuento en tu primer pedido y guía exclusiva para empaquetar con estilo tus Superpatch.
+                            Descarga la guía exlusiva: <strong>El arte de Regalar Bienestar:</strong>
+                            <br/>
+                            <br/>
+                            <strong> 10 ideas top para que tu regalo sea único</strong>
                         </p>
                     </div>
                 </div>
                 <div className={styles.form_container}>
                     <div className={styles.form}>
-                        <h1>Recibe tu descuento y la guía de regalos gratis.</h1>
                         <form onSubmit={handleSubmit}>
                             <div className={styles.input_container}>
                                 <input 
@@ -63,7 +65,7 @@ function FormSection() {
                                     name="name" 
                                     id="name" 
                                     required 
-                                    placeholder="Tu nombre" 
+                                    placeholder="Nombre" 
                                     value={contact.name} 
                                     onChange={handleChange} 
                                 />
@@ -74,7 +76,7 @@ function FormSection() {
                                     name="email" 
                                     id="email" 
                                     required 
-                                    placeholder="Tu mejor email" 
+                                    placeholder="Email" 
                                     value={contact.email} 
                                     onChange={handleChange} 
                                 />
@@ -85,13 +87,13 @@ function FormSection() {
                                     name="phone" 
                                     id="phone" 
                                     required 
-                                    placeholder="Tu número WhatsApp" 
+                                    placeholder="Teléfono" 
                                     value={contact.phone} 
                                     onChange={handleChange} 
                                 />
                             </div>
                             <div className={styles.input_container}>
-                                <button type="submit">Quiero mi descuento</button>
+                                <button type="submit">Descarga tu guía gratis</button>
                             </div>
                         </form>
                     </div>

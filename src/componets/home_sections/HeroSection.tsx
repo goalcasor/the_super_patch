@@ -29,15 +29,15 @@ function HeroSection() {
       <div className={`${styles.hero_section_content}`}>
         <motion.div
           className={styles.text_content}
-          initial={{ opacity: 0, y: 50 }} // Comienza desvanecido y abajo
-          animate={{ opacity: 1, y: 0 }} // Se anima a estar completamente visible y en su lugar
-          transition={{ duration: 1 }} // Duración de la animación
+          initial={{ opacity: 0, y: 50 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1 }} 
         >
 
           <motion.h1
-            initial={{ opacity: 0, x: -100 }} // Empieza desde la izquierda
-            animate={{ opacity: 1, x: 0 }} // Llega a su posición final
-            transition={{ duration: 1, ease: 'easeOut' }} // Duración de la animación
+            initial={{ opacity: 0, x: -100 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 1, ease: 'easeOut' }} 
           >
             Regala Salud y Bienestar: <br /> 
             Descubre los Packs Exclusivos para <span>Navidad con 25% descuento.</span>
@@ -45,7 +45,7 @@ function HeroSection() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }} // Después de un pequeño retraso
+            transition={{ duration: 1, delay: 0.3 }} 
           >
             El regalo perfecto que transformará vidas. Elige tu Pack con tecnología innovadora, diseñado para aumentar la energía, mejorar la movilidad, equilibrar el cuerpo y resaltar tu belleza.
           </motion.p>
@@ -55,10 +55,10 @@ function HeroSection() {
 
           <div className={styles.button_container}>
             <motion.div
-              whileHover={{ scale: 1.1 }} // Aumenta un poco el tamaño cuando se pasa el cursor
-              whileTap={{ scale: 0.95 }} // Reduce el tamaño al hacer clic
+              whileHover={{ scale: 1.1 }} 
+              whileTap={{ scale: 0.95 }} 
             >
-              <PrimaryButton text="MÁS INFORMACIÓN" onClick={() => setShowModal(true)} />
+              <PrimaryButton text="VER VIDEO AHORA" onClick={() => setShowModal(true)} />
             </motion.div>
           </div>
         </motion.div>

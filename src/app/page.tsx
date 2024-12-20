@@ -47,16 +47,7 @@ export default function Home({
       <SectionOne />
       <FormSection />
       <TestimonySection />
-
-      <VideoSection 
-        videoUrl={'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fsp%2Fsuper_patch_desktop.mp4?alt=media&token=b83dd774-b2e3-4ccb-a5f3-fc245f2d994c'}
-        vert={false}
-      />
-
       <Faqs />
-
-      {!isVisible && ( <PrincipalVideo/> )}
-
       <CookieBanner 
         searchParams={searchParams}
         setIsVisible={setIsVisible}

@@ -34,7 +34,7 @@ function SectionOne() {
                     </div>
                     <div className={styles.card_btn_container}>
                       <PrimaryButton 
-                          text='Comprar'
+                          text='¡Compra Ahora!'
                           onClick={() => router.push(item.url)}
                       />
                     </div>
