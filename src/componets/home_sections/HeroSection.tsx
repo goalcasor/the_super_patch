@@ -69,7 +69,7 @@ function HeroSection() {
         > 
             <div className={styless.principal_video}>
               <div className={styless.video_container} >
-                  <video className={styless.video} src='/videos/super_patch_new.mp4' controls autoPlay  controlsList="nodownload"/>
+                  <video className={styless.video} src='https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fsp%2Fsuper_patch.mp4?alt=media&token=b510b4d1-c939-4304-a6f7-cc6b311ae6d3' controls autoPlay  controlsList="nodownload"/>
               </div>
             </div>
         </VideoModal>
