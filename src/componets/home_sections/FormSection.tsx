@@ -24,10 +24,10 @@ function FormSection() {
     }
 
     const handleSubmit = async (event) => {
-        event.preventDefault(); // Prevenir la recarga de la página al enviar el formulario
+        event.preventDefault();
 
         try {
-            // Llamar a la función addOwner con el objeto contact
+            
             await addContact(contact);
             alert('¡Gracias! Tu información ha sido enviada correctamente.');
             setContact({
@@ -35,7 +35,7 @@ function FormSection() {
                 phone: '',
                 email: '',
                 owenerId: selectedOwner.id
-            }); // Opcional: Limpiar los campos del formulario después de enviar
+            }); 
         } catch (error) {
             console.error("Error al enviar los datos:", error);
             alert("Hubo un error al enviar tus datos. Intenta de nuevo.");
@@ -49,7 +49,7 @@ function FormSection() {
                     <div className={styles.text_container}>
                         <h1>¡Regales lo que regales, haz que sea único!</h1>
                         <p>
-                            Descarga la guía exlusiva: <strong>El arte de Regalar Bienestar:</strong>
+                            Descarga la guía exlusiva: <strong>El arte de Regalar Bienestar.</strong>
                             <br/>
                             <br/>
                             <strong> 10 ideas top para que tu regalo sea único</strong>

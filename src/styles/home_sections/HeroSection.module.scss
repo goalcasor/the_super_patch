@@ -4,8 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #000;
-    background-image: url('/images/landing-navidad/banner-principal.png');
+    background-image: url('/images/landing-navidad/hero_banner.jpg');
     background-size: cover;
 
     .hero_image{
@@ -23,14 +22,13 @@
         display: flex;
         flex-direction: column;
         justify-content: start;
-        color: white;
         .text_content{
             display: flex;
             flex-direction: column;
             align-items: start;
             text-align: left;
             gap: 1rem;
-            width: 60%;
+            width: 55%;
 
             .button_container{
                 width: fit-content;
@@ -39,7 +37,6 @@
         }
 
         & h1{
-            color: #fff ;
             font-size: 2.5rem;
             font-weight: 700;
             
@@ -58,7 +55,6 @@
             font-size: 1.3rem;
             font-weight: 400;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 2px rgba(44, 44, 44, 0.5);
         }
     }
 }
@@ -85,7 +81,8 @@
         flex-direction: column;
         justify-content: end;
         align-items: center;
-        background-image: url('/images/landing-navidad/banner-hero-mobile.png');
+        background-image: url('/images/landing-navidad/hero_banner_vert.png');
+        background-position: center;
 
         .hero_image{
             width: 100%;

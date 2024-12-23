@@ -1,8 +1,6 @@
 'use client'
 
 import { useOwner } from "@/context/OwnersContext";
-import Cookies from 'js-cookie';
-
 import HeroSection from "@/componets/home_sections/HeroSection";
 import SectionOne from "@/componets/home_sections/SectionOne";
 import VideoSection from "@/componets/home_sections/VideoSection";
@@ -14,7 +12,6 @@ import FormSection from "@/componets/home_sections/FormSection";
 import TestimonySection from "@/componets/home_sections/TestimonySection";
 import PrincipalLoader from "@/componets/loaders/PrincipalLoader";
 import CookieBanner from "@/componets/cookies/CookieBanner";
-import PrincipalVideo from "@/componets/home_sections/PrincipalVideo";
 import { useState } from "react";
 
 export default function Home({

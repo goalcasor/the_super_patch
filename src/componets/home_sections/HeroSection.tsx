@@ -40,7 +40,7 @@ function HeroSection() {
             transition={{ duration: 1, ease: 'easeOut' }} 
           >
             Regala Salud y Bienestar: <br /> 
-            Descubre los Packs Exclusivos para <span>Navidad con 25% descuento.</span>
+            Descubre los Packs Exclusivos para <span>Navidad con 25% de descuento</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -53,14 +53,13 @@ function HeroSection() {
 
 
 
-          <div className={styles.button_container}>
-            <motion.div
-              whileHover={{ scale: 1.1 }} 
-              whileTap={{ scale: 0.95 }} 
-            >
+          <motion.div 
+            whileHover={{ scale: 1.1 }} 
+            whileTap={{ scale: 0.95 }} 
+            className={styles.button_container}
+          >
               <PrimaryButton text="VER VIDEO AHORA" onClick={() => setShowModal(true)} />
-            </motion.div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
       {showModal && (

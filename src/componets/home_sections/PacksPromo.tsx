@@ -30,7 +30,6 @@ function PackOne ({url, router}) {
             <div
                 className={`${styles.pack_section} ${styles.pack_one}`}
             >
-                <p>Regala energía y salud, la combinación perfecta para cuidarte sin renunciar a los placeres navideños</p>
             </div>
             <div className={styles.pack_section_content}>
                 <div className={styles.pack_section_text}>
@@ -64,7 +63,6 @@ function PackTwo ({url, router}) {
             <div
                 className={`${styles.pack_section} ${styles.pack_two}`}
             >
-                <p>Este pack es super impactante haz que quienes amas brillen desde adentro hacia afuera estas fiestas</p>
             </div>
             <div className={styles.pack_section_content}>
                 <div className={styles.pack_section_text}>
@@ -96,7 +94,6 @@ function PackThree ({url, router}) {
             <div
                 className={`${styles.pack_section} ${styles.pack_three}`}
             >
-                <p>Ahora es el momento de devolver a tus seres queridos la libertad de moverse y disfrutar sin limitaciones</p>
             </div>
             <div className={styles.pack_section_content}>
                 <div className={styles.pack_section_text}>
