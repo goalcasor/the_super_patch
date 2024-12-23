@@ -3,10 +3,10 @@ import { useOwner } from '@/context/OwnersContext';
 import styles from '@/styles/home_sections/FormSection.module.scss'
 import { ContactType } from '@/types/ContactType';
 import { useState } from 'react'
-import addContact from '@/firebase/addContact'; // Importa la función addOwner
+import addContact from '@/firebase/addContact';
 
 function FormSection() {
-
+    
     const { selectedOwner } = useOwner();
     const [contact, setContact] = useState<ContactType>({
         name: '',
@@ -27,9 +27,9 @@ function FormSection() {
         event.preventDefault();
 
         try {
-            
             await addContact(contact);
             alert('¡Gracias! Tu información ha sido enviada correctamente.');
+            handleRedirect();
             setContact({
                 name: '',
                 phone: '',
@@ -41,6 +41,14 @@ function FormSection() {
             alert("Hubo un error al enviar tus datos. Intenta de nuevo.");
         }
     }
+
+    const handleRedirect = () => {
+        // Abre el enlace en una nueva ventana
+        window.open(
+          'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fdocs%2Felartederegalarbienestar.pdf?alt=media&token=bb8d7a68-d003-43d2-af9c-8f5971509052',
+          '_blank'
+        );
+    };
 
     return (
         <section className={styles.form_section}>
@@ -100,7 +108,7 @@ function FormSection() {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default FormSection;

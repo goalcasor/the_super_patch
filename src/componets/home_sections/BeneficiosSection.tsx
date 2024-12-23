@@ -17,7 +17,7 @@ function BeneficiosSection () {
                         
                     </div>
                     <h1>¿No te lo crees?</h1>
-                    <a href='https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fusing-haptic-technology-for-pain-reduction-and-functional-improvement.pdf?alt=media&token=722f9c7e-e7cb-402e-81e9-469bcf9104fe' target='_blank' className={styles.download_btn}>
+                    <a href='https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fdocs%2Festudio_spanish.pdf?alt=media&token=38d92000-86ee-4e2a-be66-639775f5db1d' target='_blank' className={styles.download_btn}>
                         <span>Descárgate el estudio</span>
                     </a>
             </div>
