@@ -81,3 +81,33 @@
     width: initial !important;
     height: 70vh;  
   }
+
+  .cta{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    font-size: 2.5rem;
+
+    @include isMobile{
+      font-size: 1.5rem;
+    }
+  }
+
+  .wp_button{
+    box-shadow: 2px 2px 3px rgba(119, 119, 119, 0.719);
+    background-color: #25d366;
+    width: fit-content;
+    padding: .5rem 2rem;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    gap: 1rem;
+    font-size: 2.5rem;
+
+    @include isMobile{
+      font-size: 1.5rem;
+    }
+  }

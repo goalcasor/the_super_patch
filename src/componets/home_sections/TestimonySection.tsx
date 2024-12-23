@@ -1,5 +1,6 @@
 'use client'
 import React, { useRef, useState, useEffect } from 'react';
+import { useOwner } from '@/context/OwnersContext';
 import styles from '@/styles/home_sections/TestimonySection.module.scss'
 import { TestimonialsData } from '@/data/TestimonialsCardData'
 import TestimonyCard from '@/componets/cards/TestimonyCars';
@@ -9,9 +10,11 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import VideoModal from '@/componets/modals/Videomodal';
 import isMobile from 'is-mobile';
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function TestimonySection() {
 
+    const { selectedOwner } = useOwner();
     const [_isMobile, setIsMobile] = useState(false);
     const [showModal, setShowModal] = useState(false)
     const [testimonyVideo, setTestimonyVideo] = useState('')
@@ -36,7 +39,7 @@ export default function TestimonySection() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
     
-
+    const contact = selectedOwner?.wpContact ? selectedOwner?.phone : 611825631;
 
     return (
         <section className={styles.testimony_section} id='contact'>
@@ -89,6 +92,17 @@ export default function TestimonySection() {
                     </div>
                 </VideoModal>
             )}
+
+            <div className={styles.cta} >
+                <div>
+                    <h3>¿Tienes alguna duda? <br/> Contáctanos en WhatsApp</h3>
+                </div>
+                <div className={styles.cta_btn}>
+                    <a href={`https://wa.me/34${contact}?text=Hola%2C%20Quisiera%20más%20información%20sobre%20Super%20Patch`} className={styles.wp_button}>
+                        <FaWhatsapp /> Contactar por WhatsApp
+                    </a>
+                </div>
+            </div>
 
         </section>
     );

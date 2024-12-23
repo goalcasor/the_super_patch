@@ -50,6 +50,7 @@ export const OwnersProvider = ({ children }) => {
           leads: data.leads ?? 0, 
           shopId: data.shopId ?? 0, 
           shopLink: data.shopLink ?? '',
+          wpContact: data.wpContact ?? false,
           createdAt: data.createdAt ? new Date(data.createdAt) : undefined, 
         };
   

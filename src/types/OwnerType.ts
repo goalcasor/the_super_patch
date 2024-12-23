@@ -7,5 +7,6 @@ export interface Owner {
     leads?: number;
     shopId?: number;
     shopLink?: string;
+    wpContact?: boolean;
     createdAt?: Date;
 }

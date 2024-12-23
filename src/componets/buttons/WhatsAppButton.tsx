@@ -2,19 +2,20 @@
 import { FaWhatsapp } from "react-icons/fa";
 import styles from '@/styles/buttons/WhatsAppButton.module.scss';
 import { usePathname } from 'next/navigation';
+import { useOwner } from "@/context/OwnersContext";
 
 function WhatsAppButton() {
-  const pathname = usePathname(); 
 
+  const { selectedOwner } = useOwner();
+  const pathname = usePathname(); 
   if (pathname === '/landing-test') {
     return null;
   }
-
+  const contact = selectedOwner?.wpContact ? selectedOwner?.phone : 611825631;
   return (
-    <a href="https://wa.me/34611825631?text=Hola%2C%20Quisiera%20más%20información%20sobre%20Super%20Patch" className={styles.wp_button}>
+    <a href={`https://wa.me/34${contact}?text=Hola%2C%20Quisiera%20más%20información%20sobre%20Super%20Patch`} className={styles.wp_button}>
       <FaWhatsapp />
     </a>
-
   );
 }
 
