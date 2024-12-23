@@ -22,7 +22,7 @@ function BeneficiosSection () {
                     </a>
             </div>
             <div
-            className={styles.content}  
+            className={` ${styles.image}`}  
             >
                 
             </div>

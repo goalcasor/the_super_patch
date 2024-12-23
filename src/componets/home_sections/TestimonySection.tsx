@@ -29,6 +29,14 @@ export default function TestimonySection() {
         setIsMobile(isMobile());
     }, []);
 
+    useEffect(() => {
+        setIsMobile(window.innerWidth <= 768);
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    
+
 
     return (
         <section className={styles.testimony_section} id='contact'>
@@ -41,8 +49,8 @@ export default function TestimonySection() {
                 </div>
                 <div className={styles.testimonials_container}>
                     <Swiper
-                        slidesPerView={_isMobile ? 2.3 : 6 }
-                        spaceBetween={30}
+                        slidesPerView={_isMobile ? 1.5 : 3 }
+                        spaceBetween={10}
                         modules={[Autoplay, Pagination, Navigation]}
                         onAutoplayTimeLeft={onAutoplayTimeLeft}
                         autoplay={{
