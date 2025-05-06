@@ -32,12 +32,12 @@ export default function Home({
 
   return (
     <main> 
-      <HeroSection />
+   {/*    <HeroSection /> */}
       <VideoSection 
         videoUrl={'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fsp%2Fsuper_patch.mp4?alt=media&token=b510b4d1-c939-4304-a6f7-cc6b311ae6d3'}
         vert={true}
       />
-      <SectionOne />
+     {/*  <SectionOne />
       <PacksPromo />
       <PatchsSection />
       <BeneficiosSection />
@@ -49,7 +49,7 @@ export default function Home({
         searchParams={searchParams}
         setIsVisible={setIsVisible}
         isVisible={isVisible}
-      />
+      /> */}
     </main>
   );
 }
