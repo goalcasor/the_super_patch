@@ -42,7 +42,7 @@ export default function RootLayout({
       <OwnersProvider >
         <body className={inter.className}>
           {children}
-          <Footer />
+     {/*      <Footer /> */}
           <WhatsAppButton />
         </body>
       </OwnersProvider>

@@ -3,6 +3,8 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useOwner } from '@/context/OwnersContext'
+import PrincipalLoader from "@/componets/loaders/PrincipalLoader";
+
 
 // Tipo mínimo para el contexto de Owners
 interface OwnerContextValue {
@@ -38,7 +40,7 @@ export default function Home() {
 
   return (
     <div>
-      {loading && <p>Cargando...</p>}
+      {loading && <PrincipalLoader />}
       {!loading && !selectedOwnerValid && <p>No se encontró un propietario válido.</p>}
     </div>
   )
