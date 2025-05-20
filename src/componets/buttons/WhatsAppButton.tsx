@@ -11,7 +11,8 @@ function WhatsAppButton() {
   if (pathname === '/landing-test') {
     return null;
   }
-  const contact = selectedOwner?.wpContact ? selectedOwner?.phone : 611825631;
+  /* const contact = selectedOwner?.wpContact ? selectedOwner?.phone : 611825631; */
+  const contact = 661959090; // Default contact number
   return (
     <a href={`https://wa.me/34${contact}?text=Hola%2C%20Quisiera%20más%20información%20sobre%20Super%20Patch`} className={styles.wp_button}>
       <FaWhatsapp />
