@@ -15,7 +15,7 @@ const productsData = [
       'Potencia tu amplitud de movimiento y recuperación física.',
       'Favorece la homeostasis neurológica para un sistema nervioso equilibrado.',
     ],
-    image: '/images/patch-liberty.png', // Ruta de tu imagen para Liberty
+    image: '/images/patchs/liberty.png', // Ruta de tu imagen para Liberty
     fdaApproved: true,
   },
   {
@@ -29,7 +29,7 @@ const productsData = [
       'Ideal para dolores musculares, articulares y crónicos.',
     ],
     usage: 'Aplicar directamente en la zona de mayor dolor o en la 7ma vértebra cervical. Para resultados óptimos, combinar con LIBERTY.',
-    image: '/images/patch-freedom.png', // Ruta de tu imagen para Freedom
+    image: '/images/patchs/freedom.png', // Ruta de tu imagen para Freedom
     fdaApproved: true,
   },
   {
@@ -42,7 +42,7 @@ const productsData = [
       'Ayuda a regular los ciclos de sueño cuando la melatonina se reduce.',
       'Despiértate sintiéndote fresco, lleno de energía y listo para el día.',
     ],
-    image: '/images/patch-rem.png', // Ruta de tu imagen para REM
+    image: '/images/patchs/rem.png', // Ruta de tu imagen para REM
     fdaApproved: true,
   },
   {
@@ -55,7 +55,7 @@ const productsData = [
       'Contribuye a un mejor descanso nocturno al aliviar la tensión mental.',
       'Ideal para momentos de alta presión o para un bienestar diario.',
     ],
-    image: '/images/patch-peace.png', // Ruta de tu imagen para Peace
+    image: '/images/patchs/peace.png', // Ruta de tu imagen para Peace
     fdaApproved: true,
   },
   {
@@ -68,10 +68,115 @@ const productsData = [
       'Mejora la concentración y el rendimiento mental.',
       'Ideal para jornadas largas, entrenamientos o simplemente para sentirte más activo.',
     ],
-    image: '/images/patch-boost.png', // Ruta de tu imagen para Boost
+    image: '/images/patchs/boost.png', // Ruta de tu imagen para Boost
     fdaApproved: true,
   },
-  // Añade más parches aquí siguiendo el mismo formato
+  
+  {
+    id: 'focus',
+    name: 'FOCUS',
+    tagline: 'Concentración y Claridad Mental. Tu Aliado para el Éxito.',
+    benefits: [
+      'Mejora la concentración y el enfoque mental.',
+      'Aumenta la claridad mental y la agilidad cognitiva.',
+      'Ideal para estudiantes, profesionales o cualquier persona que necesite un impulso de productividad.',
+      'Reduce la fatiga mental y mejora el rendimiento en tareas complejas.',
+    ],
+    image: '/images/patchs/focus.png', // Ruta de tu imagen para Focus
+    fdaApproved: true,
+  }, 
+  {
+    id: 'joy',
+    name: 'JOY',    
+    tagline: 'Felicidad Instantánea. Eleva tu Ánimo y Bienestar.',
+    benefits: [
+      'Aumenta tus niveles de felicidad y bienestar emocional.',
+      'Reduce la tristeza y mejora tu estado de ánimo de forma natural.',
+      'Ideal para momentos difíciles o para un impulso diario de alegría.',
+      'Contribuye a una sensación general de bienestar y satisfacción.',
+    ],
+    image: '/images/patchs/joy.png', // Ruta de tu imagen para Joy
+    fdaApproved: true,
+  }, 
+  {
+    id: 'defend',
+    name: 'DEFEND',
+    tagline: 'Fortalece tu Sistema Inmunológico. Protege tu Salud Naturalmente.',
+    benefits: [
+      'Refuerza tu sistema inmunológico de forma natural.',
+      'Ayuda a prevenir enfermedades y a mantenerte saludable.',
+      'Ideal para épocas de cambio estacional o cuando necesitas un impulso extra.',
+      'Contribuye a una salud general más robusta y resistente.',
+    ],
+    image: '/images/patchs/defend.png', // Ruta de tu imagen para Defend
+    fdaApproved: true,
+  }, 
+  {
+    id: 'victory',
+    name: 'VICTORY',
+    tagline: 'Supera tus Límites. Potencia tu Rendimiento Deportivo.',
+    benefits: [
+      'Aumenta tu rendimiento físico y mental durante el ejercicio.',
+      'Mejora la resistencia y reduce la fatiga muscular.',
+      'Ideal para atletas, deportistas o cualquier persona activa.',
+      'Contribuye a una recuperación más rápida después del ejercicio intenso.',
+    ],
+    image: '/images/patchs/victory.png', // Ruta de tu imagen para Victory
+    fdaApproved: true,
+  }, 
+  {
+    id: 'kiktit',
+    name: 'KIKTIT',
+    tagline: 'Adiós a la Adicción. Recupera tu Libertad.',
+    benefits: [
+      'Ayuda a reducir la dependencia de sustancias adictivas.',
+      'Facilita el proceso de desintoxicación y recuperación.',
+      'Ideal para quienes buscan liberarse de hábitos nocivos.',
+      'Contribuye a una vida más saludable y equilibrada.',
+    ],
+    image: '/images/patchs/kickit.jpg', // Ruta de tu imagen para Kiktit
+    fdaApproved: true,
+  }, 
+  {
+    id: 'ignite',
+    name: 'IGNITE',
+    tagline: 'Despierta tu Pasión. Energía y Motivación al Máximo.',
+    benefits: [
+      'Aumenta tu motivación y pasión por la vida.',
+      'Mejora tu energía y entusiasmo diario.',
+      'Ideal para momentos de baja energía o falta de inspiración.',
+      'Contribuye a un estado mental positivo y proactivo.',
+    ],
+    image: '/images/patchs/ignite.webp', // Ruta de tu imagen para Ignite
+    fdaApproved: true,
+  },
+  {
+    id: 'lumi',
+    name: 'LUMI',
+    tagline: 'Brilla con Confianza. Belleza Natural desde el Interior.',
+    benefits: [
+      'Mejora la salud de tu piel, cabello y uñas.',
+      'Aumenta la luminosidad y vitalidad de tu apariencia.',
+      'Ideal para quienes buscan un impulso de belleza natural.',
+      'Contribuye a una sensación general de bienestar y confianza.',
+    ],
+    image: '/images/patchs/lumi.webp', // Ruta de tu imagen para Lumi
+    fdaApproved: true,
+  }, 
+  {
+    id: 'rocket',
+    name: 'ROCKET',
+    tagline: 'Potencia tu Libido. Redescubre la Pasión.',
+    benefits: [
+      'Aumenta tu libido y deseo sexual de forma natural.',
+      'Mejora la circulación y la sensibilidad en las zonas erógenas.',
+      'Ideal para parejas que buscan reavivar la chispa en su relación.',
+      'Contribuye a una vida sexual más satisfactoria y plena.',
+    ],
+    image: '/images/patchs/rocket.webp', // Ruta de tu imagen para Rocket
+    fdaApproved: true,
+  }
+
 ];
 
 export default function Products() {

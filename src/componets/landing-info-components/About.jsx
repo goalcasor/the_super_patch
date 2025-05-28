@@ -16,22 +16,22 @@ export default function About() {
           </p>
           <ul className={styles.benefitsList}>
             <li className={styles.benefitItem}>
-              <span className={styles.icon}>🔬</span> **Neurociencia Pura:** Funciona en armonía con tu cuerpo, sin ingredientes externos.
+              <span className={styles.icon}>🔬</span> Neurociencia Pura: Funciona en armonía con tu cuerpo, sin ingredientes externos.
             </li>
             <li className={styles.benefitItem}>
-              <span className={styles.icon}>⏱️</span> **Acción Instantánea:** Siente el efecto desde el primer minuto.
+              <span className={styles.icon}>⏱️</span> Acción Instantánea: Siente el efecto desde el primer minuto.
             </li>
             <li className={styles.benefitItem}>
-              <span className={styles.icon}>✔️</span> **Fácil y Seguro:** Aplicar es tan simple como un adhesivo. Apto para todos, incluso niños y embarazadas.
+              <span className={styles.icon}>✔️</span> Fácil y Seguro: Aplicar es tan simple como un adhesivo. Apto para todos, incluso niños y embarazadas.
             </li>
             <li className={styles.benefitItem}>
-              <span className={styles.icon}>🚫</span> **Libre de Riesgos:** Sin contraindicaciones, no invasivo ni reactivo. Tu seguridad es nuestra prioridad.
+              <span className={styles.icon}>🚫</span> Libre de Riesgos: Sin contraindicaciones, no invasivo ni reactivo. Tu seguridad es nuestra prioridad.
             </li>
             <li className={styles.benefitItem}>
-              <span className={styles.icon}>💰</span> **Bienestar Accesible:** Calidad de vida al alcance de todos.
+              <span className={styles.icon}>💰</span> Bienestar Accesible: Calidad de vida al alcance de todos.
             </li>
           </ul>
-          <div className={styles.videoWrapper}>
+         {/*  <div className={styles.videoWrapper}>
             <p className={styles.videoPrompt}>¿Quieres entender el futuro del bienestar? Mira este video:</p>
             <a 
               href="#video-gallery" // Use the correct YouTube link here if available
@@ -39,13 +39,13 @@ export default function About() {
             >
               Ver Video Explicativo
             </a>
-          </div>
+          </div> */}
         </div>
         <div className={styles.imageGallery}>
           {/* Aquí podrías añadir un par de imágenes atractivas de los parches o de personas usándolos, 
               o una imagen que represente la neurociencia de forma abstracta. */}
-          <img src="/images/about-patch-1.jpg" alt="Parche Super Patch en uso" className={styles.galleryImage} />
-          <img src="/images/about-science.jpg" alt="Representación de neurociencia" className={styles.galleryImage} />
+          <img src="/images/patchs/hand-patch.jpg" alt="Parche Super Patch en uso" className={styles.galleryImage} />
+          <img src="/images/patchs/patch.jpg" alt="Representación de neurociencia" className={styles.galleryImage} />
         </div>
       </div>
     </section>
