@@ -10,9 +10,9 @@ function BeneficiosSection () {
                     <div className={styles.text}>
                         <h1>Los 3 Beneficios Clave De la Tecnología Super Patch:</h1>    
                         <ul>
-                                <li>Tecnología de vibrotáctil respaldada científicamente.</li>
-                                <li>Diseño discreto y fácil de usar.</li>
-                                <li>Impacto positivo en calidad de vida y salud diaria.</li>
+                            <li>Tecnología de vibrotáctil respaldada científicamente.</li>
+                            <li>Diseño discreto y fácil de usar.</li>
+                            <li>Impacto positivo en calidad de vida y salud diaria.</li>
                         </ul>
                         
                     </div>

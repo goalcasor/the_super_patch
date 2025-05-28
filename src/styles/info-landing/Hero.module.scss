@@ -1,0 +1,136 @@
+/* styles/Hero.module.scss */
+
+.hero {
+  position: relative; // Necesario para posicionar los pseudo-elementos
+  overflow: hidden; // Para asegurar que los brillos no se desborden
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%); // Un degradado sutil de azul oscuro
+  color: white;
+  text-align: center;
+  padding: 120px 20px; // Aumentamos el padding para más espacio vertical
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh; // Más altura para que el hero sea más imponente
+  font-family: 'Arial', sans-serif; // Asegúrate de usar la fuente deseada
+
+  // Pseudo-elemento para el brillo superior izquierdo
+  &::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -150px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.4), transparent 70%); // Azul vibrante, semitransparente
+    border-radius: 50%;
+    filter: blur(80px); // Efecto de brillo suave
+    z-index: 1; // Detrás del contenido
+    animation: pulseGlow 8s infinite alternate ease-in-out; // Animación de pulso
+  }
+
+  // Pseudo-elemento para el brillo inferior derecho
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -120px;
+    right: -200px;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(0, 200, 255, 0.35), transparent 60%); // Otro tono de azul
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 1;
+    animation: pulseGlow 10s infinite alternate-reverse ease-in-out; // Animación inversa
+  }
+
+  // Animación para los brillos
+  @keyframes pulseGlow {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+  }
+
+  .container {
+    max-width: 900px; // Aumentamos el ancho máximo para el contenido
+    position: relative; // Para que el contenido esté por encima de los brillos
+    z-index: 2; // Asegura que el contenido se vea por encima de los brillos
+
+    h1 {
+      font-size: 4.2em; // Tamaño de fuente más grande para el título principal
+      margin-bottom: 25px;
+      font-weight: 800; // Un peso de fuente más audaz
+      line-height: 1.1;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); // Sombra de texto para pop
+
+      @media (max-width: 992px) {
+        font-size: 3.5em;
+      }
+      @media (max-width: 768px) {
+        font-size: 2.8em;
+      }
+      @media (max-width: 480px) {
+        font-size: 2.2em;
+      }
+    }
+
+    p {
+      font-size: 1.8em; // Tamaño de fuente más grande para la descripción
+      margin-bottom: 50px;
+      line-height: 1.5;
+      max-width: 700px; // Limita el ancho del párrafo
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.9; // Ligeramente transparente para contraste
+
+      @media (max-width: 992px) {
+        font-size: 1.5em;
+      }
+      @media (max-width: 768px) {
+        font-size: 1.2em;
+      }
+      @media (max-width: 480px) {
+        font-size: 1em;
+      }
+    }
+
+    .ctaButton {
+      background-color: #007bff; // Un azul vibrante que coincide con los brillos
+      color: white;
+      padding: 18px 45px; // Aumentamos el padding para un botón más grande
+      border: none;
+      border-radius: 50px; // Botón completamente redondeado
+      font-size: 1.4em; // Tamaño de fuente más grande
+      font-weight: 700; // Peso de fuente audaz
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4); // Sombra potente
+
+      &:hover {
+        background-color: darken(#007bff, 8%);
+        transform: translateY(-5px); // Efecto de elevación
+        box-shadow: 0 15px 35px rgba(0, 123, 255, 0.5);
+      }
+      &:active {
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.2em;
+        padding: 15px 35px;
+      }
+      @media (max-width: 480px) {
+        font-size: 1em;
+        padding: 12px 30px;
+      }
+    }
+  }
+}

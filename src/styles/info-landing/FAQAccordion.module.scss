@@ -1,0 +1,110 @@
+/* styles/FAQAccordion.module.scss */
+
+.accordionContainer {
+  width: 100%;
+  max-width: 900px; // Limita el ancho del acordeón
+  margin: 0 auto; // Centra el acordeón
+  padding: 20px 0;
+}
+
+.accordionItem {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 15px; // Espacio entre los ítems del acordeón
+  overflow: hidden; // Oculta el contenido desbordante para la transición
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.accordionHeader {
+  width: 100%;
+  background-color: #f0f4f8; // Fondo ligeramente diferente para el encabezado
+  border: none;
+  padding: 20px 25px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(#f0f4f8, 3%);
+  }
+
+  &.active {
+    background-color: #e6f7ff; // Fondo cuando está activo
+    border-bottom: 1px solid #cfe2f3;
+  }
+}
+
+.accordionQuestion {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0;
+  color: #2c3e50; // Color más oscuro para la pregunta
+
+  @media (max-width: 600px) {
+    font-size: 1em;
+  }
+}
+
+.accordionIcon {
+  font-size: 1.5em;
+  color: #007bff;
+  transition: transform 0.3s ease;
+  flex-shrink: 0; // Evita que el icono se comprima
+
+  .accordionHeader.active & {
+    transform: rotate(180deg); // Gira la flecha hacia arriba
+  }
+}
+
+.accordionContent {
+  background-color: #ffffff;
+  padding: 0 25px;
+  line-height: 1.7;
+  color: #555;
+  font-size: 1em;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; // Transición para altura y padding
+  overflow: hidden; // Asegura que el contenido no se desborde durante la transición
+
+  &.open {
+    padding-bottom: 20px; // Añade padding cuando está abierto
+  }
+
+  p {
+    margin: 0; // Elimina márgenes por defecto del párrafo
+    padding-top: 15px; // Padding superior para el texto
+  }
+}
+
+// Media queries para ajustes finos en el acordeón
+@media (max-width: 768px) {
+  .accordionHeader {
+    padding: 15px 20px;
+  }
+  .accordionQuestion {
+    font-size: 1.1em;
+  }
+  .accordionIcon {
+    font-size: 1.3em;
+  }
+  .accordionContent {
+    font-size: 0.95em;
+    padding: 0 20px;
+    &.open {
+      padding-bottom: 15px;
+    }
+    p {
+      padding-top: 10px;
+    }
+  }
+}

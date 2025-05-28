@@ -1,0 +1,83 @@
+/* styles/Testimonials.module.scss */
+
+.testimonials {
+  padding: 80px 20px;
+  background-color: #f0f4f8; // Un fondo suave para esta sección
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sectionTitle {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 2.2em;
+    }
+  }
+
+  .sectionSubtitle {
+    font-size: 1.4em;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      font-size: 1.2em;
+    }
+  }
+
+  .ctaBlock {
+    margin-top: 60px;
+    background-color: #e6f7ff; // Un fondo diferente para el CTA
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .ctaText {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 25px;
+    line-height: 1.3;
+
+    @media (max-width: 768px) {
+      font-size: 1.5em;
+    }
+  }
+
+  .ctaButton {
+    background-color: #28a745; // Un botón verde de acción
+    color: white;
+    padding: 16px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+
+    &:hover {
+      background-color: darken(#28a745, 8%);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+    }
+  }
+}

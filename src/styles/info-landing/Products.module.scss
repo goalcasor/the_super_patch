@@ -1,0 +1,197 @@
+/* styles/Products.module.scss */
+
+.products {
+  padding: 80px 20px;
+  background-color: #ffffff; // Fondo blanco para los productos
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .sectionTitle {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 2.2em;
+    }
+  }
+
+  .sectionSubtitle {
+    font-size: 1.4em;
+    color: #555;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      font-size: 1.2em;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Responsive grid
+    gap: 40px; // Espacio entre las tarjetas de producto
+    margin-bottom: 60px;
+  }
+
+  .productCard {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); // Sombra más pronunciada
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; // Para asegurar que no haya desbordamientos
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .productImageWrapper {
+    width: 100%;
+    height: 250px; // Altura fija para la imagen
+    position: relative; // Para posicionar la imagen con Image de Next.js
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .productImage {
+      object-fit: contain; // Ajusta la imagen dentro del contenedor
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .productContent {
+    flex-grow: 1; // Para que el contenido ocupe el espacio restante
+    text-align: left; // Alinea el texto a la izquierda dentro de la tarjeta
+    width: 100%; // Asegura que el contenido ocupe el ancho completo de la tarjeta
+  }
+
+  .productName {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #007bff; // Color de acento para el nombre del parche
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .productTagline {
+    font-size: 1.3em;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+
+  .benefitsList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+
+    .benefitItem {
+      display: flex;
+      align-items: flex-start;
+      font-size: 1.05em;
+      color: #444;
+      margin-bottom: 10px;
+      line-height: 1.4;
+
+      .checkIcon {
+        color: #28a745; // Color verde para el check
+        font-weight: bold;
+        margin-right: 10px;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .productUsage {
+    font-size: 1em;
+    color: #777;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0; // Separador para el uso
+    line-height: 1.5;
+
+    .usageTitle {
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  .fdaApproved {
+    font-size: 0.95em;
+    color: #28a745;
+    font-weight: 600;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+
+    .checkIcon {
+      margin-right: 8px;
+      font-size: 1.1em;
+    }
+  }
+
+  .learnMoreButton {
+    background-color: #007bff; // Botón de "Saber Más" con el color principal
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+    width: 100%; // Ocupa el ancho completo de la tarjeta
+
+    &:hover {
+      background-color: darken(#007bff, 8%);
+      transform: translateY(-2px);
+    }
+  }
+
+  .ctaPrompt {
+    font-size: 1.3em;
+    color: #444;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+
+  .mainCtaButton {
+    background-color: #ff6f61; // Un color más vibrante para el CTA principal
+    color: white;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.4em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 15px rgba(255, 111, 97, 0.4);
+
+    &:hover {
+      background-color: darken(#ff6f61, 8%);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 111, 97, 0.5);
+    }
+  }
+}

@@ -1,0 +1,158 @@
+/* styles/Contact.module.scss */
+
+.contactBanner {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%); // Degradado vibrante
+  color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+}
+
+.title {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    font-size: 2.2em;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.8em;
+  }
+}
+
+.subtitle {
+  font-size: 1.5em;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+  }
+  @media (max-width: 480px) {
+    font-size: 1em;
+  }
+}
+
+.callToAction {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  font-style: italic;
+  opacity: 0.8;
+  font-weight: 300;
+
+  @media (max-width: 480px) {
+    font-size: 1em;
+  }
+}
+
+.buttonsGroup {
+  display: flex;
+  flex-direction: column; // Por defecto en columna para móviles
+  gap: 20px; // Espacio entre botones
+  justify-content: center;
+  align-items: center; // Centrar los botones individualmente
+
+  @media (min-width: 600px) {
+    flex-direction: row; // En fila para pantallas más grandes
+    flex-wrap: wrap; // Permite que los botones salten de línea si no caben
+  }
+}
+
+.socialButton {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.3em; // Ligeramente más pequeño para dos botones
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // Sombra general para los botones
+
+  .icon {
+    margin-right: 15px;
+    font-size: 1.2em; // Tamaño del icono relativo al texto del botón
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  }
+  &:active {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.1em;
+    padding: 15px 30px;
+  }
+  @media (max-width: 480px) {
+    font-size: 1em;
+    padding: 12px 25px;
+    .icon {
+      font-size: 1em;
+      margin-right: 10px;
+    }
+  }
+}
+
+.whatsappButton {
+  background-color: #25d366; // Verde de WhatsApp
+  &:hover {
+    background-color: darken(#25d366, 8%);
+  }
+}
+
+.telegramButton {
+  background-color: #0088cc; // Azul de Telegram
+  &:hover {
+    background-color: darken(#0088cc, 8%);
+  }
+}
+
+
+.alternativeText {
+  margin-top: 30px;
+  font-size: 1.1em;
+  opacity: 0.8;
+
+  b, strong {
+    color: white;
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9em;
+  }
+}

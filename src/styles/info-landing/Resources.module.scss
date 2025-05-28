@@ -1,0 +1,140 @@
+/* styles/Resources.module.scss */
+
+.resources {
+  padding: 80px 20px;
+  background-color: #f8f9fa; // Un fondo claro y limpio
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .sectionTitle {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 2.2em;
+    }
+  }
+
+  .sectionSubtitle {
+    font-size: 1.4em;
+    color: #555;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      font-size: 1.2em;
+    }
+  }
+
+  .resourceGroup {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); // Sombra sutil y elegante
+    text-align: left; // Contenido del grupo alineado a la izquierda
+
+    &:last-child {
+      margin-bottom: 0; // No margin-bottom para el último grupo
+    }
+  }
+
+  .groupTitle {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #007bff; // Color de acento para los títulos de grupo
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    .titleIcon {
+      font-size: 1.2em;
+      margin-right: 15px;
+      color: #0056b3; // Un tono más oscuro del acento para el icono del título
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.8em;
+    }
+  }
+
+  .groupDescription {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .resourcesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // Grid adaptable
+    gap: 25px; // Espacio entre las tarjetas de recursos
+  }
+
+  .resourceCard {
+    display: flex;
+    align-items: center;
+    background-color: #e9f5ff; // Fondo más claro para la tarjeta
+    padding: 20px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); // Sombra más ligera para las tarjetas
+
+    &:hover {
+      background-color: darken(#e9f5ff, 5%);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    svg {
+      font-size: 1.8em; // Tamaño de los iconos dentro de la tarjeta
+      color: #007bff; // Color de acento para los iconos
+      margin-right: 15px;
+      flex-shrink: 0; // Evita que el icono se comprima
+    }
+
+    .cardText {
+      flex-grow: 1;
+      line-height: 1.4;
+    }
+  }
+}
+
+// Media queries para ajustes finos
+@media (max-width: 600px) {
+  .resourcesGrid {
+    grid-template-columns: 1fr; // Una sola columna en pantallas muy pequeñas
+  }
+  .resourceCard {
+    font-size: 1em;
+    padding: 15px 20px;
+    svg {
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+  }
+  .groupTitle {
+    font-size: 1.6em;
+    .titleIcon {
+      font-size: 1em;
+    }
+  }
+  .groupDescription {
+    font-size: 1em;
+  }
+}
