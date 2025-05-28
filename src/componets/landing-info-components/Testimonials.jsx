@@ -1,7 +1,7 @@
 // components/Testimonials.js
 import styles from '@/styles/info-landing/Testimonials.module.scss'; // Asegúrate de que la ruta sea correcta
 import VideoGallery from '@/componets/video-gallery/VideoGallery'; // Importa tu componente VideoGallery
-
+import { SiWhatsapp, SiTelegram } from 'react-icons/si'; 
 // Datos de ejemplo para los videos de testimonios
 // En una aplicación real, esto se cargaría de Firestore o una API
 const videos = [
@@ -61,6 +61,8 @@ const videos = [
     }
   ];
 
+   const telegramChannelLink = 'https://t.me/+FyVKH5nsz2VkZTk0';
+
 export default function Testimonials() {
   return (
     <section className={styles.testimonials}>
@@ -78,9 +80,16 @@ export default function Testimonials() {
           <p className={styles.ctaText}>
             ¿Listo para escribir tu propia historia de éxito?
           </p>
-          <button className={styles.ctaButton}>
-            ¡Comienza tu Transformación Hoy!
-          </button>
+           <a
+              href={telegramChannelLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.socialButton} ${styles.telegramButton}`}
+              aria-label="Ver más testimonios en Telegram"
+            >
+              <SiTelegram className={styles.icon} />
+              <span>Ver Más Testimonios en Telegram</span>
+            </a>
         </div>
       </div>
     </section>

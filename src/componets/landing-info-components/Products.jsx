@@ -179,6 +179,9 @@ const productsData = [
 
 ];
 
+const whatsappNumber = '661959090'; // El número de teléfono
+const whatsappMessage = encodeURIComponent('Hola, me interesa Super Patch y me gustaría recibir más información o ser distribuidor. ¿Podrían ayudarme?');
+
 export default function Products() {
   return (
     <section className={styles.products}>
@@ -232,9 +235,14 @@ export default function Products() {
         <p className={styles.ctaPrompt}>
           ¿No sabes cuál elegir? ¡Contacta con un experto para una recomendación personalizada!
         </p>
-        <button className={styles.mainCtaButton}>
-          ¡Quiero mi Super Patch ahora!
-        </button>
+        <a 
+            className={styles.mainCtaButton}
+             href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Contactar con un Experto por WhatsApp
+        </a>
       </div>
     </section>
   );

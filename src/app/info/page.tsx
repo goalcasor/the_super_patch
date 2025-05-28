@@ -17,7 +17,6 @@ export default function InfoLanding() {
       <main>
         <Hero />
         <About />
-        <Contact />
         <Products />
         <Testimonials />
         <Contact />

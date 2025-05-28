@@ -11,7 +11,7 @@ export default function Contact() {
     <section className={styles.contactBanner}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <h2 className={styles.title}>¿Listo para Transformar tu Bienestar o Impulsar tu Negocio?</h2>
+          <h2 className={styles.title}>¿Listo para Transformar tu Bienestar?</h2>
           <p className={styles.subtitle}>
             Si tienes preguntas, necesitas una asesoría personalizada o te interesa ser distribuidor,
             ¡estamos aquí para ayudarte!

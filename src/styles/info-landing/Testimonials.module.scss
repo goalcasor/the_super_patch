@@ -81,3 +81,57 @@
     }
   }
 }
+
+.socialButton {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.3em; // Ligeramente más pequeño para dos botones
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // Sombra general para los botones
+
+  .icon {
+    margin-right: 15px;
+    font-size: 1.2em; // Tamaño del icono relativo al texto del botón
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  }
+  &:active {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.1em;
+    padding: 15px 30px;
+  }
+  @media (max-width: 480px) {
+    font-size: 1em;
+    padding: 12px 25px;
+    .icon {
+      font-size: 1em;
+      margin-right: 10px;
+    }
+  }
+}
+
+.whatsappButton {
+  background-color: #25d366; // Verde de WhatsApp
+  &:hover {
+    background-color: darken(#25d366, 8%);
+  }
+}
+
+.telegramButton {
+  background-color: #0088cc; // Azul de Telegram
+  &:hover {
+    background-color: darken(#0088cc, 8%);
+  }
+}
