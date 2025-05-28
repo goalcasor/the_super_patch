@@ -6,6 +6,15 @@ import { SiWhatsapp, SiTelegram } from 'react-icons/si';
 // En una aplicación real, esto se cargaría de Firestore o una API
 const videos = [
     {
+      id: '3',
+      url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/super-patch%2FEL%20SUFRIMIENTO%20INVIBLE%20-%20SD%20480p.mov?alt=media&token=90e9c441-9fde-4d0d-b6d6-40383ae784b5',
+      thumbnailUrl: '/images/how-it-works-superptach.jpg',
+      title: 'Tecnología vibrotáctil',
+      description: 'Cómo la tecnología vibrotáctil alivia el dolor crónico.',
+      duration: '0:00',
+      views: 0
+    },
+    {
       id: '1',
       url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/super-patch%2FAUTISMO%20-%20SD%20480p.mov?alt=media&token=86786812-526c-4c3b-9093-6dc737c31e40',
       thumbnailUrl: '/images/how-it-works-superptach.jpg',
@@ -20,15 +29,6 @@ const videos = [
       thumbnailUrl: '/images/how-it-works-superptach.jpg',
       title: 'Salud después del 2020',
       description: 'Historias de recuperación de personas tras los desafíos del 2020.',
-      duration: '0:00',
-      views: 0
-    },
-    {
-      id: '3',
-      url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/super-patch%2FEL%20SUFRIMIENTO%20INVIBLE%20-%20SD%20480p.mov?alt=media&token=90e9c441-9fde-4d0d-b6d6-40383ae784b5',
-      thumbnailUrl: '/images/how-it-works-superptach.jpg',
-      title: 'Tecnología vibrotáctil',
-      description: 'Cómo la tecnología vibrotáctil alivia el dolor crónico.',
       duration: '0:00',
       views: 0
     },

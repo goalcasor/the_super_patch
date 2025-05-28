@@ -232,17 +232,6 @@ export default function Products() {
             </div>
           ))}
         </div>
-        <p className={styles.ctaPrompt}>
-          ¿No sabes cuál elegir? ¡Contacta con un experto para una recomendación personalizada!
-        </p>
-        <a 
-            className={styles.mainCtaButton}
-             href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Contactar con un Experto por WhatsApp
-        </a>
       </div>
     </section>
   );

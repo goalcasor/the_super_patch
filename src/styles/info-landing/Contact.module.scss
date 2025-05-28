@@ -92,6 +92,7 @@
   align-items: center;
   color: white;
   padding: 18px 40px;
+  border: none;
   border-radius: 50px;
   text-decoration: none;
   font-size: 1.3em; // Ligeramente más pequeño para dos botones
@@ -146,6 +147,11 @@
   margin-top: 30px;
   font-size: 1.1em;
   opacity: 0.8;
+
+  & span{
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 
   b, strong {
     color: white;

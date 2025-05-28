@@ -10,9 +10,20 @@ interface VideoModalProps {
   onClose: () => void;
   videoUrl: string;
   title: string;
+  ctaLink?: string;
+  ctaText?: string;
+  isVertical?: boolean; // Nueva prop: true para video vertical, false/undefined para horizontal
 }
 
-const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoUrl, title }) => {
+const VideoModal: React.FC<VideoModalProps> = ({
+  isOpen,
+  onClose,
+  videoUrl,
+  title,
+  ctaLink,
+  ctaText,
+  isVertical = false, // Valor por defecto false (horizontal)
+}) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -48,7 +59,10 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoUrl, titl
 
   useEffect(() => {
     if (isOpen && videoRef.current) {
-      videoRef.current.play(); // Autoplay when the modal opens
+      videoRef.current.play();
+    } else if (!isOpen && videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
     }
   }, [isOpen]);
 
@@ -58,22 +72,38 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoUrl, titl
 
   return (
     <div className={styles.modalOverlay} role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
-      <div className={styles.modalContent} ref={modalRef}>
+      <div className={`${styles.modalContent} ${isVertical ? styles.verticalContent : ''}`} ref={modalRef}>
         <button className={styles.closeButton} onClick={onClose} aria-label="Cerrar video">
           <IoCloseCircleOutline />
         </button>
-        <div className={styles.videoWrapper}>
-          <video
-            ref={videoRef}
-            src={videoUrl}
-            controls // Show video controls
-            autoPlay // Autoplay the video
-            loop
-            className={styles.videoElement}
-            aria-label={title}
-          >
-            Your browser does not support the video tag.
-          </video>
+        <h2 id="video-modal-title" className="sr-only">{title}</h2>
+        <div className={`${styles.videoContainer} ${isVertical ? styles.verticalContainer : ''}`}>
+          <div className={styles.videoWrapper}>
+            <video
+              ref={videoRef}
+              src={videoUrl}
+              controls
+              autoPlay
+              loop
+              muted
+              className={styles.videoElement}
+              aria-label={title}
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          {ctaLink && ctaText && (
+            <a
+              href={ctaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ctaButton}
+              onClick={onClose}
+            >
+              {ctaText}
+            </a>
+          )}
         </div>
       </div>
     </div>

@@ -1,11 +1,28 @@
-// components/Contact.js
+'use client';
+import React, { useState } from 'react';
 import styles from '@/styles/info-landing/Contact.module.scss'; // Asegúrate de que la ruta sea correcta
-import { SiWhatsapp, SiTelegram } from 'react-icons/si'; // Importamos los iconos de React Icons
+import { SiWhatsapp,  SiHomeassistantcommunitystore  } from 'react-icons/si'; 
+import VideoModal from '../modals/HeroModal';
+
 
 export default function Contact() {
-  const whatsappNumber = '661959090'; // El número de teléfono
+  const whatsappNumber = '+34661959090'; // El número de teléfono
   const whatsappMessage = encodeURIComponent('Hola, me interesa Super Patch y me gustaría recibir más información o ser distribuidor. ¿Podrían ayudarme?');
-  const telegramChannelLink = 'https://t.me/+FyVKH5nsz2VkZTk0'; // URL de ejemplo para un canal de Telegram de testimonios. ¡Asegúrate de que esta URL sea real!
+  const telegramChannelLink = 'https://t.me/+FyVKH5nsz2VkZTk0'; 
+
+   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+    // La URL del video de la compañía que proporcionaste en el documento
+    const companyVideoUrl = "https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fsp%2Fsuper_patch_desktop.mp4?alt=media&token=b83dd774-b2e3-4ccb-a5f3-fc245f2d994c"; // Reemplaza con la URL REAL de YouTube
+  
+    const handleOpenModal = () => {
+      setIsModalOpen(true);
+    };
+  
+    const handleCloseModal = () => {
+      setIsModalOpen(false);
+    };
+  
 
   return (
     <section className={styles.contactBanner}>
@@ -32,23 +49,32 @@ export default function Contact() {
               <span>Enviar Mensaje por WhatsApp</span>
             </a>
 
-            <a
-              href={telegramChannelLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+                onClick={handleOpenModal}
               className={`${styles.socialButton} ${styles.telegramButton}`}
               aria-label="Ver más testimonios en Telegram"
             >
-              <SiTelegram className={styles.icon} />
-              <span>Ver Más Testimonios en Telegram</span>
-            </a>
-          </div>
+              <SiHomeassistantcommunitystore className={styles.icon} />
+              <span>Acceso a tienda</span>
+            </button>
 
+          </div>
           <p className={styles.alternativeText}>
-            O si lo prefieres, puedes enviar un mensaje directo al número: **{whatsappNumber}**
+            O si lo prefieres, puedes enviar un mensaje directo al número: <span> {whatsappNumber}</span>
           </p>
         </div>
       </div>
+
+        <VideoModal
+            isOpen={isModalOpen}
+            onClose={handleCloseModal}
+            videoUrl={companyVideoUrl}
+            ctaLink='https://shop.superpatch.com/#/shop/from/111208386'
+            ctaText='Acceso a tienda'
+            isVertical={false}
+        />
+
+
     </section>
   );
 }
