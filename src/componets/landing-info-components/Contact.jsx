@@ -13,7 +13,7 @@ export default function Contact() {
    const [isModalOpen, setIsModalOpen] = useState(false);
   
     // La URL del video de la compañía que proporcionaste en el documento
-    const companyVideoUrl = "https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fsp%2Fsuper_patch_desktop.mp4?alt=media&token=b83dd774-b2e3-4ccb-a5f3-fc245f2d994c"; // Reemplaza con la URL REAL de YouTube
+    const companyVideoUrl = "https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-media%2Fcompras%20como%20cliente%20.mp4?alt=media&token=65d1c103-88f1-453f-816d-373408f9c2ed"; // Reemplaza con la URL REAL de YouTube
   
     const handleOpenModal = () => {
       setIsModalOpen(true);

@@ -9,34 +9,19 @@ export default function Resources() {
     { name: 'Dossier para Profesionales', url: 'https://sistemtop.com/descargas/dossier-profesionales.pdf', icon: <FaFilePdf /> },
     { name: 'Consejo Científico', url: 'https://sistemtop.com/descargas/consejo-cientifico.pdf', icon: <FaFilePdf /> },
     { name: 'Estudios Científicos', url: 'https://sistemtop.com/descargas/estudios-cientificos.pdf', icon: <FaFilePdf /> },
+    { name: 'Equilibrio y estalbilidad', url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-docs%2FEquilibrio_balance_y_Estabilidad_-9541322.pdf?alt=media&token=414200f6-5381-49ae-af7e-f4f0d37b3a6a', icon: <FaFilePdf /> },
+    { name: 'Canales iónicos', url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-docs%2FEstudios_centificos_2025_canales_Ionicos_-9541532.pdf?alt=media&token=234246fd-2269-4347-8076-09708d8533d3', icon: <FaFilePdf /> },
+    { name: 'Estudio Científico Para el Dolor', url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-docs%2FParche_del_dolor_HapticVibrotactileTriggerTechnologyDisruptingtheNeuromatrixtoReducePainSeverityandInterference-2-9541457.pdf?alt=media&token=d190c59f-0fc2-4809-9754-10a644979252', icon: <FaFilePdf /> },
+    { name: 'Estudio Científico - REM', url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/sp-docs%2FEL_SUENO_Improving-sleep-and-quality-of-life-after-use-of-a-haptic-vibrotactile-trigger-technology-drugfree-topical-patch-results-from-the--2711-2-9541386.pdf?alt=media&token=6a5519f7-a842-4bf4-8dc6-44d39eeba254', icon: <FaFilePdf /> },
     { name: 'Imágenes de Todos los Parches', url: 'https://sistemtop.com/wp-content/uploads/2025/04/todos-los-parches-.pdf', icon: <MdDownload /> },
     { name: 'Imágenes de Productos (PDF)', url: 'https://sistemtop.com/descargas/productos.pdf', icon: <MdDownload /> },
     { name: 'Imágenes de Productos (JPG)', url: 'https://sistemtop.com/descargas/productos.jpg', icon: <MdDownload /> },
   ];
 
-  const scientificTopics = [
-    { name: 'Pruebas de Equilibrio', url: '#', icon: <FaBalanceScale /> }, // URL placeholder
-    { name: 'Dosier Informativo', url: '#', icon: <FaFilePdf /> }, // URL placeholder
-    { name: 'Estudios e Investigación', url: '#', icon: <MdScience /> }, // URL placeholder
-    { name: 'Equilibrio y Estabilidad', url: '#', icon: <FaBalanceScale /> }, // URL placeholder
-    { name: 'Canales Iónicos', url: '#', icon: <MdScience /> }, // URL placeholder
-    { name: 'Sueño REM', url: '#', icon: <FaBed /> }, // URL placeholder
-    { name: 'Anestesia y Dolor', url: '#', icon: <MdScience /> }, // URL placeholder
-    { name: 'Guía de Parches', url: '#', icon: <FaFilePdf /> }, // URL placeholder
-  ];
-
   const videoResources = [
-    { name: 'VIDEO: Cómo funciona la ciencia detrás de Super Patch', url: 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID_1', icon: <MdPlayCircleOutline /> },
-    { name: 'VIDEO: El futuro del bienestar en un parche', url: 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID_2', icon: <MdPlayCircleOutline /> },
-    { name: 'VIDEO: Cómo funciona esta tecnología 100% natural', url: 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID_3', icon: <MdPlayCircleOutline /> },
-  ];
-
-  // Herramientas para asociados, del documento original
-  const associateTools = [
-    { name: 'Llamada a 3', url: '#', icon: <MdOutlineSupportAgent /> }, // URL placeholder
-    { name: 'Material de apoyo', url: '#', icon: <MdDownload /> }, // URL placeholder
-    { name: 'Prueba de estabilidad', url: '#', icon: <FaBalanceScale /> }, // URL placeholder
-    { name: 'Rolls up tiendas', url: '#', icon: <MdOutlineSupportAgent /> }, // URL placeholder
+    { name: 'VIDEO: Cómo funciona la ciencia detrás de Super Patch', url: 'https://www.youtube.com/watch?v=vdnlN3nbvGw&t=3s', icon: <MdPlayCircleOutline /> },
+    { name: 'VIDEO: El futuro del bienestar en un parche', url: 'https://www.youtube.com/watch?v=XhNYbK-CcjI&t=2s', icon: <MdPlayCircleOutline /> },
+   /*  { name: 'VIDEO: Cómo funciona esta tecnología 100% natural', url: 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID_3', icon: <MdPlayCircleOutline /> }, */
   ];
 
   // Datos para el acordeón de Preguntas Frecuentes
@@ -80,31 +65,6 @@ export default function Resources() {
           Desde estudios científicos hasta herramientas para socios.
         </p>
 
-        {/* Sección de Herramientas para Asociados */}
-      {/*   <div className={styles.resourceGroup}>
-          <h3 className={styles.groupTitle}>
-            <MdOutlineSupportAgent className={styles.titleIcon} /> Herramientas Exclusivas para Asociados
-          </h3>
-          <p className={styles.groupDescription}>
-            Si eres parte de nuestra comunidad o quieres serlo, aquí tienes todo el soporte para crecer y triunfar.
-          </p>
-          <div className={styles.resourcesGrid}>
-            {associateTools.map((resource, index) => (
-              <a
-                key={index}
-                href={resource.url || '#'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.resourceCard}
-                aria-label={`Herramienta para asociados: ${resource.name}`}
-              >
-                {resource.icon}
-                <span className={styles.cardText}>{resource.name}</span>
-              </a>
-            ))}
-          </div>
-        </div> */}
-
         {/* Sección de Área de Descargas */}
         <div className={styles.resourceGroup}>
           <h3 className={styles.groupTitle}>
@@ -129,32 +89,6 @@ export default function Resources() {
             ))}
           </div>
         </div>
-
-        {/* Sección de Temas Científicos e Informativos */}
-     {/*    <div className={styles.resourceGroup}>
-          <h3 className={styles.groupTitle}>
-            <MdScience className={styles.titleIcon} /> Temas Clave y Base Científica
-          </h3>
-          <p className={styles.groupDescription}>
-            Profundiza en los principios de neurociencia y los beneficios específicos que Super Patch puede ofrecer.
-          </p>
-          <div className={styles.resourcesGrid}>
-            {scientificTopics.map((resource, index) => (
-              <a
-                key={index}
-                href={resource.url || '#'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.resourceCard}
-                aria-label={`Información sobre ${resource.name}`}
-              >
-                {resource.icon}
-                <span className={styles.cardText}>{resource.name}</span>
-              </a>
-            ))}
-          </div>
-        </div> */}
-
         {/* Sección de Recursos de Video */}
         <div className={styles.resourceGroup}>
           <h3 className={styles.groupTitle}>

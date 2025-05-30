@@ -225,9 +225,13 @@ export default function Products() {
                     <span className={styles.checkIcon}>✓</span> Aprobado por FDA / EU-MDR
                   </p>
                 )}
-                <button className={styles.learnMoreButton}>
+                <a 
+                className={styles.learnMoreButton}
+                href={`https://shop.superpatch.com/#/shop/from/111208386`}
+                target="_blank"
+                rel="noopener noreferrer">
                   Saber Más sobre {product.name}
-                </button>
+                </a>
               </div>
             </div>
           ))}
