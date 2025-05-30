@@ -16,7 +16,7 @@ const productsData = [
       'Favorece la homeostasis neurológica para un sistema nervioso equilibrado.',
     ],
     image: '/images/patchs/liberty.png', // Ruta de tu imagen para Liberty
-    fdaApproved: true,
+    fdaApproved: false,
   },
   {
     id: 'freedom',
@@ -56,7 +56,7 @@ const productsData = [
       'Ideal para momentos de alta presión o para un bienestar diario.',
     ],
     image: '/images/patchs/peace.png', // Ruta de tu imagen para Peace
-    fdaApproved: true,
+    fdaApproved: false,
   },
   {
     id: 'boost',
@@ -69,7 +69,7 @@ const productsData = [
       'Ideal para jornadas largas, entrenamientos o simplemente para sentirte más activo.',
     ],
     image: '/images/patchs/boost.png', // Ruta de tu imagen para Boost
-    fdaApproved: true,
+    fdaApproved: false,
   },
   
   {
@@ -83,7 +83,7 @@ const productsData = [
       'Reduce la fatiga mental y mejora el rendimiento en tareas complejas.',
     ],
     image: '/images/patchs/focus.png', // Ruta de tu imagen para Focus
-    fdaApproved: true,
+    fdaApproved: false,
   }, 
   {
     id: 'joy',
@@ -96,7 +96,7 @@ const productsData = [
       'Contribuye a una sensación general de bienestar y satisfacción.',
     ],
     image: '/images/patchs/joy.png', // Ruta de tu imagen para Joy
-    fdaApproved: true,
+    fdaApproved: false,
   }, 
   {
     id: 'defend',
@@ -109,7 +109,7 @@ const productsData = [
       'Contribuye a una salud general más robusta y resistente.',
     ],
     image: '/images/patchs/defend.png', // Ruta de tu imagen para Defend
-    fdaApproved: true,
+    fdaApproved: false,
   }, 
   {
     id: 'victory',
@@ -122,7 +122,7 @@ const productsData = [
       'Contribuye a una recuperación más rápida después del ejercicio intenso.',
     ],
     image: '/images/patchs/victory.png', // Ruta de tu imagen para Victory
-    fdaApproved: true,
+    fdaApproved: false,
   }, 
   {
     id: 'kiktit',
@@ -135,7 +135,7 @@ const productsData = [
       'Contribuye a una vida más saludable y equilibrada.',
     ],
     image: '/images/patchs/kickit.jpg', // Ruta de tu imagen para Kiktit
-    fdaApproved: true,
+    fdaApproved: false,
   }, 
   {
     id: 'ignite',
@@ -148,7 +148,7 @@ const productsData = [
       'Contribuye a un estado mental positivo y proactivo.',
     ],
     image: '/images/patchs/ignite.webp', // Ruta de tu imagen para Ignite
-    fdaApproved: true,
+    fdaApproved: false,
   },
   {
     id: 'lumi',
@@ -161,7 +161,7 @@ const productsData = [
       'Contribuye a una sensación general de bienestar y confianza.',
     ],
     image: '/images/patchs/lumi.webp', // Ruta de tu imagen para Lumi
-    fdaApproved: true,
+    fdaApproved: false,
   }, 
   {
     id: 'rocket',
@@ -174,7 +174,7 @@ const productsData = [
       'Contribuye a una vida sexual más satisfactoria y plena.',
     ],
     image: '/images/patchs/rocket.webp', // Ruta de tu imagen para Rocket
-    fdaApproved: true,
+    fdaApproved: false,
   }
 
 ];

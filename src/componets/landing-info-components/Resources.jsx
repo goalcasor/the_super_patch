@@ -81,7 +81,7 @@ export default function Resources() {
         </p>
 
         {/* Sección de Herramientas para Asociados */}
-        <div className={styles.resourceGroup}>
+      {/*   <div className={styles.resourceGroup}>
           <h3 className={styles.groupTitle}>
             <MdOutlineSupportAgent className={styles.titleIcon} /> Herramientas Exclusivas para Asociados
           </h3>
@@ -103,10 +103,10 @@ export default function Resources() {
               </a>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Sección de Área de Descargas */}
-        <div className={styles.resourceGroup}>
+   {/*      <div className={styles.resourceGroup}>
           <h3 className={styles.groupTitle}>
             <MdDownload className={styles.titleIcon} /> Área de Descargas
           </h3>
@@ -128,7 +128,7 @@ export default function Resources() {
               </a>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Sección de Temas Científicos e Informativos */}
         <div className={styles.resourceGroup}>
