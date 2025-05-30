@@ -106,7 +106,7 @@ export default function Resources() {
         </div> */}
 
         {/* Sección de Área de Descargas */}
-   {/*      <div className={styles.resourceGroup}>
+        <div className={styles.resourceGroup}>
           <h3 className={styles.groupTitle}>
             <MdDownload className={styles.titleIcon} /> Área de Descargas
           </h3>
@@ -128,10 +128,10 @@ export default function Resources() {
               </a>
             ))}
           </div>
-        </div> */}
+        </div>
 
         {/* Sección de Temas Científicos e Informativos */}
-        <div className={styles.resourceGroup}>
+     {/*    <div className={styles.resourceGroup}>
           <h3 className={styles.groupTitle}>
             <MdScience className={styles.titleIcon} /> Temas Clave y Base Científica
           </h3>
@@ -153,7 +153,7 @@ export default function Resources() {
               </a>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Sección de Recursos de Video */}
         <div className={styles.resourceGroup}>
