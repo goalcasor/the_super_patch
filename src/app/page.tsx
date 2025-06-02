@@ -109,11 +109,6 @@ const videos: Video[] = [
         </div>
       </section>
 
-
-      {/*  <section className={styles.dualSection}>
-        <DistributorCTA />
-        <TestimonialForm />
-      </section> */}
     </main>
   );
 }
