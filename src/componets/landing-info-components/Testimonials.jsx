@@ -1,9 +1,7 @@
-// components/Testimonials.js
-import styles from '@/styles/info-landing/Testimonials.module.scss'; // Asegúrate de que la ruta sea correcta
-import VideoGallery from '@/componets/video-gallery/VideoGallery'; // Importa tu componente VideoGallery
-import { SiWhatsapp, SiTelegram } from 'react-icons/si'; 
-// Datos de ejemplo para los videos de testimonios
-// En una aplicación real, esto se cargaría de Firestore o una API
+import styles from '@/styles/info-landing/Testimonials.module.scss'; 
+import VideoGallery from '@/componets/video-gallery/VideoGallery';
+import {  SiTelegram } from 'react-icons/si'; 
+
 const videos = [
     {
       id: '3',
