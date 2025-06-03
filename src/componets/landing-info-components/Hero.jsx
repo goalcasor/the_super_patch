@@ -35,6 +35,15 @@ export default function Hero() {
       description: 'Guía rápida para aplicar y maximizar los beneficios de Super Patch.',
       duration: '0:00',
       views: 0
+    },
+    {
+      id: '4',
+      url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/alex-sp%2Fhistoria%20de%20sp.mp4?alt=media&token=6a17816b-5dca-4e8d-8528-f6ecd8834e9b',
+      thumbnailUrl: '/images/03.jpg',
+      title: 'Historia de Super Patch',
+      description: 'Conoce la historia detrás de Super Patch y su impacto en el bienestar.',
+      duration: '0:00',
+      views: 0  
     }
 
    
