@@ -7,7 +7,7 @@ const videos = [
       id: '3',
       url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/super-patch%2FEL%20SUFRIMIENTO%20INVIBLE%20-%20SD%20480p.mov?alt=media&token=90e9c441-9fde-4d0d-b6d6-40383ae784b5',
       thumbnailUrl: '/images/how-it-works-superptach.jpg',
-      title: 'Tecnología vibrotáctil',
+      title: 'Testimonios reales de Super Patch',
       description: 'Cómo la tecnología vibrotáctil alivia el dolor crónico.',
       duration: '0:00',
       views: 0
