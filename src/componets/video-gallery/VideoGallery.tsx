@@ -109,6 +109,7 @@ const VideoGallery: React.FC<VideoGalleryProps> = ({ videos }) => {
             preload="metadata"
             className={styles.videoPlayer}
             aria-label={`Reproductor de video del testimonio ${currentVideo.title}`}
+            muted
           >
             Tu navegador no soporta el elemento de video.
           </video>

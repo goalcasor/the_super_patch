@@ -1,12 +1,10 @@
 'use client';
 import React, { useState } from 'react';
 import styles from '@/styles/info-landing/Hero.module.scss';
-import VideoModal from '../modals/HeroModal';
 import VideoGallery from '../video-gallery/VideoGallery';
 import { i } from 'framer-motion/client';
 
 export default function Hero() {
-
 
   const videos = [
     {
@@ -48,17 +46,16 @@ export default function Hero() {
 
    
   ]
- 
 
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
         <h1>¿Y si existiera una tecnología que aliviara el dolor sin químicos ni fármacos?</h1>
         <p>Descubre el futuro del bienestar en un parche 100% natural.</p>
+      </div>
         <VideoGallery
           videos={videos}
         />
-      </div>
-    </section>
+    </section>  
   );
 }

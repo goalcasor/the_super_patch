@@ -1,19 +1,20 @@
 /* styles/Hero.module.scss */
 
 .hero {
-  position: relative; // Necesario para posicionar los pseudo-elementos
-  overflow: hidden; // Para asegurar que los brillos no se desborden
-  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%); // Un degradado sutil de azul oscuro
+  position: relative; 
+  overflow: hidden;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%); 
   color: white;
   text-align: center;
-  padding: 120px 20px; // Aumentamos el padding para más espacio vertical
+  padding: 120px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 85vh; // Más altura para que el hero sea más imponente
-  font-family: 'Arial', sans-serif; // Asegúrate de usar la fuente deseada
+  flex-direction: column;
+  min-height: 85vh; 
+  font-family: 'Arial', sans-serif; 
 
-  // Pseudo-elemento para el brillo superior izquierdo
+
   &::before {
     content: '';
     position: absolute;
@@ -21,14 +22,14 @@
     left: -150px;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(0, 123, 255, 0.4), transparent 70%); // Azul vibrante, semitransparente
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.4), transparent 70%);
     border-radius: 50%;
-    filter: blur(80px); // Efecto de brillo suave
-    z-index: 1; // Detrás del contenido
-    animation: pulseGlow 8s infinite alternate ease-in-out; // Animación de pulso
+    filter: blur(80px); 
+    z-index: 1;
+    animation: pulseGlow 8s infinite alternate ease-in-out;
   }
 
-  // Pseudo-elemento para el brillo inferior derecho
+  
   &::after {
     content: '';
     position: absolute;
@@ -36,14 +37,14 @@
     right: -200px;
     width: 450px;
     height: 450px;
-    background: radial-gradient(circle, rgba(0, 200, 255, 0.35), transparent 60%); // Otro tono de azul
+    background: radial-gradient(circle, rgba(0, 200, 255, 0.35), transparent 60%); 
     border-radius: 50%;
     filter: blur(90px);
     z-index: 1;
-    animation: pulseGlow 10s infinite alternate-reverse ease-in-out; // Animación inversa
+    animation: pulseGlow 10s infinite alternate-reverse ease-in-out; 
   }
 
-  // Animación para los brillos
+
   @keyframes pulseGlow {
     0% {
       transform: scale(1);
@@ -60,9 +61,9 @@
   }
 
   .container {
-    max-width: 900px; // Aumentamos el ancho máximo para el contenido
-    position: relative; // Para que el contenido esté por encima de los brillos
-    z-index: 2; // Asegura que el contenido se vea por encima de los brillos
+    max-width: 900px; 
+    position: relative;
+    z-index: 2;
 
     h1 {
       font-size: 4.2em; // Tamaño de fuente más grande para el título principal
