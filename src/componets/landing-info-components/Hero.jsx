@@ -8,19 +8,19 @@ export default function Hero() {
   const videos = [
     {
       id: '0',
-      url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/alex-sp%2Flanding-marzo%2FIMG_9345.MP4?alt=media&token=2a490a2a-66e7-4e9f-b66a-303386d5902a',
+      url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/alex-sp%2Fque%20es%20SuperPatch.mp4?alt=media&token=9ee3260f-c24e-435b-9c65-31751df8a3ce',
       thumbnailUrl: '/images/01.jpg',
-      title: 'Oportunidad para crear tu propio negocio',
-      description: 'Conviértete en un líder de bienestar con Super Patch.',
+      title: '¿Qué es Super Patch?',
+      description: 'Descubre cómo Super Patch puede transformar tu bienestar.',
       duration: '0:00',
       views: 0
     }, 
     {
       id: '1',
-      url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/alex-sp%2Fque%20es%20SuperPatch.mp4?alt=media&token=9ee3260f-c24e-435b-9c65-31751df8a3ce',
+      url: 'https://firebasestorage.googleapis.com/v0/b/mdc-guide.appspot.com/o/alex-sp%2Flanding-marzo%2FIMG_9345.MP4?alt=media&token=2a490a2a-66e7-4e9f-b66a-303386d5902a',
       thumbnailUrl: '/images/01.jpg',
-      title: '¿Qué es Super Patch?',
-      description: 'Descubre cómo Super Patch puede transformar tu bienestar.',
+      title: 'Oportunidad para crear tu propio negocio',
+      description: 'Conviértete en un líder de bienestar con Super Patch.',
       duration: '0:00',
       views: 0
     }, 
