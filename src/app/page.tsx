@@ -3,6 +3,8 @@ import Hero from '@/componets/landing-info-components/Hero';
 import About from '@/componets/landing-info-components/About';
 import Testimonials from '@/componets/landing-info-components/Testimonials';
 import Contact from '@/componets/landing-info-components/Contact';
+import HomePage from '@/componets/home-page/HomePage';
+
 
 export default function InfoLanding() {
   return (
@@ -13,12 +15,7 @@ export default function InfoLanding() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero />
-        <Contact />
-        <About />
-        <Testimonials />
-        <Contact />
-
+        <HomePage />
       </main>
     </div>
   );

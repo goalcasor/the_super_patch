@@ -1,0 +1,577 @@
+$primary-dark-blue: #0b1a2f;
+$text-light: #ffffff;
+$text-dark: #333333;
+$text-secondary-light: #e0e0e0;
+$accent-red: #e7222e;
+$accent-orange: #ff7e5f;
+$accent-cyan: #56d8e4;
+
+/* --- Base y Contenedor Principal --- */
+.pageContainer {
+  width: 100%;
+  background-color: #ffffff;
+  color: $text-dark;
+  font-family: 'Inter', sans-serif; /* Asumiendo que Inter es la fuente principal */
+  overflow-x: hidden; /* Previene el desbordamiento horizontal */
+}
+
+/* --- Estilos Generales de Sección --- */
+.section {
+  padding: 4rem 2rem; /* Relleno por defecto */
+  max-width: 1200px; /* Ancho máximo para el contenido de la sección */
+  margin: 0 auto; /* Centra la sección */
+}
+
+.darkSection {
+  background-color: $primary-dark-blue;
+  color: $text-light;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem; /* Tamaño de fuente por defecto */
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.centeredText {
+  text-align: center;
+  max-width: 900px;
+  margin: 1rem auto;
+
+  h2, h3 {
+    margin-bottom: 1rem;
+  }
+  h2 { font-size: 2.2rem; } /* Tamaño de fuente por defecto */
+  h3 { font-size: 1.8rem; font-weight: 500;} /* Tamaño de fuente por defecto */
+  p { font-size: 1.1rem; line-height: 1.6; } /* Tamaño de fuente por defecto */
+}
+
+.subheading {
+  font-size: 1.4rem; /* Tamaño de fuente por defecto */
+  font-weight: 500;
+}
+
+.bigHeading {
+  font-size: 2.8rem; /* Tamaño de fuente por defecto */
+  margin-top: 1rem;
+  color: $primary-dark-blue;
+}
+
+/* --- Layouts --- */
+.twoColumnLayout {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+  justify-content: center; /* Centra los elementos cuando se envuelven */
+
+  .textBlock, .imageBlock, .videoBlock {
+    flex: 1; /* Permite que los bloques crezcan */
+    min-width: 300px; /* Ancho mínimo antes de envolver */
+    /* Para pantallas más pequeñas, se ajustará automáticamente por flex-wrap */
+  }
+  
+  .textBlock p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .videoBlock iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto del video */
+    border-radius: 8px;
+  }
+}
+
+.threeColumnGrid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+
+  .gridItem {
+    flex-basis: 300px; /* Ancho base para 3 columnas antes de envolver */
+    text-align: center;
+    h4 {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    p {
+      color: $text-secondary-light;
+    }
+    img {
+      max-width: 100%; /* Asegura que la imagen no desborde */
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+}
+
+.fourColumnGrid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+
+  .opportunityCard {
+    flex-basis: 250px; /* Ancho base para 4 columnas antes de envolver */
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: darken($primary-dark-blue, 5%); /* Función darken de Sass */
+    h3 {
+      margin: 1rem 0;
+      font-size: 1.3rem;
+    }
+    p {
+      color: $text-secondary-light;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+/* --- Componentes Específicos --- */
+.heroSection {
+  .fullWidthImage {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  }
+}
+
+.dualBrainLayout {
+  display: flex;
+  align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+  justify-content: center;
+  gap: 1.5rem; /* Espacio entre los lados del cerebro */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+
+  .brainSide {
+    padding: 1.5rem;
+    border-radius: 15px;
+    width: 320px; /* Ancho fijo para las cajas de cerebro */
+    flex-shrink: 0; /* Evita que las cajas se encojan en flexbox */
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    ul {
+      list-style-type: '✔ '; /* Unicode checkmark */
+      padding-left: 1.5rem;
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  #malFuncionamiento {
+    background-color: lighten($accent-orange, 25%); /* Función lighten de Sass */
+    border: 2px solid $accent-orange;
+    color: $text-dark;
+  }
+
+  #buenFuncionamiento {
+    background-color: lighten($accent-cyan, 35%); /* Función lighten de Sass */
+    border: 2px solid $accent-cyan;
+    color: $text-dark;
+  }
+
+  .brainImage {
+    flex-basis: 400px; /* Ancho base para la imagen del cerebro */
+    max-width: 100%;
+    height: auto;
+    display: flex; /* Para centrar la imagen dentro de su contenedor */
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block; /* Elimina espacio extra debajo de la imagen */
+    }
+  }
+}
+
+.patchInfoLayout {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+
+  .patchText {
+    flex: 1; /* Permite que los bloques de texto crezcan */
+    min-width: 280px; /* Ancho mínimo antes de envolver */
+
+    h4 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: $text-secondary-light;
+    }
+  }
+
+  /* Los text-align específicos se anularán en media queries para mobile */
+  .patchText:first-of-type {
+    text-align: right;
+  }
+  .patchText:last-of-type {
+    text-align: left;
+  }
+
+  .patchImage {
+    flex-shrink: 0;
+    max-width: 100%; /* Asegura que la imagen no desborde */
+    height: auto;
+  }
+}
+
+.iconPlaceholder {
+  background-color: transparent; 
+  color: #FFFFFF;
+  font-size: 3.5rem; 
+  margin-bottom: 1rem; 
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: #f4f4f4;
+  color: $text-dark;
+  text-align: center;
+  padding: 3rem 1rem;
+
+  p {
+    max-width: 600px;
+    margin: 1.5rem auto;
+  }
+
+  /* Estilos específicos para contactMethods dentro del footer si es un componente anidado */
+  .contactMethods {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .contactItem { /* Asumiendo que es una clase dentro de contactMethods */
+    text-align: center;
+    h4 {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}
+
+/* --- Estilos para los botones de contacto (ya optimizados previamente) --- */
+.contactMethods { /* Este bloque se fusiona o coexiste con el del footer si es un componente reusable */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.contactButton {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.contactButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transition: all 0.7s ease;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: 0;
+}
+
+.contactButton:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.contactButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  font-size: 2.5em;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.textContainer h4 {
+  margin: 0;
+  font-size: 1.2em;
+  color: inherit;
+}
+
+.textContainer p {
+  margin: 0;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Estilos de color específicos para cada botón con gradientes */
+.whatsappButton {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.telegramButton {
+  background: linear-gradient(135deg, #0088CC, #005E99);
+}
+
+.mailButton {
+  background: linear-gradient(135deg, #EA4335, #C63426);
+}
+
+
+/* --- Media Queries para Responsividad --- */
+
+/* Extra Small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 1rem; /* Reduce el relleno en móviles pequeños */
+  }
+
+  .sectionTitle {
+    font-size: 2rem; /* Tamaño de título más pequeño */
+  }
+
+  .centeredText {
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.5rem; }
+    p { font-size: 1rem; } /* Tamaño de párrafo ligeramente más pequeño */
+  }
+
+  .subheading {
+    font-size: 1.2rem;
+  }
+
+  .bigHeading {
+    font-size: 2.2rem;
+  }
+
+  .twoColumnLayout,
+  .threeColumnGrid,
+  .fourColumnGrid,
+  .dualBrainLayout,
+  .patchInfoLayout {
+    flex-direction: column; /* Apila todos los diseños en una columna */
+    gap: 1.5rem; /* Reduce el espacio entre elementos apilados */
+  }
+
+  .twoColumnLayout .textBlock,
+  .twoColumnLayout .imageBlock,
+  .twoColumnLayout .videoBlock,
+  .threeColumnGrid .gridItem,
+  .fourColumnGrid .opportunityCard,
+  .dualBrainLayout .brainSide,
+  .patchInfoLayout .patchText {
+    min-width: unset; /* Elimina min-width para permitir el flujo natural */
+    width: 100%; /* Ocupa el ancho completo */
+    flex-basis: auto; /* Restablece el flex-basis */
+  }
+  
+  .patchInfoLayout .patchText {
+    text-align: center !important; /* Centra el texto en móviles para ambos lados */
+  }
+  .dualBrainLayout .brainImage {
+      flex-basis: auto;
+      max-width: 90%; /* Ajusta el tamaño de la imagen del cerebro */
+  }
+
+  /* Contact Buttons specific for very small screens */
+  .contactMethods {
+    padding: 15px;
+    gap: 15px;
+  }
+  .contactButton {
+    max-width: 100%;
+    padding: 10px 20px;
+  }
+  .icon {
+    font-size: 1.8em;
+  }
+  .textContainer h4 {
+    font-size: 1em;
+  }
+  .textContainer p {
+    font-size: 0.8em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+
+  .centeredText {
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.7rem; }
+    p { font-size: 1.05rem; }
+  }
+  
+  .subheading {
+    font-size: 1.3rem;
+  }
+
+  .bigHeading {
+    font-size: 2.5rem;
+  }
+
+  .twoColumnLayout,
+  .dualBrainLayout,
+  .patchInfoLayout {
+    flex-direction: column; /* Apila estos diseños también en tablets */
+    gap: 2rem;
+  }
+  
+  .twoColumnLayout .textBlock,
+  .twoColumnLayout .imageBlock,
+  .twoColumnLayout .videoBlock,
+  .dualBrainLayout .brainSide,
+  .patchInfoLayout .patchText {
+    min-width: unset;
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .patchInfoLayout .patchText {
+    text-align: center !important; /* Centra el texto en tablets */
+  }
+
+  .threeColumnGrid,
+  .fourColumnGrid {
+    .gridItem, .opportunityCard {
+      flex-basis: calc(50% - 1rem); /* Dos columnas en tablets */
+    }
+  }
+
+  /* Contact Buttons specific for tablets */
+  .contactButton {
+    padding: 12px 25px;
+  }
+  .icon {
+    font-size: 2em;
+  }
+  .textContainer h4 {
+    font-size: 1.1em;
+  }
+  .textContainer p {
+    font-size: 0.85em;
+  }
+}
+
+/* Medium devices (laptops and smaller desktops, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section {
+    padding: 4rem 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.4rem;
+  }
+
+  .centeredText {
+    h2 { font-size: 2.1rem; }
+    h3 { font-size: 1.75rem; }
+    p { font-size: 1.08rem; }
+  }
+
+  .bigHeading {
+    font-size: 2.7rem;
+  }
+
+  .threeColumnGrid {
+    .gridItem {
+      flex-basis: calc(33.333% - 1.5rem); /* Mantiene 3 columnas */
+    }
+  }
+
+  .fourColumnGrid {
+    .opportunityCard {
+      flex-basis: calc(33.333% - 1rem); /* 3 columnas en pantallas medianas */
+    }
+  }
+}
+
+/* Large devices (desktops, 1025px and up) */
+/* Los estilos por defecto ya sirven para estas pantallas, pero se pueden refinar */
+@media (min-width: 1025px) {
+  .section {
+    padding: 5rem 2.5rem; /* Aumenta el relleno para pantallas grandes */
+  }
+  .sectionTitle {
+    font-size: 2.8rem;
+  }
+  .centeredText {
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 2rem; }
+    p { font-size: 1.2rem; }
+  }
+  .bigHeading {
+    font-size: 3rem;
+  }
+  /* Asegura que los layouts complejos mantengan su diseño de múltiples columnas */
+  .twoColumnLayout {
+    flex-direction: row;
+  }
+  .dualBrainLayout {
+    flex-direction: row;
+  }
+  .patchInfoLayout {
+    flex-direction: row;
+  }
+}
