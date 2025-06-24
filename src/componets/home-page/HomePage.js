@@ -29,12 +29,12 @@ const Home1 = () => {
     },
   ];
 
-  return (
+return (
     <main className={styles.pageContainer}>
       {/* --- Sección 1: Introducción y Descubrimiento --- */}
       <section className={`${styles.section} ${styles.heroSection}`}>
         <div className={styles.centeredText}>
-          <h2>En el 2008 se hizo un descubrimiento que vino a cambiar el mundo, tal y como lo conocemos.</h2>
+          <h2>En 2008 se hizo un descubrimiento que vino a cambiar el mundo tal y como lo conocemos.</h2>
           <p className={styles.subheading}>Un nuevo lenguaje de comunicación con nuestro cerebro.</p>
         </div>
         <Image 
@@ -56,7 +56,7 @@ const Home1 = () => {
           <div className={styles.textBlock}>
             <h2>Hoy sabemos que nuestro cerebro es el sistema operativo de nuestro cuerpo.</h2>
             <br/>
-            <p>Nuestro cerebro es el sitema operativo de nuestro cuerpo, como si de un ordenador se tratase, el sistema operativo se daña, o deja de funcionar correctamente. Cuando algo no funciona bien en nuestro cuerpo, el cerebro tiene la capacidad de restaurar esos programas y arreglarlos.</p>
+            <p>Nuestro cerebro es el sistema operativo de nuestro cuerpo, como si de un ordenador se tratase; el sistema operativo se daña o deja de funcionar correctamente. Cuando algo no funciona bien en nuestro cuerpo, el cerebro tiene la capacidad de restaurar esos programas y arreglarlos.</p>
           </div>
           <div className={styles.imageBlock}>
             <Image 
@@ -69,8 +69,8 @@ const Home1 = () => {
           </div>
         </div>
         <div className={styles.centeredText} style={{ marginTop: '4rem' }}>
-          <h2>Este descubrimiento esta aquí, para ayudar a resolver los grandes problemas de la Humanidad.</h2>
-          <p>Es una comunicacion natural, que restaura programas que todos en mayor o menor grado, tenemos y no funcionan correcmente</p>
+          <h2>Este descubrimiento está aquí para ayudar a resolver los grandes problemas de la humanidad.</h2>
+          <p>Es una comunicación natural que restaura programas que todos, en mayor o menor grado, tenemos y no funcionan correctamente.</p>
         </div>
       </section>
 
@@ -122,45 +122,45 @@ const Home1 = () => {
       <section className={`${styles.section} ${styles.darkSection}`}>
         <div className={styles.centeredText}>
             <h2>ES REAL Y AHORA LO PUEDES EXPERIMENTAR</h2>
-            <p className={styles.subheading}>UN LENGUAJE QUE SE COMUNICA A TRAVES DE LA PIEL</p>
+            <p className={styles.subheading}>UN LENGUAJE QUE SE COMUNICA A TRAVÉS DE LA PIEL</p>
         </div>
         <div className={styles.centeredText} style={{ maxWidth: '800px', margin: '2rem auto' }}>
-            <p>Porque estamos hablando de neurociencia al mas alto nivel de investigación.</p>
+            <p>Porque estamos hablando de neurociencia al más alto nivel de investigación.</p>
         </div>
         <div className={styles.threeColumnGrid}>
             <div className={styles.gridItem}>
                 <Image src="/images/patchs/hand-patch.jpg" alt="Mano escribiendo" width={350} height={200} style={{ objectFit: 'cover' }} />
-                <h4>MENSAJE QUE SE ENVIA A TRAVES DEL CONTACTO CON LA PIEL</h4>
-                <p>Si cierras los ojos y te doy un boligrafo, sabes que es un boligrafo sin verlo, de esta forma se comunica. La piel envia la informacion al cerebro.</p>
+                <h4>MENSAJE QUE SE ENVÍA A TRAVÉS DEL CONTACTO CON LA PIEL</h4>
+                <p>Si cierras los ojos y te doy un bolígrafo, sabes que es un bolígrafo sin verlo; de esta forma se comunica. La piel envía la información al cerebro.</p>
             </div>
             <div className={styles.gridItem}>
                 <Image src="/images/receptores.png" alt="Receptores de la piel" width={350} height={200} style={{ objectFit: 'contain' }}/>
-                <h4>EN LA PIEL, EXISTEN MILES DE RECEPTORES QUE ENVIAN CONSTANTEMENTE MENSAJES AL CEREBRO</h4>
-                <p>Por eso podemos detectar frio, calor, dolor y tacto, entre otros.</p>
+                <h4>EN LA PIEL, EXISTEN MILES DE RECEPTORES QUE ENVÍAN CONSTANTEMENTE MENSAJES AL CEREBRO</h4>
+                <p>Por eso podemos detectar frío, calor, dolor y tacto, entre otros.</p>
             </div>
             <div className={styles.gridItem}>
                 <Image src="/images/premio-nobel.png" alt="Ganadores del Premio Nobel 2021" width={350} height={200} style={{ objectFit: 'cover' }}/>
-                <h4>EN EL 2021, DOS CIENTÍFICOS LO DEMOSTRARÓN</h4>
-                <p>Premio nobel de la ciencia por este hallazgo.</p>
+                <h4>EN 2021, DOS CIENTÍFICOS LO DEMOSTRARON</h4>
+                <p>Premio Nobel de la ciencia por este hallazgo.</p>
             </div>
         </div>
         
-        <h2 className={styles.sectionTitle} style={{ margin: '4rem 0' }}>A TRAVES DE ESTE MEDIO LO HACE</h2>
+        <h2 className={styles.sectionTitle} style={{ margin: '4rem 0' }}>A TRAVÉS DE ESTE MEDIO LO HACE</h2>
 
         <div className={styles.patchInfoLayout}>
             <div className={styles.patchText}>
-                <h4>A traves de un codigo insertado en un Parche.</h4>
-                <p>Libre de, ingredientes, químicos, sustancias, o medicamentos.</p>
-                <p>Natural sin aditivos.</p>
-                <p>LLevan unos micro puntos ó crestas que envian un mensaje concreto al cerebro </p>
+                <h4>A través de un código insertado en un parche.</h4>
+                <p>Libre de ingredientes, químicos, sustancias o medicamentos.</p>
+                <p>Natural, sin aditivos.</p>
+                <p>Llevan unos micropuntos o crestas que envían un mensaje concreto al cerebro.</p>
             </div>
             <div className={styles.patchImage}>
                 <Image src="/images/patch.png" alt="Parche Super Patch" width={300} height={300} style={{ objectFit: 'contain' }}/>
             </div>
             <div className={styles.patchText}>
-                <h4>Actualmente existen 13 codigos o tipos de mensajes</h4>
-                <p>cada uno de ellos, envia un mensaje especifico.</p>
-                <p>Y estan ayudandon a solventar la mayoria de los problemas que sufre el 80% de la población Mundial.</p>
+                <h4>Actualmente existen 13 códigos o tipos de mensajes.</h4>
+                <p>Cada uno de ellos envía un mensaje específico.</p>
+                <p>Y están ayudando a solventar la mayoría de los problemas que sufre el 80% de la población mundial.</p>
                 <p>Parece magia, pero no lo es.</p>
                 <p>Es ciencia médica de vanguardia.</p>
             </div>
@@ -171,10 +171,10 @@ const Home1 = () => {
       <section className={`${styles.section}`}>
         <div className={styles.twoColumnLayout}>
             <div className={styles.textBlock}>
-                <p>En tan solo 25 minutos, entenderas de que hablamos y que hace cada codigo.</p>
-                <p>Es natural y no tienen ninguna contraindicación, lo puede usar todo el mundo y es una nueva forma de abordar los grandes desafios de la salud y el bienestar.</p>
-                <p>Si entiendes la potencia que hay detras de esta innovación, entenderas que es una gran herramienta para tu profesión o negocio.</p>
-                <p>Lo que vas a ver en este video, es lo que vas a poder experimentar tu mism@.</p>
+                <p>En tan solo 25 minutos, entenderás de qué hablamos y qué hace cada código.</p>
+                <p>Es natural y no tiene ninguna contraindicación, lo puede usar todo el mundo y es una nueva forma de abordar los grandes desafíos de la salud y el bienestar.</p>
+                <p>Si entiendes la potencia que hay detrás de esta innovación, entenderás que es una gran herramienta para tu profesión o negocio.</p>
+                <p>Lo que vas a ver en este video es lo que vas a poder experimentar tú mism@.</p>
             </div>
             <div className={styles.videoBlock}>
                 {/* El iframe de YouTube se puede personalizar más si es necesario */}
@@ -190,7 +190,7 @@ const Home1 = () => {
             </div>
         </div>
         <div className={styles.centeredText} style={{ marginTop: '4rem' }}>
-            <h2>Ahora puedes experimentarlo.<br/>y</h2>
+            <h2>Ahora puedes experimentarlo.<br/>Y</h2>
             <h2 className={styles.bigHeading}> Ver una gran oportunidad.</h2>
         </div>
       </section>
@@ -201,27 +201,27 @@ const Home1 = () => {
             <div className={styles.opportunityCard}>
                 <div className={styles.iconPlaceholder}> <GrGrow/> </div>
                 <h3>CRECIMIENTO</h3>
-                <p>2023, mas de 60 millones de facturacón.</p>
-                <p>2024, sobrepasa lo 100 millones de facturación.</p>
-                <p>2025, batiendo record de usuaros mes a mes.</p>
+                <p>2023, más de 60 millones de facturación.</p>
+                <p>2024, sobrepasa los 100 millones de facturación.</p>
+                <p>2025, batiendo récord de usuarios mes a mes.</p>
             </div>
             <div className={styles.opportunityCard}>
                 <div className={styles.iconPlaceholder}> <FaBrain/> </div>
                 <h3>ENFOQUE</h3>
-                <p>Muy Sencillo, lo pruebas, lo experimentas ves lo que hace...</p>
-                <p>Y compartes, primero con la gente que confie en ti y despues con el resto</p>
+                <p>Muy sencillo: lo pruebas, lo experimentas, ves lo que hace...</p>
+                <p>Y compartes, primero con la gente que confía en ti y después con el resto.</p>
             </div>
             <div className={styles.opportunityCard}>
                 <div className={styles.iconPlaceholder}> <FaUsers /> </div>
                 <h3>ORGANIZACIÓN</h3>
-                <p>Crea tu propia organizacion, entiende como funciona, como se distribuye y escala a lo más alto.</p>
+                <p>Crea tu propia organización, entiende cómo funciona, cómo se distribuye y escala a lo más alto.</p>
             </div>
             <div className={styles.opportunityCard}>
                 <div className={styles.iconPlaceholder}> <FaMoneyBillWave /> </div>
                 <h3>RENTABILIDAD</h3>
-                <p>Ingresos extras sin inversón.</p>
+                <p>Ingresos extras sin inversión.</p>
                 <p>Genera un sistema de ingresos activos y pasivos.</p>
-                <p>Apuntae al plan de Carrera y cambia tu vida , si es lo que buscas.</p>
+                <p>Apúntate al plan de carrera y cambia tu vida, si es lo que buscas.</p>
             </div>
         </div>
       </section>
@@ -229,7 +229,7 @@ const Home1 = () => {
       {/* --- Sección 7: Contacto / Footer --- */}
       <footer className={styles.footer}>
         <h2>¿Quieres saber más?</h2>
-        <p>Si quieres saber mas contacta directamente enviando un mensaje de WhatsApp o Telegram y me pondré en contacto contigo para que lo veas.</p>
+        <p>Si quieres saber más, contacta directamente enviando un mensaje de WhatsApp o Telegram y me pondré en contacto contigo para que lo veas.</p>
         <div className={styles.contactMethods}>
             {contactItems.map((item) => (
             <a
