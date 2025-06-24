@@ -45,7 +45,7 @@ const Home1 = () => {
           className={styles.fullWidthImage}
         />
         <div className={styles.centeredText}>
-          <p>Ha existido siempre, desde nacimos.</p>
+          <p>Ha existido siempre, desde que nacimos.</p>
           <h3>Hoy esta comunicación la tenemos disponible para usarla para nuestro mayor bien.</h3>
         </div>
       </section>
@@ -69,7 +69,7 @@ const Home1 = () => {
           </div>
         </div>
         <div className={styles.centeredText} style={{ marginTop: '4rem' }}>
-          <h2>Este descubrimiento esta aquí, para resolver los grandes problemas de la Humanidad.</h2>
+          <h2>Este descubrimiento esta aquí, para ayudar a resolver los grandes problemas de la Humanidad.</h2>
           <p>Es una comunicacion natural, que restaura programas que todos en mayor o menor grado, tenemos y no funcionan correcmente</p>
         </div>
       </section>
@@ -125,11 +125,11 @@ const Home1 = () => {
             <p className={styles.subheading}>UN LENGUAJE QUE SE COMUNICA A TRAVES DE LA PIEL</p>
         </div>
         <div className={styles.centeredText} style={{ maxWidth: '800px', margin: '2rem auto' }}>
-            <p>Porque estamos hablando de neurociencia al mas alto nivel de investigación y yo no soy Neurologo y quizas tu tampoco.</p>
+            <p>Porque estamos hablando de neurociencia al mas alto nivel de investigación.</p>
         </div>
         <div className={styles.threeColumnGrid}>
             <div className={styles.gridItem}>
-                <Image src="/images/mano-escribiendo.png" alt="Mano escribiendo" width={350} height={200} style={{ objectFit: 'cover' }} />
+                <Image src="/images/patchs/hand-patch.jpg" alt="Mano escribiendo" width={350} height={200} style={{ objectFit: 'cover' }} />
                 <h4>MENSAJE QUE SE ENVIA A TRAVES DEL CONTACTO CON LA PIEL</h4>
                 <p>Si cierras los ojos y te doy un boligrafo, sabes que es un boligrafo sin verlo, de esta forma se comunica. La piel envia la informacion al cerebro.</p>
             </div>
@@ -152,7 +152,7 @@ const Home1 = () => {
                 <h4>A traves de un codigo insertado en un Parche.</h4>
                 <p>Libre de, ingredientes, químicos, sustancias, o medicamentos.</p>
                 <p>Natural sin aditivos.</p>
-                <p>LLevan unos micro puntos ó crestas que</p>
+                <p>LLevan unos micro puntos ó crestas que envian un mensaje concreto al cerebro </p>
             </div>
             <div className={styles.patchImage}>
                 <Image src="/images/patch.png" alt="Parche Super Patch" width={300} height={300} style={{ objectFit: 'contain' }}/>
@@ -160,8 +160,9 @@ const Home1 = () => {
             <div className={styles.patchText}>
                 <h4>Actualmente existen 13 codigos o tipos de mensajes</h4>
                 <p>cada uno de ellos, envia un mensaje especifico.</p>
-                <p>Y estan ayudandon a solventar la mayoria de los problemas que sufre el 70% de la población Mundial.</p>
-                <p>Parece no magia, pero no lo es.</p>
+                <p>Y estan ayudandon a solventar la mayoria de los problemas que sufre el 80% de la población Mundial.</p>
+                <p>Parece magia, pero no lo es.</p>
+                <p>Es ciencia médica de vanguardia.</p>
             </div>
         </div>
       </section>
@@ -170,10 +171,10 @@ const Home1 = () => {
       <section className={`${styles.section}`}>
         <div className={styles.twoColumnLayout}>
             <div className={styles.textBlock}>
-                <p>En tan solo 25 minutos, entenderas de que hablamos y que hace cada codigo, te recuerdo que son combinables y puedes usar los que quieras.</p>
-                <p>ya que no tiene ninguna contraindicacion, lo puede usar todo el mundo y es una nueva forma de abordar los grandes desafios de la salud y el bienestar,</p>
-                <p>Si entiendes la potencia que hay detras de esta innovación, entenderas que hay una gran oportunidad para tener tu propio negocio sin onversio, algo nunca visto.</p>
-                <p>Se puede ofrecer desde tu propio negocio ya vendiendo directamente o lo mas comodo, que lo compren en tu tienda online de forma exclusiva.</p>
+                <p>En tan solo 25 minutos, entenderas de que hablamos y que hace cada codigo.</p>
+                <p>Es natural y no tienen ninguna contraindicación, lo puede usar todo el mundo y es una nueva forma de abordar los grandes desafios de la salud y el bienestar.</p>
+                <p>Si entiendes la potencia que hay detras de esta innovación, entenderas que es una gran herramienta para tu profesión o negocio.</p>
+                <p>Lo que vas a ver en este video, es lo que vas a poder experimentar tu mism@.</p>
             </div>
             <div className={styles.videoBlock}>
                 {/* El iframe de YouTube se puede personalizar más si es necesario */}
@@ -189,8 +190,8 @@ const Home1 = () => {
             </div>
         </div>
         <div className={styles.centeredText} style={{ marginTop: '4rem' }}>
-            <h2>Ahora puedes experimentarlo.<br/>Y si lo deseas.</h2>
-            <h2 className={styles.bigHeading}>Una ver una oportunidad de negocio.</h2>
+            <h2>Ahora puedes experimentarlo.<br/>y</h2>
+            <h2 className={styles.bigHeading}> Ver una gran oportunidad.</h2>
         </div>
       </section>
       
@@ -201,20 +202,19 @@ const Home1 = () => {
                 <div className={styles.iconPlaceholder}> <GrGrow/> </div>
                 <h3>CRECIMIENTO</h3>
                 <p>2023, mas de 60 millones de facturacón.</p>
-                <p>2024, sobre pasa lo 100 millones de facturación.</p>
+                <p>2024, sobrepasa lo 100 millones de facturación.</p>
                 <p>2025, batiendo record de usuaros mes a mes.</p>
             </div>
             <div className={styles.opportunityCard}>
                 <div className={styles.iconPlaceholder}> <FaBrain/> </div>
                 <h3>ENFOQUE</h3>
                 <p>Muy Sencillo, lo pruebas, lo experimentas ves lo que hace...</p>
-                <p>Y comparte, primero con la gente que condie en ti y despues con el resto</p>
+                <p>Y compartes, primero con la gente que confie en ti y despues con el resto</p>
             </div>
             <div className={styles.opportunityCard}>
                 <div className={styles.iconPlaceholder}> <FaUsers /> </div>
                 <h3>ORGANIZACIÓN</h3>
-                <p>Crea tu propia organizacion, crece costantemente, y no lo hagas solo/a</p>
-                <p>Apoyate en la persona que te lo enseño y entodo el equipo que hay detrás.</p>
+                <p>Crea tu propia organizacion, entiende como funciona, como se distribuye y escala a lo más alto.</p>
             </div>
             <div className={styles.opportunityCard}>
                 <div className={styles.iconPlaceholder}> <FaMoneyBillWave /> </div>
@@ -228,14 +228,8 @@ const Home1 = () => {
 
       {/* --- Sección 7: Contacto / Footer --- */}
       <footer className={styles.footer}>
-        <Image 
-            src="/images/superpatch_logo-removebg.png" // Reemplaza con el logo de Super Patch
-            alt="The Super Patch Company Logo"
-            width={150}
-            height={75}
-            style={{ objectFit: 'contain' }}
-        />
-        <p>Si quieres saber mas contacta directamente enviando un mensaje de Whatsup, Telegram, ó correo Electronico.</p>
+        <h2>¿Quieres saber más?</h2>
+        <p>Si quieres saber mas contacta directamente enviando un mensaje de WhatsApp o Telegram y me pondré en contacto contigo para que lo veas.</p>
         <div className={styles.contactMethods}>
             {contactItems.map((item) => (
             <a
